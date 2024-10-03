@@ -1,0 +1,50 @@
+2024-10-03 20:04:08.096 INFO  ---- [tartedMain] [CertMain:50] logStarting   Starting CertMain using Java 17.0.12 with PID 26636 (C:\Users\tkdrb\IdeaProjects\waerwiz\wearwiz-cert\build\classes\java\main started by tkdrb in C:\Users\tkdrb\IdeaProjects\waerwiz\wearwiz-cert)
+2024-10-03 20:04:08.099 INFO  ---- [tartedMain] [CertMain:654] logStartupProfileInfo   No active profile set, falling back to 1 default profile: "default"
+2024-10-03 20:04:08.142 INFO  ---- [tartedMain] [DevToolsPropertyDefaultsPostProcessor:252] logTo   Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-10-03 20:04:08.143 INFO  ---- [tartedMain] [DevToolsPropertyDefaultsPostProcessor:252] logTo   For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-10-03 20:04:08.892 INFO  ---- [tartedMain] [RepositoryConfigurationDelegate:295] multipleStoresDetected   Multiple Spring Data modules found, entering strict repository configuration mode
+2024-10-03 20:04:08.893 INFO  ---- [tartedMain] [RepositoryConfigurationDelegate:143] registerRepositoriesIn   Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-03 20:04:08.914 INFO  ---- [tartedMain] [RepositoryConfigurationDelegate:211] registerRepositoriesIn   Finished Spring Data repository scanning in 13 ms. Found 0 JPA repository interfaces.
+2024-10-03 20:04:08.930 INFO  ---- [tartedMain] [RepositoryConfigurationDelegate:295] multipleStoresDetected   Multiple Spring Data modules found, entering strict repository configuration mode
+2024-10-03 20:04:08.932 INFO  ---- [tartedMain] [RepositoryConfigurationDelegate:143] registerRepositoriesIn   Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-10-03 20:04:08.942 INFO  ---- [tartedMain] [RepositoryConfigurationDelegate:211] registerRepositoriesIn   Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+2024-10-03 20:04:09.865 INFO  ---- [tartedMain] [TomcatWebServer:111] initialize   Tomcat initialized with port 0 (http)
+2024-10-03 20:04:09.880 INFO  ---- [tartedMain] [StandardService:173] log   Starting service [Tomcat]
+2024-10-03 20:04:09.880 INFO  ---- [tartedMain] [StandardEngine:173] log   Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-03 20:04:09.950 INFO  ---- [tartedMain] [[/]:173] log   Initializing Spring embedded WebApplicationContext
+2024-10-03 20:04:09.950 INFO  ---- [tartedMain] [ServletWebServerApplicationContext:296] prepareWebApplicationContext   Root WebApplicationContext: initialization completed in 1806 ms
+2024-10-03 20:04:10.085 INFO  ---- [tartedMain] [LogHelper:31] logPersistenceUnitInformation   HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-03 20:04:10.152 INFO  ---- [tartedMain] [Version:44] logVersion   HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-03 20:04:10.190 INFO  ---- [tartedMain] [RegionFactoryInitiator:50] initiateService   HHH000026: Second-level cache disabled
+2024-10-03 20:04:10.537 INFO  ---- [tartedMain] [SpringPersistenceUnitInfo:87] addTransformer   No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-03 20:04:10.565 INFO  ---- [tartedMain] [HikariDataSource:109] getConnection   HikariPool-1 - Starting...
+2024-10-03 20:04:10.870 INFO  ---- [tartedMain] [HikariPool:554] checkFailFast   HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@56a95d57
+2024-10-03 20:04:10.873 INFO  ---- [tartedMain] [HikariDataSource:122] getConnection   HikariPool-1 - Start completed.
+2024-10-03 20:04:10.962 DEBUG ---- [tartedMain] [DdlTypeRegistry:64] addDescriptor   addDescriptor(12, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@3fc08625) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@5f0a5af5)
+2024-10-03 20:04:10.962 DEBUG ---- [tartedMain] [DdlTypeRegistry:64] addDescriptor   addDescriptor(-9, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@15f612fe) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@4014e846)
+2024-10-03 20:04:10.962 DEBUG ---- [tartedMain] [DdlTypeRegistry:64] addDescriptor   addDescriptor(-3, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@7bdebfcf) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@760e9fb3)
+2024-10-03 20:04:10.962 DEBUG ---- [tartedMain] [DdlTypeRegistry:64] addDescriptor   addDescriptor(4003, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@534a126e) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@34fb9699)
+2024-10-03 20:04:10.962 DEBUG ---- [tartedMain] [DdlTypeRegistry:64] addDescriptor   addDescriptor(4001, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@3a55670e) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@38a494f0)
+2024-10-03 20:04:10.962 DEBUG ---- [tartedMain] [DdlTypeRegistry:64] addDescriptor   addDescriptor(4002, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@3b7e28e8) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@53593e40)
+2024-10-03 20:04:10.963 DEBUG ---- [tartedMain] [DdlTypeRegistry:64] addDescriptor   addDescriptor(2004, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@42a54e32) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@5eba4182)
+2024-10-03 20:04:10.963 DEBUG ---- [tartedMain] [DdlTypeRegistry:64] addDescriptor   addDescriptor(2005, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@14490bd5) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@e789c22)
+2024-10-03 20:04:10.963 DEBUG ---- [tartedMain] [DdlTypeRegistry:64] addDescriptor   addDescriptor(2011, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@66448701) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@6afe6c1a)
+2024-10-03 20:04:12.276 INFO  ---- [tartedMain] [JtaPlatformInitiator:59] initiateService   HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-03 20:04:12.346 DEBUG ---- [tartedMain] [SQL:135] logStatement   create table tb_category (category_id bigint not null auto_increment, name varchar(255), primary key (category_id)) engine=InnoDB
+2024-10-03 20:04:12.382 DEBUG ---- [tartedMain] [SQL:135] logStatement   create table tb_image (id bigint not null auto_increment, file_path varchar(255), portfolio_id bigint, primary key (id)) engine=InnoDB
+2024-10-03 20:04:12.407 DEBUG ---- [tartedMain] [SQL:135] logStatement   create table tb_member (member_id bigint not null auto_increment, area varchar(255), counsel integer, email varchar(255), introduce varchar(255), nickName varchar(255) not null, password varchar(255), rate float(53), portfolio_id bigint, primary key (member_id)) engine=InnoDB
+2024-10-03 20:04:12.434 DEBUG ---- [tartedMain] [SQL:135] logStatement   create table tb_member_category (id bigint not null auto_increment, category_id bigint, member_id bigint, primary key (id)) engine=InnoDB
+2024-10-03 20:04:12.460 DEBUG ---- [tartedMain] [SQL:135] logStatement   create table tb_portfolio (id bigint not null auto_increment, license varchar(255), primary key (id)) engine=InnoDB
+2024-10-03 20:04:12.486 DEBUG ---- [tartedMain] [SQL:135] logStatement   alter table tb_category drop index UK4gpl7afmaxiecnv7fv7unn2mp
+2024-10-03 20:04:12.504 DEBUG ---- [tartedMain] [SQL:135] logStatement   alter table tb_category add constraint UK4gpl7afmaxiecnv7fv7unn2mp unique (name)
+2024-10-03 20:04:12.531 DEBUG ---- [tartedMain] [SQL:135] logStatement   alter table tb_member_category drop index NAME_AGE_UNIQUE
+2024-10-03 20:04:12.535 DEBUG ---- [tartedMain] [SQL:135] logStatement   alter table tb_member_category add constraint NAME_AGE_UNIQUE unique (member_id, category_id)
+2024-10-03 20:04:12.551 DEBUG ---- [tartedMain] [SQL:135] logStatement   alter table tb_image add constraint FKmkcp6v2658wca8c39hgr63gnf foreign key (portfolio_id) references tb_portfolio (id)
+2024-10-03 20:04:12.622 DEBUG ---- [tartedMain] [SQL:135] logStatement   alter table tb_member add constraint FK1dmxc39vm9cmkm71e8hk6krus foreign key (portfolio_id) references tb_portfolio (id)
+2024-10-03 20:04:12.686 DEBUG ---- [tartedMain] [SQL:135] logStatement   alter table tb_member_category add constraint FK2ewt7r91jyo2v6efnqodqw1vs foreign key (category_id) references tb_category (category_id)
+2024-10-03 20:04:12.752 DEBUG ---- [tartedMain] [SQL:135] logStatement   alter table tb_member_category add constraint FKabu2oq4l7le5ts8gcvndtd8im foreign key (member_id) references tb_member (member_id)
+2024-10-03 20:04:12.848 INFO  ---- [tartedMain] [LocalContainerEntityManagerFactoryBean:437] buildNativeEntityManagerFactory   Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-03 20:04:12.918 WARN  ---- [tartedMain] [JpaBaseConfiguration$JpaWebConfiguration:236] openEntityManagerInViewInterceptor   spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-03 20:04:14.124 INFO  ---- [tartedMain] [OptionalLiveReloadServer:59] startServer   LiveReload server is running on port 35729
+2024-10-03 20:04:14.169 INFO  ---- [tartedMain] [TomcatWebServer:243] start   Tomcat started on port 51596 (http) with context path '/'
+2024-10-03 20:04:14.179 INFO  ---- [tartedMain] [CertMain:56] logStarted   Started CertMain in 6.821 seconds (process running for 7.419)
