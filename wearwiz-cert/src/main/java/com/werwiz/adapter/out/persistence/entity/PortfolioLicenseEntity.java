@@ -9,26 +9,28 @@ import lombok.*;
 @EqualsAndHashCode(of="id")
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "tb_member_category",
+@Table(name = "tb_portfolio_license",
         uniqueConstraints = {
                 @UniqueConstraint(
                         name = "MEMBER_CATEGORY_UNIQUE",
-                        columnNames = {"member_id", "category_id"}
+                        columnNames = {"portfolio_id", "category_id"}
                 )
         })
 @Builder
+public class PortfolioLicenseEntity {
 
-public class MemberCategoryEntity {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @JoinColumn(name = "member_id")
+    @JoinColumn(name = "portfolio_id")
     @ManyToOne(fetch = FetchType.LAZY)
-    private MemberEntity member;
+    private PortfolioEntity portfolio;
 
-    @JoinColumn(name = "category_id")
+    @JoinColumn(name = "license_id")
     @ManyToOne(fetch = FetchType.LAZY)
-    private CategoryEntity category;
+    private LicenseEntity license;
+
 
 }

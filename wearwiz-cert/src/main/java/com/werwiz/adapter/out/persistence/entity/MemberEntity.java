@@ -4,8 +4,10 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Getter
@@ -37,10 +39,17 @@ public class MemberEntity {
 
     private String introduce;
 
-    @OneToMany(mappedBy = "member", orphanRemoval = true, cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "member", fetch = FetchType.LAZY)
     private List<MemberCategoryEntity> category = new ArrayList<>();
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     private PortfolioEntity portfolio;
+
+    @OneToMany()
+    Set<Role> roleList;
+
+    private LocalDate createAt;
+
+    private LocalDate updateAt;
 
 }

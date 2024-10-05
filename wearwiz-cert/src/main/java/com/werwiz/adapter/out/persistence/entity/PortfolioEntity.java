@@ -3,7 +3,7 @@ package com.werwiz.adapter.out.persistence.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.util.List;
+import java.util.Set;
 
 @Entity
 @Getter
@@ -16,14 +16,12 @@ public class PortfolioEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    @Column(name = "portfolio_id")
+    private Long portfolioId;
 
-    @OneToMany(mappedBy = "portfolio", orphanRemoval = true, cascade = CascadeType.ALL)
-    private List<ImageEntity> imageEntities;
+    @OneToMany(mappedBy = "portfolio",fetch = FetchType.LAZY)
+    private Set<ImageEntity> imageEntities;
 
-    /**
-     * Todo:
-     * 별도 엔티티로 뺄지 정하는중
-     * */
-    private String license;
+    @OneToMany(mappedBy = "portfolio",fetch = FetchType.LAZY)
+    private Set<PortfolioLicenseEntity> licenseList;
 }
