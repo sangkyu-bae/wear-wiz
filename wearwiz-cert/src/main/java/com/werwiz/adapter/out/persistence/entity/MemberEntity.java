@@ -5,14 +5,16 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
 @Entity
 @Getter
 @Setter
-@EqualsAndHashCode(of="id")
+@EqualsAndHashCode(of="memberId")
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "tb_member") @Builder
@@ -21,7 +23,9 @@ public class MemberEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "member_id")
-    private Long id;
+    private Long memberId;
+
+    private String name;
 
     private String email;
 
@@ -37,19 +41,35 @@ public class MemberEntity {
     @Column(name = "nickName", nullable = false)
     private String nickName;
 
+    @Lob
     private String introduce;
 
     @OneToMany(mappedBy = "member", fetch = FetchType.LAZY)
-    private List<MemberCategoryEntity> category = new ArrayList<>();
+    private Set<MemberCategoryEntity> category;
 
     @ManyToOne(fetch = FetchType.LAZY)
     private PortfolioEntity portfolio;
 
-    @OneToMany()
-    Set<Role> roleList;
+    @OneToMany(mappedBy = "member", fetch = FetchType.LAZY)
+    public Set<MemberRoleEntity> roleList;
 
-    private LocalDate createAt;
+    private LocalDateTime createAt;
 
-    private LocalDate updateAt;
+    private LocalDateTime updateAt;
+
+    public void addCategory(Set<MemberCategoryEntity> categoryEntities){
+        for(MemberCategoryEntity categoryEntity : categoryEntities){
+            this.addCategory(categoryEntity);
+        }
+    }
+    private void addCategory(MemberCategoryEntity memberCategoryEntity){
+        memberCategoryEntity.setMember(this);
+
+        if(category == null){
+            category = new HashSet<>();
+        }
+
+        category.add(memberCategoryEntity);
+    }
 
 }

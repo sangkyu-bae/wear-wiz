@@ -6,15 +6,16 @@ import lombok.*;
 @Entity
 @Getter
 @Setter
-@EqualsAndHashCode(of="id")
+@EqualsAndHashCode(of="roleId")
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "tb_role") @Builder
-public class Role {
+public class RoleEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    @Column(name = "role_id")
+    private Long roleId;
 
-    private String name;
+    private String roleName;
 }

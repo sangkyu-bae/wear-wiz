@@ -1,5 +1,6 @@
 package com.werwiz.adapter.out.persistence.entity;
 
+
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -9,16 +10,15 @@ import lombok.*;
 @EqualsAndHashCode(of="id")
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "tb_member_category",
+@Table(name = "tb_member_role",
         uniqueConstraints = {
                 @UniqueConstraint(
-                        name = "MEMBER_CATEGORY_UNIQUE",
-                        columnNames = {"member_id", "category_id"}
+                        name = "MEMBER_ROLE_UNIQUE",
+                        columnNames = {"member_id", "role_id"}
                 )
         })
 @Builder
-
-public class MemberCategoryEntity {
+public class MemberRoleEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -27,9 +27,8 @@ public class MemberCategoryEntity {
     @ManyToOne(fetch = FetchType.LAZY)
     private MemberEntity member;
 
-    @JoinColumn(name = "category_id")
+    @JoinColumn(name = "role_id")
     @ManyToOne(fetch = FetchType.LAZY)
-    private CategoryEntity category;
-
+    private RoleEntity role;
 
 }

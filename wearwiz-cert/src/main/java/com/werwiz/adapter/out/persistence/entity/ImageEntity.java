@@ -18,6 +18,7 @@ public class ImageEntity {
 
     @Column(name = "file_path")
     private String filePath;
+
     @ManyToOne
     private PortfolioEntity portfolio;
 }

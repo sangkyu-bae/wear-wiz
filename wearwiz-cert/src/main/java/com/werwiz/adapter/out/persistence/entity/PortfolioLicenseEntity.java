@@ -12,14 +12,12 @@ import lombok.*;
 @Table(name = "tb_portfolio_license",
         uniqueConstraints = {
                 @UniqueConstraint(
-                        name = "MEMBER_CATEGORY_UNIQUE",
-                        columnNames = {"portfolio_id", "category_id"}
+                        name = "PORTFOLIO_LICENSE_UNIQUE",
+                        columnNames = {"portfolio_id", "license_id"}
                 )
         })
 @Builder
 public class PortfolioLicenseEntity {
-
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -31,6 +29,5 @@ public class PortfolioLicenseEntity {
     @JoinColumn(name = "license_id")
     @ManyToOne(fetch = FetchType.LAZY)
     private LicenseEntity license;
-
 
 }
