@@ -14,7 +14,6 @@ public class Portfolio {
 
     private final List<License> licenses;
 
-
     public static Portfolio createPortfolio(List<Image> images, List<License> licenses){
         return new Portfolio(images,licenses);
     }

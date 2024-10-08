@@ -43,6 +43,8 @@ logging:
     root: INFO
   #jwt:
   #  secret: securtytest
+upload:
+  path: "c:/upload"
 
 token:
   access-expired-time: 3600000

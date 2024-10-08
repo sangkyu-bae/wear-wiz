@@ -1,7 +1,9 @@
-package com.werwiz.adapter.out.persistence;
+package com.werwiz.adapter.out.persistence.mapper;
 
 import com.werwiz.adapter.out.persistence.entity.MemberEntity;
+import com.werwiz.domain.Category;
 import com.werwiz.domain.Member;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -25,4 +27,6 @@ public class MemberMapper {
                 memberEntity.getPassword()
         );
     }
+
+
 }

@@ -5,9 +5,10 @@ import jakarta.persistence.Lob;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
+import org.springframework.web.multipart.MultipartFile;
+
+import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -33,4 +34,33 @@ public class JoinMemberRequest extends SelfValidating {
     private String nickName;
 
     private String introduce;
+
+    private String area;
+
+    private List<License> licenses;
+
+    private List<Category> categories;
+
+    @Data
+    @NoArgsConstructor @AllArgsConstructor
+    public static class License{
+        @NotNull
+        private Long licenseId;
+
+        @NotNull
+        private String name;
+    }
+
+    @Data
+    @NoArgsConstructor
+    @AllArgsConstructor
+    public static class Category {
+        @NotNull
+        private Long id;
+
+        @NotNull
+        private String name;
+    }
 }
+
+

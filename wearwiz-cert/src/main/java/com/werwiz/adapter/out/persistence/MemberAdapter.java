@@ -1,10 +1,13 @@
 package com.werwiz.adapter.out.persistence;
 
 import com.wearwiz.common.PersistenceAdapter;
+import com.wearwiz.common.error.ErrorException;
 import com.werwiz.adapter.out.persistence.entity.*;
 import com.werwiz.adapter.out.persistence.repository.*;
+import com.werwiz.application.port.out.FindMemberPort;
 import com.werwiz.application.port.out.JoinMemberPort;
 import com.werwiz.domain.*;
+import com.werwiz.infra.excption.MemberError;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
@@ -17,16 +20,14 @@ import java.util.stream.Collectors;
 
 @PersistenceAdapter
 @RequiredArgsConstructor
-public class MemberAdapter implements JoinMemberPort {
+public class MemberAdapter implements JoinMemberPort, FindMemberPort {
 
     private final MemberEntityRepository memberEntityRepository;
     private final MemberCategoryEntityRepository memberCategoryEntityRepository;
     private final ImageEntityRepository imageEntityRepository;
     private final PortfolioLicenseEntityRepository portfolioLicenseEntityRepository;
-
     private final PortfolioEntityRepository portfolioEntityRepository;
     private final ModelMapper modelMapper;
-
     private final PasswordEncoder passwordEncoder;
 
 
@@ -118,5 +119,11 @@ public class MemberAdapter implements JoinMemberPort {
                 .build();
 
         return portfolioEntity;
+    }
+
+    @Override
+    public MemberEntity findById(long id) {
+        return memberEntityRepository.findById(id)
+                .orElseThrow(()->new ErrorException(MemberError.MEMBER_NOT_FOUND,"findById"));
     }
 }

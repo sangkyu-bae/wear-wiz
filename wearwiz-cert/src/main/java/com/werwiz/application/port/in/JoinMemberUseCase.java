@@ -6,4 +6,5 @@ import com.werwiz.domain.Member;
 public interface JoinMemberUseCase {
 
     Member joinMember(JoinMemberRequest request);
+
 }

@@ -27,7 +27,7 @@ public class PortfolioEntity {
     @OneToMany(mappedBy = "portfolio",fetch = FetchType.LAZY)
     private Set<PortfolioLicenseEntity> licenseList;
 
-    private void addImage(ImageEntity imageEntity){
+    public void addImage(ImageEntity imageEntity){
         imageEntity.setPortfolio(this);
 
         if(imageList == null){
@@ -46,7 +46,7 @@ public class PortfolioEntity {
         }
     }
 
-    private void addLicense(PortfolioLicenseEntity license){
+    public void addLicense(PortfolioLicenseEntity license){
         license.setPortfolio(this);
 
         if(licenseList == null){
