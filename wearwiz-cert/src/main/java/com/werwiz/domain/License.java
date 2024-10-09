@@ -7,9 +7,9 @@ import lombok.Getter;
 
 @Getter
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
-public class License {
+public class License implements EnumClassType{
 
-    private final Long licenseId;
+    private final Long id;
 
     private final String name;
 

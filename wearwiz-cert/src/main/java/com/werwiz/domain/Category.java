@@ -6,7 +6,7 @@ import lombok.Getter;
 
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 @Getter
-public class Category {
+public class Category implements EnumClassType{
 
     private final Long id;
 
