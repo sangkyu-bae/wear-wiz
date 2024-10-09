@@ -6,7 +6,7 @@ import lombok.*;
 @Entity
 @Getter
 @Setter
-@EqualsAndHashCode(of="id")
+@EqualsAndHashCode(of="id",callSuper = false)
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "tb_portfolio_license",
@@ -30,4 +30,27 @@ public class PortfolioLicenseEntity {
     @ManyToOne(fetch = FetchType.LAZY)
     private LicenseEntity license;
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        PortfolioLicenseEntity that = (PortfolioLicenseEntity) o;
+
+        if (id == null || that.id == null) {
+            return portfolio.equals(that.portfolio) && license.equals(that.license);
+        }
+
+        return id.equals(that.id);
+    }
+
+    @Override
+    public int hashCode() {
+        if (id == null) {
+            int portfolioHash = (portfolio != null) ? portfolio.hashCode() : 0;
+            int licenseHash = (license != null) ? license.hashCode() : 0;
+            return portfolioHash + licenseHash;
+        }
+        return id.hashCode();
+    }
 }

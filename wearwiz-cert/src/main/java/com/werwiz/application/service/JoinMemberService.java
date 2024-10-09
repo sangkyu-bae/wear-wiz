@@ -33,14 +33,20 @@ public class JoinMemberService implements JoinMemberUseCase {
     private final LicenseMapper licenseMapper;
     @Override
     public Member joinMember(JoinMemberRequest request) {
+        List<Category> categories = null;
+        List<License> licenses = null;
+        if(request.getCategories() != null){
+            categories = request.getCategories().stream()
+                    .map(category -> categoryMapper.mapToDomain(category))
+                    .collect(Collectors.toList());
 
-        List<Category> categories = request.getCategories().stream()
-                .map(category -> categoryMapper.mapToDomain(category))
-                .collect(Collectors.toList());
+        }
 
-        List<License> licenses = request.getLicenses().stream()
-                .map(license -> licenseMapper.mapToDomain(license))
-                .collect(Collectors.toList());
+        if(request.getLicenses() != null){
+            licenses = request.getLicenses().stream()
+                    .map(license -> licenseMapper.mapToDomain(license))
+                    .collect(Collectors.toList());
+        }
 
         Portfolio portfolio = Portfolio.createPortfolio(null,licenses);
 
@@ -60,6 +66,7 @@ public class JoinMemberService implements JoinMemberUseCase {
                 request.getName(),
                 request.getPassword()
         );
+
 
         MemberEntity createMember = joinMemberPort.joinMember(member);
 

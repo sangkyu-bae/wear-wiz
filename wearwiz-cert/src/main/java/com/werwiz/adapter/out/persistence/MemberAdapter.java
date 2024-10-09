@@ -3,6 +3,7 @@ package com.werwiz.adapter.out.persistence;
 import com.wearwiz.common.PersistenceAdapter;
 import com.wearwiz.common.error.ErrorException;
 import com.werwiz.adapter.out.persistence.entity.*;
+import com.werwiz.adapter.out.persistence.mapper.LicenseMapper;
 import com.werwiz.adapter.out.persistence.repository.*;
 import com.werwiz.application.port.out.FindMemberPort;
 import com.werwiz.application.port.out.JoinMemberPort;
@@ -12,6 +13,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.HashSet;
 import java.util.List;
@@ -20,11 +22,11 @@ import java.util.stream.Collectors;
 
 @PersistenceAdapter
 @RequiredArgsConstructor
+@Slf4j
 public class MemberAdapter implements JoinMemberPort, FindMemberPort {
 
     private final MemberEntityRepository memberEntityRepository;
     private final MemberCategoryEntityRepository memberCategoryEntityRepository;
-    private final ImageEntityRepository imageEntityRepository;
     private final PortfolioLicenseEntityRepository portfolioLicenseEntityRepository;
     private final PortfolioEntityRepository portfolioEntityRepository;
     private final ModelMapper modelMapper;
@@ -32,10 +34,11 @@ public class MemberAdapter implements JoinMemberPort, FindMemberPort {
 
 
     @Override
+    @Transactional
     public MemberEntity joinMember(Member member) {
         Set<MemberCategoryEntity> memberCategoryList = null;
         PortfolioEntity portfolio = null;
-        if(!member.getCategorys().isEmpty()){
+        if(member.getCategorys() != null){
             memberCategoryList = new HashSet<>();
             for(Category category : member.getCategorys()){
                 CategoryEntity categoryEntity = modelMapper.map(category,CategoryEntity.class);
@@ -44,29 +47,23 @@ public class MemberAdapter implements JoinMemberPort, FindMemberPort {
                                 .category(categoryEntity)
                                 .build()
                 );
-            }
 
-            memberCategoryList = (Set<MemberCategoryEntity>) memberCategoryEntityRepository.saveAll(memberCategoryList);
+            }
+            List<MemberCategoryEntity> saveCategory = memberCategoryEntityRepository.saveAll(memberCategoryList);
+            memberCategoryList = new HashSet<>(saveCategory);
         }
 
         if(member.getPortfolio() != null){
             portfolio = setPortfolio(member.getPortfolio());
-
-            Set<ImageEntity> imageEntities = new HashSet<>();
             Set<PortfolioLicenseEntity> licenseEntities = new HashSet<>();
 
-            if(portfolio.getImageList() != null){
-                 imageEntities = (Set<ImageEntity>) imageEntityRepository.saveAll(portfolio.getImageList());
-            }
 
             if(portfolio.getLicenseList() != null){
-                licenseEntities = (Set<PortfolioLicenseEntity>) portfolioLicenseEntityRepository.saveAll(portfolio.getLicenseList());
+                List<PortfolioLicenseEntity> savedLicenses = portfolioLicenseEntityRepository.saveAll(portfolio.getLicenseList());
+                licenseEntities = new HashSet<>(savedLicenses);
             }
 
             portfolio = portfolioEntityRepository.save(portfolio);
-
-            portfolio.addImage(imageEntities);
-            portfolio.addLicense(licenseEntities);
         }
 
         MemberEntity memberEntity = MemberEntity.builder()
@@ -85,36 +82,34 @@ public class MemberAdapter implements JoinMemberPort, FindMemberPort {
                 .build();
         memberEntity =  memberEntityRepository.save(memberEntity);
 
-        memberEntity.addCategory(memberCategoryList);
+        if(memberCategoryList != null) {
+            memberEntity.addCategory(memberCategoryList);
+        }
 
         return memberEntity;
     }
 
     private PortfolioEntity setPortfolio(Portfolio portfolio){
-        Set<ImageEntity> images = null;
-        Set<PortfolioLicenseEntity> portfolioLicense = null;
-        if(!portfolio.getImages().isEmpty()){
-            images = new HashSet<>();
 
-            for(Image image : portfolio.getImages()){
-                images.add(modelMapper.map(image,ImageEntity.class));
-            }
-        }
+        Set<PortfolioLicenseEntity> portfolioLicense = null;
 
         if(!portfolio.getLicenses().isEmpty()){
             portfolioLicense = new HashSet<>();
 
             for(License license : portfolio.getLicenses()){
+                LicenseEntity licenseEntity = modelMapper.map(license,LicenseEntity.class);
+                licenseEntity.setLicenseId(license.getId());
 
                 PortfolioLicenseEntity portfolioLicenseEntity = PortfolioLicenseEntity.builder()
-                        .license(modelMapper.map(license, LicenseEntity.class))
+                        .license(licenseEntity)
                         .build();
+
+                portfolioLicense.add(portfolioLicenseEntity);
             }
 
         }
 
         PortfolioEntity portfolioEntity = PortfolioEntity.builder()
-                .imageList(images)
                 .licenseList(portfolioLicense)
                 .build();
 
@@ -125,5 +120,11 @@ public class MemberAdapter implements JoinMemberPort, FindMemberPort {
     public MemberEntity findById(long id) {
         return memberEntityRepository.findById(id)
                 .orElseThrow(()->new ErrorException(MemberError.MEMBER_NOT_FOUND,"findById"));
+    }
+
+    @Override
+    public MemberEntity findByEmailAndPassword(String email, String password) {
+        password = passwordEncoder.encode(password);
+        return memberEntityRepository.findByEmailAndPassword(email,password);
     }
 }

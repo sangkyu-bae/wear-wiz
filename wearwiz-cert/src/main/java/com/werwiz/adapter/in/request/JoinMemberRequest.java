@@ -1,19 +1,18 @@
 package com.werwiz.adapter.in.request;
 
-import com.wearwiz.common.SelfValidating;
-import jakarta.persistence.Lob;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.*;
-import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class JoinMemberRequest extends SelfValidating {
+@Getter @Setter
+//public class JoinMemberRequest extends SelfValidating {
+public class JoinMemberRequest {
 
     @NotNull
     @Email

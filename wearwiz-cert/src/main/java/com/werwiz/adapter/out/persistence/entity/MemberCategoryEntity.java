@@ -6,7 +6,7 @@ import lombok.*;
 @Entity
 @Getter
 @Setter
-@EqualsAndHashCode(of="id")
+@EqualsAndHashCode(of="id",callSuper = false)
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "tb_member_category",
@@ -31,5 +31,28 @@ public class MemberCategoryEntity {
     @ManyToOne(fetch = FetchType.LAZY)
     private CategoryEntity category;
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        MemberCategoryEntity that = (MemberCategoryEntity) o;
+
+        if (id == null || that.id == null) {
+            return member.equals(that.member) && category.equals(that.category);
+        }
+
+        return id.equals(that.id);
+    }
+
+    @Override
+    public int hashCode() {
+        if (id == null) {
+            int memberHash = (member != null) ? member.hashCode() : 0;
+            int categoryHash = (category != null) ? category.hashCode() : 0;
+            return memberHash + categoryHash;
+        }
+        return id.hashCode();
+    }
 
 }

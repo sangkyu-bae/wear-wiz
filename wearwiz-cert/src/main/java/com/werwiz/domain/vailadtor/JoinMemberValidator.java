@@ -22,13 +22,6 @@ public class JoinMemberValidator implements Validator {
     public void validate(Object target, Errors errors) {
         JoinMemberRequest request = (JoinMemberRequest) target;
 
-        boolean hasError = request.validateSelfCheck();
-
-        if(hasError){
-            errors.rejectValue("vailid","invalid.joinform","valid 조건을 충족하지 않습니다.");
-            return;
-        }
-
         if(memberEntityRepository.existsByEmail(request.getEmail())){
             errors.rejectValue("email","invalid.email","이미 존재하는 이메일 입니다");
             return;
