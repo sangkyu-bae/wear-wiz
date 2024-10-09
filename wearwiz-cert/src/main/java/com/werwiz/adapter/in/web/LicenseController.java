@@ -19,7 +19,7 @@ import java.util.List;
 public class LicenseController {
 
     private final EnumClassMapper enumClassMapper;
-    
+
     @GetMapping("/member/license")
     public ResponseEntity<List<EnumClassMapperValue>> findLicenses(){
         return ResponseEntity.ok().body(enumClassMapper.get("license"));

@@ -2,7 +2,7 @@ package com.werwiz.domain;
 
 public interface EnumClassType {
 
-    long getId();
+    Long getId();
 
     String getName();
 }
