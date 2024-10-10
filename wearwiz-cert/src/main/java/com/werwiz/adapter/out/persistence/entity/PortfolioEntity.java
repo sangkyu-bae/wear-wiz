@@ -6,6 +6,7 @@ import lombok.*;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 @Entity
 @Getter
@@ -51,11 +52,19 @@ public class PortfolioEntity {
 
         if(licenseList == null){
             licenseList = new HashSet<>();
+        } else{
+           List<PortfolioLicenseEntity> licenseEntityList = licenseList.stream()
+                    .filter(licenseEntity -> licenseEntity.getLicense().getLicenseId() == license.getLicense().getLicenseId())
+                   .collect(Collectors.toList());
+
+           if(licenseEntityList != null){
+               return;
+           }
         }
 
         licenseList.add(license);
     }
-    public void addLicense(Set<PortfolioLicenseEntity> licenseList){
+    public void addLicense(List<PortfolioLicenseEntity> licenseList){
         if(licenseList == null){
             return;
         }

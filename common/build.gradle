@@ -9,12 +9,33 @@ repositories {
     mavenCentral()
 }
 bootJar.enabled = false
-
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
 jar.enabled = true
 dependencies {
+//    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+//    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+//
+//
+////    implementation 'org.hibernate.validator:hibernate-validator:8.0.0.Final'
+//    implementation 'jakarta.validation:jakarta.validation-api:3.0.0'
+//
+////    implementation 'javax.validation:validation-api:2.0.1.Final'
+//    implementation 'org.springframework.boot:spring-boot-starter-web'
+//    compileOnly 'org.projectlombok:lombok'
+//    annotationProcessor 'org.projectlombok:lombok'
+//    testAnnotationProcessor('org.projectlombok:lombok')
+
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    implementation 'org.aspectj:aspectjrt:1.9.8' // AspectJ Runtime
+    implementation 'org.aspectj:aspectjweaver:1.9.8' // AspectJ Weaver
+
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
-
     implementation 'javax.validation:validation-api:2.0.1.Final'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     compileOnly 'org.projectlombok:lombok'
@@ -24,8 +45,12 @@ dependencies {
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     implementation 'org.aspectj:aspectjrt:1.9.8' // AspectJ Runtime
     implementation 'org.aspectj:aspectjweaver:1.9.8' // AspectJ Weaver
+
 }
 
 test {
     useJUnitPlatform()
 }
+
+sourceCompatibility = '17'
+targetCompatibility = '17'

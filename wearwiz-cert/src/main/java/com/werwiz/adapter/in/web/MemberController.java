@@ -4,6 +4,7 @@ import com.wearwiz.common.WebAdapter;
 import com.wearwiz.common.error.ErrorException;
 import com.werwiz.adapter.in.request.JoinMemberRequest;
 import com.werwiz.adapter.in.request.LoginMemberRequest;
+import com.werwiz.adapter.in.request.UpdateMemberRequest;
 import com.werwiz.application.port.in.JoinMemberUseCase;
 import com.werwiz.application.port.in.LoginMemberUseCase;
 import com.werwiz.application.port.in.LogoutUseCase;
@@ -80,6 +81,9 @@ public class MemberController {
         return ResponseEntity.ok().body(member);
     }
 
+    /**
+     * TODO: 추후 sprig gateway에서 jwt 검증예정
+     * */
     @DeleteMapping("/member/logout")
     public ResponseEntity<String> logout(ServerHttpRequest request){
         if (!request.getHeaders().containsKey(HttpHeaders.AUTHORIZATION)) {
@@ -91,5 +95,23 @@ public class MemberController {
         String status = logoutUseCase.logout(jwt);
 
         return ResponseEntity.ok().body(status);
+    }
+
+
+    /**
+     * TODO: 추후 spring gateway에서 jwt 검증예정
+     * */
+    @PatchMapping("/member")
+    public ResponseEntity<Member> updateMember(@RequestBody UpdateMemberRequest updateMemberRequest,
+                                               ServerHttpRequest request){
+        if (!request.getHeaders().containsKey(HttpHeaders.AUTHORIZATION)) {
+            throw new ErrorException(MemberError.NO_AUTHORIZATION_HEADER,"logout");
+        }
+
+        String authorizationHeader = request.getHeaders().get(HttpHeaders.AUTHORIZATION).get(0);
+        String jwt = authorizationHeader.replace("Bearer", "");
+
+
+        return ResponseEntity.ok().body(null);
     }
 }

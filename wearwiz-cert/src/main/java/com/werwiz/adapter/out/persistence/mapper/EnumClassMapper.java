@@ -1,10 +1,9 @@
 package com.werwiz.adapter.out.persistence.mapper;
 
+import com.wearwiz.common.EnumMapperType;
 import com.werwiz.domain.EnumClassType;
 
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
@@ -14,6 +13,16 @@ public class EnumClassMapper {
 
     public void put(String key, List<EnumClassMapperValue> value){
         factory.put(key, value);
+    }
+
+    public void put(String key, Class<? extends EnumMapperType> e){
+        factory.put(key,toEnumValues(e));
+    }
+
+    private List<EnumClassMapperValue> toEnumValues(Class <? extends EnumMapperType>e){
+        return Arrays.stream(e.getEnumConstants())
+                .map(EnumClassMapperValue::new)
+                .collect(Collectors.toList());
     }
 
     public List<EnumClassMapperValue> get(String key){

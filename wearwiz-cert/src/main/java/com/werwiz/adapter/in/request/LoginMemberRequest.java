@@ -8,7 +8,6 @@ import lombok.Data;
 
 @Data
 @AllArgsConstructor
-@NotNull
 public class LoginMemberRequest {
 
     @NotNull

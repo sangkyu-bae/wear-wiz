@@ -7,6 +7,7 @@ import com.werwiz.adapter.out.persistence.mapper.LicenseMapper;
 import com.werwiz.adapter.out.persistence.repository.*;
 import com.werwiz.application.port.out.FindMemberPort;
 import com.werwiz.application.port.out.JoinMemberPort;
+import com.werwiz.application.port.out.UpdateMemberPort;
 import com.werwiz.domain.*;
 import com.werwiz.infra.excption.MemberError;
 import lombok.RequiredArgsConstructor;
@@ -15,15 +16,13 @@ import org.modelmapper.ModelMapper;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
 
 @PersistenceAdapter
 @RequiredArgsConstructor
 @Slf4j
-public class MemberAdapter implements JoinMemberPort, FindMemberPort {
+public class MemberAdapter implements JoinMemberPort, FindMemberPort, UpdateMemberPort {
 
     private final MemberEntityRepository memberEntityRepository;
     private final MemberCategoryEntityRepository memberCategoryEntityRepository;
@@ -89,6 +88,56 @@ public class MemberAdapter implements JoinMemberPort, FindMemberPort {
         return memberEntity;
     }
 
+//    private PortfolioEntity setPortfolio(Portfolio portfolio,PortfolioEntity entity){
+//
+//        Set<PortfolioLicenseEntity> portfolioLicense = entity.getLicenseList();
+//        Map<Long, Boolean> licenseMap= entity.getLicenseList().stream()
+//                .collect(Collectors.toMap(
+//                        license -> license.getLicense().getLicenseId(),
+//                        license -> false
+//                ));
+//
+//
+//        if(!portfolio.getLicenses().isEmpty()){
+//
+//            for(License license : portfolio.getLicenses()){
+//
+//                if(licenseMap.containsKey(license.getId())){
+//                    licenseMap.put(license.getId(),true);
+//                    continue;
+//                }
+//
+//                LicenseEntity licenseEntity = modelMapper.map(license,LicenseEntity.class);
+//                licenseEntity.setLicenseId(license.getId());
+//
+//                PortfolioLicenseEntity portfolioLicenseEntity = PortfolioLicenseEntity.builder()
+//                        .license(licenseEntity)
+//                        .build();
+//
+//                portfolioLicense.add(portfolioLicenseEntity);
+//            }
+//
+//            for(Long key : licenseMap.keySet()){
+//                boolean isContain = licenseMap.get(key);
+//
+//                if(!isContain){
+//                    portfolioLicense.
+//                }
+//            }
+//        }
+//
+//        if(portfolio.getImages() != null){
+//
+//
+//        }
+//
+//        PortfolioEntity portfolioEntity = PortfolioEntity.builder()
+//                .licenseList(portfolioLicense)
+//                .build();
+//
+//        return portfolioEntity;
+//    }
+
     private PortfolioEntity setPortfolio(Portfolio portfolio){
 
         Set<PortfolioLicenseEntity> portfolioLicense = null;
@@ -106,7 +155,6 @@ public class MemberAdapter implements JoinMemberPort, FindMemberPort {
 
                 portfolioLicense.add(portfolioLicenseEntity);
             }
-
         }
 
         PortfolioEntity portfolioEntity = PortfolioEntity.builder()
@@ -126,5 +174,80 @@ public class MemberAdapter implements JoinMemberPort, FindMemberPort {
     public MemberEntity findByEmailAndPassword(String email, String password) {
         password = passwordEncoder.encode(password);
         return memberEntityRepository.findByEmailAndPassword(email,password);
+    }
+
+    @Override
+    public MemberEntity updateMember(Member updateMember) {
+        MemberEntity memberEntity = this.findById(updateMember.getMemberId());
+
+        if(updateMember.getArea() != null){
+            memberEntity.setArea(updateMember.getArea());
+        }
+
+        if(updateMember.getIntroduce() != null){
+            memberEntity.setIntroduce(updateMember.getIntroduce());
+        }
+
+//        if(updateMember.getPortfolio() != null){
+//            Portfolio portfolio = updateMember.getPortfolio();
+//
+//            PortfolioEntity portfolioEntity = memberEntity.getPortfolio();
+//
+//            Set<PortfolioLicenseEntity> licenseEntityList = null;
+//            if(portfolio.getLicenses() != null){
+//                licenseEntityList = new HashSet<>();
+//
+//
+//                for(License license : portfolio.getLicenses()){
+//                    LicenseEntity licenseEntity = LicenseEntity.builder()
+//                            .licenseId(license.getId())
+//                            .name(license.getName())
+//                            .build();
+//
+//                    licenseEntityList.add(
+//                            PortfolioLicenseEntity.builder()
+//                                    .isUse(true)
+//                                    .license(licenseEntity)
+//                                    .build()
+//                    );
+//                }
+//
+//
+//            }
+//
+//
+//            Set<ImageEntity> imageEntityList = null;
+//            if(portfolio.getImages() != null){
+//                imageEntityList = new HashSet<>();
+//
+//                imageEntityList = portfolio.getImages().stream()
+//                        .map(image -> new ImageEntity(image.getId(),image.getFilePath(),null))
+//                        .collect(Collectors.toSet());
+//            }
+//
+//            if(portfolioEntity == null){
+//                portfolioEntity = PortfolioEntity.builder()
+//                        .licenseList(licenseEntityList)
+//                        .imageList(imageEntityList)
+//                        .build();
+//
+//                List<PortfolioLicenseEntity> saveLicenseEntity = portfolioLicenseEntityRepository.saveAll(licenseEntityList);
+//                portfolioEntity = portfolioEntityRepository.save(portfolioEntity);
+//
+//                portfolioEntity.addLicense(saveLicenseEntity);
+//                portfolioEntity.addImage(imageEntityList);
+//
+//                memberEntity.setPortfolio(portfolioEntity);
+//
+//                return memberEntityRepository.save(memberEntity);
+//            }
+//
+//            Set<PortfolioLicenseEntity> licenseEntities = portfolioEntity.getLicenseList();
+//            if(licenseEntities != null){
+//
+//            }
+//        }
+
+        return memberEntityRepository.save(memberEntity);
     }
 }

@@ -55,7 +55,7 @@ public class JoinMemberService implements JoinMemberUseCase {
                 request.getEmail(),
                 request.getArea(),
                 null,
-                null,
+                Double.valueOf(0),
                 request.getNickName(),
                 request.getIntroduce(),
                 categories,

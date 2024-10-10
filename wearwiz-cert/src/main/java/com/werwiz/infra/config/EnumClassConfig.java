@@ -5,6 +5,7 @@ import com.werwiz.adapter.out.persistence.mapper.EnumClassMapperValue;
 import com.werwiz.application.port.in.FindCategoryUseCase;
 import com.werwiz.application.port.in.FindLicenseUseCase;
 import com.werwiz.domain.Category;
+import com.werwiz.domain.enums.ConsulEnum;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -32,7 +33,7 @@ public class EnumClassConfig {
 
         enumClassMapper.put("license",licenseEnum);
         enumClassMapper.put("category",categoryEnum);
-
+        enumClassMapper.put("consul", ConsulEnum.class);
         return enumClassMapper;
     }
 

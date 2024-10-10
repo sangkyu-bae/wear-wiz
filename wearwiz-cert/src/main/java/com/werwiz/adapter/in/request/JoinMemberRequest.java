@@ -36,30 +36,10 @@ public class JoinMemberRequest {
 
     private String area;
 
-    private List<License> licenses;
+    private List<LicenseRequest> licenses;
 
-    private List<Category> categories;
+    private List<CategoryRequest> categories;
 
-    @Data
-    @NoArgsConstructor @AllArgsConstructor
-    public static class License{
-        @NotNull
-        private Long licenseId;
-
-        @NotNull
-        private String name;
-    }
-
-    @Data
-    @NoArgsConstructor
-    @AllArgsConstructor
-    public static class Category {
-        @NotNull
-        private Long id;
-
-        @NotNull
-        private String name;
-    }
 }
 
 

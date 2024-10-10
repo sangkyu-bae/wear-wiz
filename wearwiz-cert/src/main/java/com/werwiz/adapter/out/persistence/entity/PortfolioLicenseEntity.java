@@ -30,6 +30,7 @@ public class PortfolioLicenseEntity {
     @ManyToOne(fetch = FetchType.LAZY)
     private LicenseEntity license;
 
+    private boolean isUse;
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
