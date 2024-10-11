@@ -42,3 +42,10 @@ out/
 ./common/build/*
 ./gradle
 ./src
+
+##logfile
+/wearwiz-gateway/build/*
+/wearwiz-cert/userLog*
+
+
+
