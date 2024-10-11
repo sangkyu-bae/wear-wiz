@@ -2,4 +2,5 @@ rootProject.name = 'waerwiz'
 
 include 'common'
 include 'wearwiz-cert'
+include 'wearwiz-gateway'
 
