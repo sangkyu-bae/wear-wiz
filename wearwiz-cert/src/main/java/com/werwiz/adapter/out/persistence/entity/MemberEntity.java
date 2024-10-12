@@ -62,7 +62,7 @@ public class MemberEntity {
             this.addCategory(categoryEntity);
         }
     }
-    private void addCategory(MemberCategoryEntity memberCategoryEntity){
+    public void addCategory(MemberCategoryEntity memberCategoryEntity){
         memberCategoryEntity.setMember(this);
 
         if(category == null){
@@ -70,6 +70,10 @@ public class MemberEntity {
         }
 
         category.add(memberCategoryEntity);
+    }
+
+    public void subtractCategory(MemberCategoryEntity memberCategoryEntity){
+        this.category.remove(memberCategoryEntity);
     }
 
 }

@@ -73,4 +73,8 @@ public class PortfolioEntity {
             this.addLicense(license);
         }
     }
+
+    public void removeLicense(PortfolioLicenseEntity portfolioLicenseEntity){
+        licenseList.remove(portfolioLicenseEntity);
+    }
 }

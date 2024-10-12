@@ -2,9 +2,7 @@ package com.werwiz.adapter.in.web;
 
 import com.wearwiz.common.WebAdapter;
 import com.wearwiz.common.error.ErrorException;
-import com.werwiz.adapter.in.request.JoinMemberRequest;
-import com.werwiz.adapter.in.request.LoginMemberRequest;
-import com.werwiz.adapter.in.request.UpdateMemberRequest;
+import com.werwiz.adapter.in.request.*;
 import com.werwiz.application.port.in.*;
 import com.werwiz.domain.Image;
 import com.werwiz.domain.LoginMember;
@@ -84,9 +82,7 @@ public class MemberController {
 
     @PostMapping("/member/v1/login")
     @Operation(summary = "로그인", description =
-            " JWT 토큰 을 리턴하며, 나온 accessToken, refrshToken을 저장하고 있어야 해요." ,
-            security = {@SecurityRequirement(name = "accessToken")}
-    )
+            " JWT 토큰 을 리턴하며, 나온 accessToken, refrshToken을 저장하고 있어야 해요.")
     public ResponseEntity<LoginMember> login(@RequestBody @Valid LoginMemberRequest loginRequest,
                                              Errors errors,
                                              HttpServletRequest request){
@@ -112,10 +108,58 @@ public class MemberController {
     }
 
     @PatchMapping("/member/v2")
+    @Operation(summary = "회원수정", description =
+            "기본 회원수정 입니다, 로그인한뒤 나온 accessToken 값 입력 실제 API 보낼때는 Header에 실어 보내야해요."
+    )
     public ResponseEntity<Member> updateMember(@RequestBody UpdateMemberRequest updateMemberRequest,
                                                @RequestHeader("userId") Long userId){
         Member updateMember = updateMemberUseCase.updateMember(userId,updateMemberRequest);
-        
-        return ResponseEntity.ok().body(null);
+
+        return ResponseEntity.ok().body(updateMember);
     }
+
+    @PutMapping("/member/v2/category/add")
+    @Operation(summary = "회원수정 (카테고리 추가)",description =
+            "회원의 카테고리를 추가 합니다")
+    public ResponseEntity<Member> addCategoryToMember(@RequestBody CategoryRequest request,
+                                                      @RequestHeader("userId") Long userId){
+        Member addCategoryMember = updateMemberUseCase.addCategory(userId,request);
+
+        return ResponseEntity.ok().body(addCategoryMember);
+    }
+
+    @PutMapping("/member/v2/category/subtract")
+    @Operation(summary = "회원수정 (카테고리 삭제)",description =
+            "회원의 카테고리를 삭제 합니다")
+    public ResponseEntity<Member> subtractCategoryToMember(@RequestBody CategoryRequest request,
+                                                           @RequestHeader("userId") Long userId){
+        Member subtractCategoryMember = updateMemberUseCase.subtractCategory(userId,request);
+
+        return ResponseEntity.ok().body(subtractCategoryMember);
+    }
+
+    @PutMapping("/member/v2/license/add")
+    @Operation(summary = "회원수정 (자격증 추가)",description =
+            "회원의 자격증을 추가 합니다")
+    public ResponseEntity<Member> addLicenseToMember(@RequestBody LicenseRequest request,
+                                                     @RequestHeader("userId") Long userId){
+
+        Member addLicenseMember = updateMemberUseCase.addLicenseMember(userId,request);
+
+        return ResponseEntity.ok().body(addLicenseMember);
+
+    }
+
+    @PutMapping("/member/v2/license/remove")
+    @Operation(summary = "회원수정 (자격증 삭제)",description =
+            "회원의 자격증을 삭제 합니다")
+    public ResponseEntity<Member> removeLicenseToMember(@RequestBody LicenseRequest request,
+                                                     @RequestHeader("userId") Long userId){
+
+        Member addLicenseMember = updateMemberUseCase.subtractLicenseMember(userId,request);
+
+        return ResponseEntity.ok().body(addLicenseMember);
+
+    }
+
 }

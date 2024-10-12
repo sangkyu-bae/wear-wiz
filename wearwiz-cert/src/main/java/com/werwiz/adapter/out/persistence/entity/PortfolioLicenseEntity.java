@@ -54,4 +54,12 @@ public class PortfolioLicenseEntity {
         }
         return id.hashCode();
     }
+
+    public boolean isContain(long licenseId){
+        if(this.license.getLicenseId() == licenseId){
+            return true;
+        }
+
+        return false;
+    }
 }

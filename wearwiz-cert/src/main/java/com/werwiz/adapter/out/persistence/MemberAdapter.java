@@ -16,6 +16,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.time.LocalDateTime;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -30,6 +31,8 @@ public class MemberAdapter implements JoinMemberPort, FindMemberPort, UpdateMemb
     private final PortfolioEntityRepository portfolioEntityRepository;
     private final ModelMapper modelMapper;
     private final PasswordEncoder passwordEncoder;
+
+    private final LicenseEntityRepository licenseEntityRepository;
 
 
     @Override
@@ -88,56 +91,6 @@ public class MemberAdapter implements JoinMemberPort, FindMemberPort, UpdateMemb
         return memberEntity;
     }
 
-//    private PortfolioEntity setPortfolio(Portfolio portfolio,PortfolioEntity entity){
-//
-//        Set<PortfolioLicenseEntity> portfolioLicense = entity.getLicenseList();
-//        Map<Long, Boolean> licenseMap= entity.getLicenseList().stream()
-//                .collect(Collectors.toMap(
-//                        license -> license.getLicense().getLicenseId(),
-//                        license -> false
-//                ));
-//
-//
-//        if(!portfolio.getLicenses().isEmpty()){
-//
-//            for(License license : portfolio.getLicenses()){
-//
-//                if(licenseMap.containsKey(license.getId())){
-//                    licenseMap.put(license.getId(),true);
-//                    continue;
-//                }
-//
-//                LicenseEntity licenseEntity = modelMapper.map(license,LicenseEntity.class);
-//                licenseEntity.setLicenseId(license.getId());
-//
-//                PortfolioLicenseEntity portfolioLicenseEntity = PortfolioLicenseEntity.builder()
-//                        .license(licenseEntity)
-//                        .build();
-//
-//                portfolioLicense.add(portfolioLicenseEntity);
-//            }
-//
-//            for(Long key : licenseMap.keySet()){
-//                boolean isContain = licenseMap.get(key);
-//
-//                if(!isContain){
-//                    portfolioLicense.
-//                }
-//            }
-//        }
-//
-//        if(portfolio.getImages() != null){
-//
-//
-//        }
-//
-//        PortfolioEntity portfolioEntity = PortfolioEntity.builder()
-//                .licenseList(portfolioLicense)
-//                .build();
-//
-//        return portfolioEntity;
-//    }
-
     private PortfolioEntity setPortfolio(Portfolio portfolio){
 
         Set<PortfolioLicenseEntity> portfolioLicense = null;
@@ -187,66 +140,136 @@ public class MemberAdapter implements JoinMemberPort, FindMemberPort, UpdateMemb
             memberEntity.setIntroduce(updateMember.getIntroduce());
         }
 
-//        if(updateMember.getPortfolio() != null){
-//            Portfolio portfolio = updateMember.getPortfolio();
-//
-//            PortfolioEntity portfolioEntity = memberEntity.getPortfolio();
-//
-//            Set<PortfolioLicenseEntity> licenseEntityList = null;
-//            if(portfolio.getLicenses() != null){
-//                licenseEntityList = new HashSet<>();
-//
-//
-//                for(License license : portfolio.getLicenses()){
-//                    LicenseEntity licenseEntity = LicenseEntity.builder()
-//                            .licenseId(license.getId())
-//                            .name(license.getName())
-//                            .build();
-//
-//                    licenseEntityList.add(
-//                            PortfolioLicenseEntity.builder()
-//                                    .isUse(true)
-//                                    .license(licenseEntity)
-//                                    .build()
-//                    );
-//                }
-//
-//
-//            }
-//
-//
-//            Set<ImageEntity> imageEntityList = null;
-//            if(portfolio.getImages() != null){
-//                imageEntityList = new HashSet<>();
-//
-//                imageEntityList = portfolio.getImages().stream()
-//                        .map(image -> new ImageEntity(image.getId(),image.getFilePath(),null))
-//                        .collect(Collectors.toSet());
-//            }
-//
-//            if(portfolioEntity == null){
-//                portfolioEntity = PortfolioEntity.builder()
-//                        .licenseList(licenseEntityList)
-//                        .imageList(imageEntityList)
-//                        .build();
-//
-//                List<PortfolioLicenseEntity> saveLicenseEntity = portfolioLicenseEntityRepository.saveAll(licenseEntityList);
-//                portfolioEntity = portfolioEntityRepository.save(portfolioEntity);
-//
-//                portfolioEntity.addLicense(saveLicenseEntity);
-//                portfolioEntity.addImage(imageEntityList);
-//
-//                memberEntity.setPortfolio(portfolioEntity);
-//
-//                return memberEntityRepository.save(memberEntity);
-//            }
-//
-//            Set<PortfolioLicenseEntity> licenseEntities = portfolioEntity.getLicenseList();
-//            if(licenseEntities != null){
-//
-//            }
-//        }
+        memberEntity.setUpdateAt(LocalDateTime.now());
 
+        return memberEntityRepository.save(memberEntity);
+    }
+
+    @Override
+    public MemberEntity addCategoryToMember(long memberId, Category category) {
+        MemberEntity memberEntity = this.findById(memberId);
+        Set<MemberCategoryEntity> memberCategorys = memberEntity.getCategory();
+
+        if(memberCategorys != null){
+            for(MemberCategoryEntity categoryEntity : memberCategorys){
+                boolean isContain = categoryEntity.isContain(category.getId());
+
+                if(isContain){
+                    return memberEntity;
+                }
+            }
+        }
+
+        CategoryEntity categoryEntity = CategoryEntity.builder()
+                .id(category.getId())
+                .name(category.getName())
+                .build();
+
+        MemberCategoryEntity memberCategoryEntity = MemberCategoryEntity.builder()
+                        .category(categoryEntity)
+                        .build();
+
+        memberCategoryEntity = memberCategoryEntityRepository.save(memberCategoryEntity);
+
+        memberEntity.addCategory(memberCategoryEntity);
+
+        memberEntity.setUpdateAt(LocalDateTime.now());
+        return memberEntityRepository.save(memberEntity);
+    }
+
+    @Override
+    public MemberEntity subtractCategoryToMember(long memberId, Category category) {
+        MemberEntity memberEntity = this.findById(memberId);
+        Set<MemberCategoryEntity> memberCategorys = memberEntity.getCategory();
+
+        if(memberCategorys == null){
+            return memberEntity;
+        }
+
+        boolean isContain = false;
+        for(MemberCategoryEntity categoryEntity : memberCategorys){
+            isContain = categoryEntity.isContain(category.getId());
+
+            if(isContain){
+                memberEntity.subtractCategory(categoryEntity);
+                memberCategoryEntityRepository.delete(categoryEntity);
+                break;
+            }
+        }
+
+        if(isContain){
+            memberEntity.setUpdateAt(LocalDateTime.now());
+            memberEntity = memberEntityRepository.save(memberEntity);
+        }
+        return memberEntity;
+    }
+
+    @Override
+    public MemberEntity addLicenseToMember(long memberId, License license) {
+        MemberEntity memberEntity = this.findById(memberId);
+        PortfolioEntity portfolioEntity = memberEntity.getPortfolio();
+
+        if(portfolioEntity != null){
+            Set<PortfolioLicenseEntity> licenseEntities=   portfolioEntity.getLicenseList();
+
+            if(licenseEntities != null){
+                for(PortfolioLicenseEntity portfolioLicenseEntity : licenseEntities){
+                    boolean isContain = portfolioLicenseEntity.isContain(license.getId());
+
+                    if(isContain){
+                        return memberEntity;
+                    }
+                }
+            }
+        }else {
+            portfolioEntity = PortfolioEntity.builder()
+                  .build();
+        }
+
+
+
+        LicenseEntity licenseEntity =  LicenseEntity.builder()
+                .licenseId(license.getId())
+                .name(license.getName())
+                .build();
+
+        PortfolioLicenseEntity portfolioLicenseEntity = PortfolioLicenseEntity.builder()
+                .license(licenseEntity)
+                .build();
+
+        portfolioLicenseEntityRepository.save(portfolioLicenseEntity);
+
+        portfolioEntity.addLicense(portfolioLicenseEntity);
+        portfolioEntity = portfolioEntityRepository.save(portfolioEntity);
+
+        memberEntity.setPortfolio(portfolioEntity);
+
+        memberEntity.setUpdateAt(LocalDateTime.now());
+        return memberEntityRepository.save(memberEntity);
+    }
+
+    @Override
+    public MemberEntity subtractLicenseToMember(long memberId, License license) {
+        MemberEntity memberEntity = this.findById(memberId);
+        PortfolioEntity portfolioEntity = memberEntity.getPortfolio();
+
+        if(portfolioEntity == null){
+            return memberEntity;
+        }
+
+        Set<PortfolioLicenseEntity> licenseEntities = portfolioEntity.getLicenseList();
+        if(licenseEntities == null){
+            return memberEntity;
+        }
+
+        for(PortfolioLicenseEntity portfolioLicenseEntity : licenseEntities){
+            if(portfolioLicenseEntity.isContain(license.getId())){
+                portfolioEntity.removeLicense(portfolioLicenseEntity);
+                portfolioLicenseEntityRepository.delete(portfolioLicenseEntity);
+            }
+        }
+
+        memberEntity.setUpdateAt(LocalDateTime.now());
         return memberEntityRepository.save(memberEntity);
     }
 }

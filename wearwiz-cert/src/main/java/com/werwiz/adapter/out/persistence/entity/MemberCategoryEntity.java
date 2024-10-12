@@ -55,4 +55,12 @@ public class MemberCategoryEntity {
         return id.hashCode();
     }
 
+    public boolean isContain(long categoryId){
+        if(this.category.getId() == categoryId){
+            return true;
+        }
+
+        return false;
+    }
+
 }
