@@ -66,6 +66,7 @@ public class AuthFilter extends AbstractGatewayFilterFactory<AuthFilter.Config> 
 
             exchange = exchange.mutate()
                     .request(builder -> builder.header("userId", userId))
+                    .request(builder -> builder.header("jwt",jwt))
                     .build();
 
             return chain.filter(exchange);

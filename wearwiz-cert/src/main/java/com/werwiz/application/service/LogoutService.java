@@ -18,7 +18,7 @@ public class LogoutService implements LogoutUseCase {
     private final JwtTokenProvider jwtTokenProvider;
 
     @Value("${redis.refresh}")
-    private int REFRESH;
+    private String REFRESH;
 
     @Override
     public String logout(String token) {

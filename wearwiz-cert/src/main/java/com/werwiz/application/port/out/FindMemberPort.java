@@ -6,5 +6,5 @@ import com.werwiz.domain.Member;
 public interface FindMemberPort {
     MemberEntity findById(long id);
 
-    MemberEntity findByEmailAndPassword(String email, String password );
+    MemberEntity findByEmail(String email);
 }

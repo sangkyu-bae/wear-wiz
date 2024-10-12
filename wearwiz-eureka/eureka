@@ -1,0 +1,113 @@
+2024-10-12 14:24:52.492 INFO  ---- [main      ] [WearwizEurekaApplication:50] logStarting   Starting WearwizEurekaApplication using Java 17.0.12 with PID 26568 (C:\Users\tkdrb\IdeaProjects\waerwiz\wearwiz-eureka\build\classes\java\main started by tkdrb in C:\Users\tkdrb\IdeaProjects\waerwiz\wearwiz-eureka)
+2024-10-12 14:24:52.506 INFO  ---- [main      ] [WearwizEurekaApplication:654] logStartupProfileInfo   No active profile set, falling back to 1 default profile: "default"
+2024-10-12 14:24:54.849 INFO  ---- [main      ] [GenericScope:282] setSerializationId   BeanFactory id=16c71ec9-c1b6-39ca-aca6-546b1679e34d
+2024-10-12 14:24:54.942 WARN  ---- [main      ] [PostProcessorRegistrationDelegate$BeanPostProcessorChecker:429] postProcessAfterInitialization   Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-10-12 14:24:54.949 WARN  ---- [main      ] [PostProcessorRegistrationDelegate$BeanPostProcessorChecker:437] postProcessAfterInitialization   Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-10-12 14:24:55.695 INFO  ---- [main      ] [TomcatWebServer:111] initialize   Tomcat initialized with port 8761 (http)
+2024-10-12 14:24:55.728 INFO  ---- [main      ] [StandardService:173] log   Starting service [Tomcat]
+2024-10-12 14:24:55.729 INFO  ---- [main      ] [StandardEngine:173] log   Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-12 14:24:55.919 INFO  ---- [main      ] [[/]:173] log   Initializing Spring embedded WebApplicationContext
+2024-10-12 14:24:55.920 INFO  ---- [main      ] [ServletWebServerApplicationContext:296] prepareWebApplicationContext   Root WebApplicationContext: initialization completed in 3304 ms
+2024-10-12 14:24:58.360 INFO  ---- [main      ] [DiscoveryJerseyProvider:70] <init>   Using JSON encoding codec LegacyJacksonJson
+2024-10-12 14:24:58.364 INFO  ---- [main      ] [DiscoveryJerseyProvider:71] <init>   Using JSON decoding codec LegacyJacksonJson
+2024-10-12 14:24:59.056 INFO  ---- [main      ] [DiscoveryJerseyProvider:80] <init>   Using XML encoding codec XStreamXml
+2024-10-12 14:24:59.057 INFO  ---- [main      ] [DiscoveryJerseyProvider:81] <init>   Using XML decoding codec XStreamXml
+2024-10-12 14:25:03.959 WARN  ---- [main      ] [LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger:94] afterPropertiesSet   Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2024-10-12 14:25:04.044 INFO  ---- [main      ] [InstanceInfoFactory:67] create   Setting initial instance status as: STARTING
+2024-10-12 14:25:04.130 INFO  ---- [main      ] [DiscoveryClient:329] <init>   Initializing Eureka in region us-east-1
+2024-10-12 14:25:04.132 INFO  ---- [main      ] [DiscoveryClient:332] <init>   Client configured to neither register nor query for data.
+2024-10-12 14:25:04.140 INFO  ---- [main      ] [DiscoveryClient:347] <init>   Discovery Client initialized at timestamp 1728710704137 with initial instances count: 0
+2024-10-12 14:25:04.264 INFO  ---- [main      ] [DefaultEurekaServerContext:64] initialize   Initializing ...
+2024-10-12 14:25:04.269 INFO  ---- [main      ] [PeerEurekaNodes:186] updatePeerEurekaNodes   Adding new peer nodes [http://localhost:8761/eureka/]
+2024-10-12 14:25:04.715 INFO  ---- [main      ] [DiscoveryJerseyProvider:70] <init>   Using JSON encoding codec LegacyJacksonJson
+2024-10-12 14:25:04.716 INFO  ---- [main      ] [DiscoveryJerseyProvider:71] <init>   Using JSON decoding codec LegacyJacksonJson
+2024-10-12 14:25:04.716 INFO  ---- [main      ] [DiscoveryJerseyProvider:80] <init>   Using XML encoding codec XStreamXml
+2024-10-12 14:25:04.716 INFO  ---- [main      ] [DiscoveryJerseyProvider:81] <init>   Using XML decoding codec XStreamXml
+2024-10-12 14:25:04.843 INFO  ---- [main      ] [PeerEurekaNodes:108] start   Replica node URL:  http://localhost:8761/eureka/
+2024-10-12 14:25:04.870 INFO  ---- [main      ] [AbstractInstanceRegistry:164] initRemoteRegionRegistry   Finished initializing remote region registries. All known remote regions: []
+2024-10-12 14:25:04.871 INFO  ---- [main      ] [DefaultEurekaServerContext:71] initialize   Initialized
+2024-10-12 14:25:04.887 INFO  ---- [main      ] [EndpointLinksResolver:60] <init>   Exposing 1 endpoint beneath base path '/actuator'
+2024-10-12 14:25:04.999 INFO  ---- [main      ] [EurekaServiceRegistry:70] register   Registering application WEARWIZ-EUREKA with eureka with status UP
+2024-10-12 14:25:05.059 INFO  ---- [Thread-9  ] [EurekaServerBootstrap:142] isAws   isAws returned false
+2024-10-12 14:25:05.060 INFO  ---- [Thread-9  ] [EurekaServerBootstrap:108] initEurekaServerContext   Initialized server context
+2024-10-12 14:25:05.061 INFO  ---- [Thread-9  ] [PeerAwareInstanceRegistryImpl:245] openForTraffic   Got 1 instances from neighboring DS node
+2024-10-12 14:25:05.061 INFO  ---- [Thread-9  ] [PeerAwareInstanceRegistryImpl:246] openForTraffic   Renew threshold is: 1
+2024-10-12 14:25:05.062 INFO  ---- [Thread-9  ] [PeerAwareInstanceRegistryImpl:257] openForTraffic   Changing status to UP
+2024-10-12 14:25:05.070 INFO  ---- [Thread-9  ] [EurekaServerInitializerConfiguration:68] lambda$start$0   Started Eureka Server
+2024-10-12 14:25:05.075 INFO  ---- [main      ] [TomcatWebServer:243] start   Tomcat started on port 8761 (http) with context path '/'
+2024-10-12 14:25:05.077 INFO  ---- [main      ] [EurekaAutoServiceRegistration:150] onApplicationEvent   Updating port to 8761
+2024-10-12 14:25:06.155 INFO  ---- [main      ] [WearwizEurekaApplication:56] logStarted   Started WearwizEurekaApplication in 16.084 seconds (process running for 17.435)
+2024-10-12 14:25:15.181 INFO  ---- [761-exec-1] [[/]:173] log   Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-12 14:25:15.183 INFO  ---- [761-exec-1] [DispatcherServlet:532] initServletBean   Initializing Servlet 'dispatcherServlet'
+2024-10-12 14:25:15.194 INFO  ---- [761-exec-1] [DispatcherServlet:554] initServletBean   Completed initialization in 10 ms
+2024-10-12 14:25:15.845 INFO  ---- [761-exec-2] [AbstractInstanceRegistry:277] register   Registered instance WEARWIZ-API-GATEWAY/192.168.0.109:8080 with status UP (replication=false)
+2024-10-12 14:25:16.769 INFO  ---- [761-exec-5] [AbstractInstanceRegistry:277] register   Registered instance WEARWIZ-API-GATEWAY/192.168.0.109:8080 with status UP (replication=true)
+2024-10-12 14:26:05.065 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
+2024-10-12 14:26:41.883 INFO  ---- [761-exec-1] [AbstractInstanceRegistry:277] register   Registered instance CERT-SERVICE/192.168.0.109:b47beddb74f73e4f9535806aef6cacc3 with status UP (replication=false)
+2024-10-12 14:26:42.410 INFO  ---- [761-exec-2] [AbstractInstanceRegistry:277] register   Registered instance CERT-SERVICE/192.168.0.109:b47beddb74f73e4f9535806aef6cacc3 with status UP (replication=true)
+2024-10-12 14:27:05.066 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
+2024-10-12 14:28:05.067 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
+2024-10-12 14:29:05.067 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
+2024-10-12 14:30:05.075 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 7ms
+2024-10-12 14:31:05.075 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
+2024-10-12 14:32:05.075 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
+2024-10-12 14:33:05.075 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
+2024-10-12 14:34:05.076 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
+2024-10-12 14:35:05.077 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 1ms
+2024-10-12 14:36:05.077 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
+2024-10-12 14:37:05.077 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
+2024-10-12 14:38:05.078 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
+2024-10-12 14:39:05.079 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 1ms
+2024-10-12 14:40:04.869 INFO  ---- [oldUpdater] [PeerAwareInstanceRegistryImpl:550] updateRenewalThreshold   Current renewal threshold is : 5
+2024-10-12 14:40:05.079 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
+2024-10-12 14:41:05.079 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
+2024-10-12 14:42:05.087 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 6ms
+2024-10-12 14:43:05.087 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
+2024-10-12 14:44:05.088 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
+2024-10-12 14:45:05.089 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
+2024-10-12 14:45:27.878 INFO  ---- [761-exec-3] [AbstractInstanceRegistry:277] register   Registered instance CERT-SERVICE/192.168.0.109:8081 with status UP (replication=false)
+2024-10-12 14:45:28.394 INFO  ---- [761-exec-4] [AbstractInstanceRegistry:277] register   Registered instance CERT-SERVICE/192.168.0.109:8081 with status UP (replication=true)
+2024-10-12 14:46:05.089 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
+2024-10-12 14:47:05.089 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
+2024-10-12 14:47:05.090 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:629] evict   Evicting 1 items (expired=1, evictionLimit=1)
+2024-10-12 14:47:05.090 WARN  ---- [ctionTimer] [AbstractInstanceRegistry:641] evict   DS: Registry: expired lease for CERT-SERVICE/192.168.0.109:b47beddb74f73e4f9535806aef6cacc3
+2024-10-12 14:47:05.091 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:339] internalCancel   Cancelled instance CERT-SERVICE/192.168.0.109:b47beddb74f73e4f9535806aef6cacc3 (replication=false)
+2024-10-12 14:48:05.090 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
+2024-10-12 14:49:05.090 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
+2024-10-12 14:50:05.091 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
+2024-10-12 14:51:05.092 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
+2024-10-12 14:52:05.093 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
+2024-10-12 14:53:05.094 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 1ms
+2024-10-12 14:54:05.094 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
+2024-10-12 14:55:04.869 INFO  ---- [oldUpdater] [PeerAwareInstanceRegistryImpl:550] updateRenewalThreshold   Current renewal threshold is : 5
+2024-10-12 14:55:05.095 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
+2024-10-12 14:56:05.096 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 1ms
+2024-10-12 14:57:05.096 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
+2024-10-12 14:58:05.097 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
+2024-10-12 14:59:05.132 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 35ms
+2024-10-12 15:00:05.133 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
+2024-10-12 15:01:05.134 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 1ms
+2024-10-12 15:02:05.134 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
+2024-10-12 15:03:05.135 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
+2024-10-12 15:04:05.135 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
+2024-10-12 15:05:05.135 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
+2024-10-12 15:06:05.136 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
+2024-10-12 15:07:05.138 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 2ms
+2024-10-12 15:08:05.138 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
+2024-10-12 15:09:05.138 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
+2024-10-12 15:10:04.870 INFO  ---- [oldUpdater] [PeerAwareInstanceRegistryImpl:550] updateRenewalThreshold   Current renewal threshold is : 5
+2024-10-12 15:10:05.138 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
+2024-10-12 15:11:05.138 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
+2024-10-12 15:13:46.078 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 100939ms
+2024-10-12 15:14:46.078 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
+2024-10-12 15:15:46.078 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
+2024-10-12 15:16:46.079 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
+2024-10-12 15:17:46.081 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 2ms
+2024-10-12 15:18:46.081 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
+2024-10-12 15:19:46.082 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
+2024-10-12 15:20:46.083 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 1ms
+2024-10-12 15:21:46.084 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 1ms
+2024-10-12 15:22:46.084 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
+2024-10-12 15:23:46.084 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
+2024-10-12 15:24:46.085 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
+2024-10-12 15:25:46.086 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 1ms

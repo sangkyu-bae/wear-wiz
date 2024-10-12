@@ -1,6 +1,9 @@
+server:
+  port: 8080
+
 spring:
   application:
-    name: api-gateway
+    name: wearwiz-api-gateway
   cloud:
     gateway:
       default-filters:
@@ -10,7 +13,8 @@ spring:
         cors-configurations:
           '[/**]':
             allowedOrigins: '*'
-            allow-credentials: true
+#            allow-credentials: true
+            allow-credentials: false
             allowedHeaders: '*'
             allowedMethods:
               - PATCH
@@ -23,11 +27,11 @@ spring:
         - id: cert-service
           uri: lb://cert-service
           predicates:
-            - Path=/user/v1/**
+            - Path=/member/v1/**
         - id: cert-service-cert
           uri: lb://cert-service
           predicates:
-            - Path=/user/v2/**
+            - Path=/member/v2/**
           filters:
             - AuthFilter
 management:
@@ -60,3 +64,9 @@ redis:
 token:
   secret: eyJhbGciOiJIUzI1NiJ9.aGVsbG8gd29ybGQ.-aGmFI1PnL6hrGpVCapG31O5FZKeo6K-w09wY-GIh8o
 
+eureka:
+  instance:
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+  client:
+    service-url:
+      defaultZone: http://0.0.0.0:8761/eureka

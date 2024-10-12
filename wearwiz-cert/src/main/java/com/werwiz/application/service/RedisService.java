@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit;
 public class RedisService {
 
     @Value("${redis.refresh}")
-    private int REFRESH;
+    private String REFRESH;
     private final RedisTemplate<String,Object> redisTemplate;
 
 

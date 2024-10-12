@@ -1,6 +1,7 @@
 
 server:
-  port: 8080
+#  port: 0
+  port: 8081
 redis:
   port: 6379
   host: localhost
@@ -56,50 +57,13 @@ token:
 
 
 ## 유레카 설정
-#eureka:
-#  instance:
+eureka:
+  instance:
 #    instance-id: ${spring.cloud.client.ip-address}:${random.value}
-#  client:
-#    service-url:
-#      defaultZone: http://127.0.0.1:8761/eureka
-##eureka:
-##  client:
-##    register-with-eureka: true
-##    fetch-registry: true
-##    service-url:
-##      defaultZone: http://localhost:8761/eureka/
-#
-#app:
-#  bootstrapServer: localhost:9092
-#  orderTopic : order
-#  consumerProduct: update-product
-#  sendProduct : request-product
-#  createOrder: create-order
-#  memberTopic : task-member
-#  removeOrderTopic: remove-order-product
-#  removeRollbackTopic: rollback-remove-order
-#kafka:
-#  notification:
-#    topic:notification
-#  order :
-#    remove :
-#      topic : member.check.remove.order
-#      group : member.check.remove.order.v1
-#  member:
-#    task :
-#      group : member.check.v1
-#      topic: member-check
-####################
-## Axon config #####
-####################
-#axon:
-#  serializer:
-#    general: xstream
-#    events: jackson
-#    messages: jackson
-#  axonserver:
-#    servers: 127.0.0.1:8124
-
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+  client:
+    service-url:
+      defaultZone: http://0.0.0.0:8761/eureka
 
 
 

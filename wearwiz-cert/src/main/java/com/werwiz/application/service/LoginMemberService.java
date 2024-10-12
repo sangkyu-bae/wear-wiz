@@ -12,6 +12,7 @@ import com.werwiz.infra.jwt.JwtTokenProvider;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Date;
@@ -29,13 +30,19 @@ public class LoginMemberService implements LoginMemberUseCase {
 
     private final RedisService redisService;
 
+    private final PasswordEncoder passwordEncoder;
+
     @Override
     @Transactional
     public LoginMember login(LoginMemberRequest loginRequest,HttpServletRequest request) {
 
-        MemberEntity member = findMemberPort.findByEmailAndPassword(loginRequest.getLoginEmail(),loginRequest.getPassword());
+        MemberEntity member = findMemberPort.findByEmail(loginRequest.getLoginEmail());
 
         if(member == null){
+            throw new ErrorException(MemberError.MEMBER_NOT_FOUND,"LoginService - login");
+        }
+
+        if(!passwordEncoder.matches(loginRequest.getPassword(), member.getPassword())){
             throw new ErrorException(MemberError.MEMBER_NOT_FOUND,"LoginService - login");
         }
 

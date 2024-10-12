@@ -49,3 +49,6 @@ out/
 /wearwiz-cert/userLog
 /wearwiz-gateway/gradle/wrapper/gradle-wrapper.jar
 
+/wearwiz-eureka/build/*
+/wearwiz-eureka/userLog
+/wearwiz-eureka/gradle/wrapper/gradle-wrapper.jar

@@ -171,9 +171,8 @@ public class MemberAdapter implements JoinMemberPort, FindMemberPort, UpdateMemb
     }
 
     @Override
-    public MemberEntity findByEmailAndPassword(String email, String password) {
-        password = passwordEncoder.encode(password);
-        return memberEntityRepository.findByEmailAndPassword(email,password);
+    public MemberEntity findByEmail(String email) {
+        return memberEntityRepository.findByEmail(email);
     }
 
     @Override
