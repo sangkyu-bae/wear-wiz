@@ -50,12 +50,12 @@ public class RegisterImgService implements RegisterImgUseCase {
                continue;
             }
 
-            images.add(Image.createImage(null, multipartFile.getName()));
+            images.add(Image.createImage(null, multipartFile.getOriginalFilename()));
         }
 
         List<Image> registerImage = new ArrayList<>();
         for(Image image : images){
-            ImageEntity registerImgEntity = uploadImagePort.uploadImage(image,member.getPortfolio());
+            ImageEntity registerImgEntity = uploadImagePort.uploadImage(image,member);
             registerImage.add(imageMapper.mapToDomain(registerImgEntity));
         }
 

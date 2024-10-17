@@ -1,96 +1,281 @@
-2024-10-12 14:25:03.905 INFO  ---- [main      ] [WearwizGatewayApplication:50] logStarting   Starting WearwizGatewayApplication using Java 17.0.12 with PID 22028 (C:\Users\tkdrb\IdeaProjects\waerwiz\wearwiz-gateway\build\classes\java\main started by tkdrb in C:\Users\tkdrb\IdeaProjects\waerwiz\wearwiz-gateway)
-2024-10-12 14:25:03.924 INFO  ---- [main      ] [WearwizGatewayApplication:654] logStartupProfileInfo   No active profile set, falling back to 1 default profile: "default"
-2024-10-12 14:25:05.278 INFO  ---- [main      ] [RepositoryConfigurationDelegate:295] multipleStoresDetected   Multiple Spring Data modules found, entering strict repository configuration mode
-2024-10-12 14:25:05.280 INFO  ---- [main      ] [RepositoryConfigurationDelegate:143] registerRepositoriesIn   Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2024-10-12 14:25:05.331 INFO  ---- [main      ] [RepositoryConfigurationDelegate:211] registerRepositoriesIn   Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
-2024-10-12 14:25:05.877 INFO  ---- [main      ] [RepositoryConfigurationDelegate:295] multipleStoresDetected   Multiple Spring Data modules found, entering strict repository configuration mode
-2024-10-12 14:25:05.880 INFO  ---- [main      ] [RepositoryConfigurationDelegate:143] registerRepositoriesIn   Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2024-10-12 14:25:05.913 INFO  ---- [main      ] [RepositoryConfigurationDelegate:211] registerRepositoriesIn   Finished Spring Data repository scanning in 32 ms. Found 0 Redis repository interfaces.
-2024-10-12 14:25:06.529 INFO  ---- [main      ] [GenericScope:282] setSerializationId   BeanFactory id=41169cce-d464-39f4-a597-a8ad4a92454c
-2024-10-12 14:25:06.662 WARN  ---- [main      ] [PostProcessorRegistrationDelegate$BeanPostProcessorChecker:429] postProcessAfterInitialization   Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
-2024-10-12 14:25:06.667 WARN  ---- [main      ] [PostProcessorRegistrationDelegate$BeanPostProcessorChecker:437] postProcessAfterInitialization   Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
-2024-10-12 14:25:06.670 WARN  ---- [main      ] [PostProcessorRegistrationDelegate$BeanPostProcessorChecker:429] postProcessAfterInitialization   Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
-2024-10-12 14:25:06.671 WARN  ---- [main      ] [PostProcessorRegistrationDelegate$BeanPostProcessorChecker:437] postProcessAfterInitialization   Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
-2024-10-12 14:25:06.675 WARN  ---- [main      ] [PostProcessorRegistrationDelegate$BeanPostProcessorChecker:437] postProcessAfterInitialization   Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
-2024-10-12 14:25:10.810 INFO  ---- [main      ] [RouteDefinitionRouteLocator:89] lambda$initFactories$1   Loaded RoutePredicateFactory [After]
-2024-10-12 14:25:10.811 INFO  ---- [main      ] [RouteDefinitionRouteLocator:89] lambda$initFactories$1   Loaded RoutePredicateFactory [Before]
-2024-10-12 14:25:10.811 INFO  ---- [main      ] [RouteDefinitionRouteLocator:89] lambda$initFactories$1   Loaded RoutePredicateFactory [Between]
-2024-10-12 14:25:10.812 INFO  ---- [main      ] [RouteDefinitionRouteLocator:89] lambda$initFactories$1   Loaded RoutePredicateFactory [Cookie]
-2024-10-12 14:25:10.812 INFO  ---- [main      ] [RouteDefinitionRouteLocator:89] lambda$initFactories$1   Loaded RoutePredicateFactory [Header]
-2024-10-12 14:25:10.813 INFO  ---- [main      ] [RouteDefinitionRouteLocator:89] lambda$initFactories$1   Loaded RoutePredicateFactory [Host]
-2024-10-12 14:25:10.813 INFO  ---- [main      ] [RouteDefinitionRouteLocator:89] lambda$initFactories$1   Loaded RoutePredicateFactory [Method]
-2024-10-12 14:25:10.813 INFO  ---- [main      ] [RouteDefinitionRouteLocator:89] lambda$initFactories$1   Loaded RoutePredicateFactory [Path]
-2024-10-12 14:25:10.813 INFO  ---- [main      ] [RouteDefinitionRouteLocator:89] lambda$initFactories$1   Loaded RoutePredicateFactory [Query]
-2024-10-12 14:25:10.814 INFO  ---- [main      ] [RouteDefinitionRouteLocator:89] lambda$initFactories$1   Loaded RoutePredicateFactory [ReadBody]
-2024-10-12 14:25:10.814 INFO  ---- [main      ] [RouteDefinitionRouteLocator:89] lambda$initFactories$1   Loaded RoutePredicateFactory [RemoteAddr]
-2024-10-12 14:25:10.814 INFO  ---- [main      ] [RouteDefinitionRouteLocator:89] lambda$initFactories$1   Loaded RoutePredicateFactory [XForwardedRemoteAddr]
-2024-10-12 14:25:10.815 INFO  ---- [main      ] [RouteDefinitionRouteLocator:89] lambda$initFactories$1   Loaded RoutePredicateFactory [Weight]
-2024-10-12 14:25:10.816 INFO  ---- [main      ] [RouteDefinitionRouteLocator:89] lambda$initFactories$1   Loaded RoutePredicateFactory [CloudFoundryRouteService]
-2024-10-12 14:25:12.691 INFO  ---- [main      ] [DiscoveryClientOptionalArgsConfiguration:80] restTemplateDiscoveryClientOptionalArgs   Eureka HTTP Client uses RestTemplate.
-2024-10-12 14:25:13.418 WARN  ---- [main      ] [LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger:94] afterPropertiesSet   Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2024-10-12 14:25:13.486 INFO  ---- [main      ] [InstanceInfoFactory:67] create   Setting initial instance status as: STARTING
-2024-10-12 14:25:13.544 INFO  ---- [main      ] [DiscoveryClient:329] <init>   Initializing Eureka in region us-east-1
-2024-10-12 14:25:13.553 INFO  ---- [main      ] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
-2024-10-12 14:25:13.621 INFO  ---- [main      ] [DiscoveryClient:954] fetchRegistry   Disable delta property : false
-2024-10-12 14:25:13.622 INFO  ---- [main      ] [DiscoveryClient:955] fetchRegistry   Single vip registry refresh property : null
-2024-10-12 14:25:13.623 INFO  ---- [main      ] [DiscoveryClient:956] fetchRegistry   Force full registry fetch : false
-2024-10-12 14:25:13.623 INFO  ---- [main      ] [DiscoveryClient:957] fetchRegistry   Application is null : false
-2024-10-12 14:25:13.623 INFO  ---- [main      ] [DiscoveryClient:958] fetchRegistry   Registered Applications size is zero : true
-2024-10-12 14:25:13.624 INFO  ---- [main      ] [DiscoveryClient:960] fetchRegistry   Application version is -1: true
-2024-10-12 14:25:13.625 INFO  ---- [main      ] [DiscoveryClient:1042] getAndStoreFullRegistry   Getting all instance registry info from the eureka server
-2024-10-12 14:25:15.501 INFO  ---- [main      ] [DiscoveryClient:1051] getAndStoreFullRegistry   The response status is 200
-2024-10-12 14:25:15.513 INFO  ---- [main      ] [DiscoveryClient:1266] initScheduledTasks   Starting heartbeat executor: renew interval is: 30
-2024-10-12 14:25:15.516 INFO  ---- [main      ] [InstanceInfoReplicator:64] <init>   InstanceInfoReplicator onDemand update allowed rate per min is 4
-2024-10-12 14:25:15.523 INFO  ---- [main      ] [DiscoveryClient:455] <init>   Discovery Client initialized at timestamp 1728710715521 with initial instances count: 0
-2024-10-12 14:25:15.528 INFO  ---- [main      ] [EurekaServiceRegistry:70] register   Registering application WEARWIZ-API-GATEWAY with eureka with status UP
-2024-10-12 14:25:15.530 INFO  ---- [main      ] [DiscoveryClient:1297] notify   Saw local status change event StatusChangeEvent [timestamp=1728710715530, current=UP, previous=STARTING]
-2024-10-12 14:25:15.532 INFO  ---- [licator-%d] [DiscoveryClient:825] register   DiscoveryClient_WEARWIZ-API-GATEWAY/192.168.0.109:8080: registering service...
-2024-10-12 14:25:15.869 INFO  ---- [licator-%d] [DiscoveryClient:834] register   DiscoveryClient_WEARWIZ-API-GATEWAY/192.168.0.109:8080 - registration status: 204
-2024-10-12 14:25:16.111 INFO  ---- [main      ] [NettyWebServer:141] start   Netty started on port 8080 (http)
-2024-10-12 14:25:16.116 INFO  ---- [main      ] [EurekaAutoServiceRegistration:150] onApplicationEvent   Updating port to 8080
-2024-10-12 14:25:17.713 INFO  ---- [main      ] [WearwizGatewayApplication:56] logStarted   Started WearwizGatewayApplication in 15.592 seconds (process running for 16.621)
-2024-10-12 14:25:45.527 INFO  ---- [xecutor-%d] [DiscoveryClient:954] fetchRegistry   Disable delta property : false
-2024-10-12 14:25:45.528 INFO  ---- [xecutor-%d] [DiscoveryClient:955] fetchRegistry   Single vip registry refresh property : null
-2024-10-12 14:25:45.529 INFO  ---- [xecutor-%d] [DiscoveryClient:956] fetchRegistry   Force full registry fetch : false
-2024-10-12 14:25:45.530 INFO  ---- [xecutor-%d] [DiscoveryClient:957] fetchRegistry   Application is null : false
-2024-10-12 14:25:45.531 INFO  ---- [xecutor-%d] [DiscoveryClient:958] fetchRegistry   Registered Applications size is zero : true
-2024-10-12 14:25:45.532 INFO  ---- [xecutor-%d] [DiscoveryClient:960] fetchRegistry   Application version is -1: false
-2024-10-12 14:25:45.532 INFO  ---- [xecutor-%d] [DiscoveryClient:1042] getAndStoreFullRegistry   Getting all instance registry info from the eureka server
-2024-10-12 14:25:45.576 INFO  ---- [xecutor-%d] [DiscoveryClient:1051] getAndStoreFullRegistry   The response status is 200
-2024-10-12 14:30:13.641 INFO  ---- [xecutor-%d] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
-2024-10-12 14:35:13.652 INFO  ---- [xecutor-%d] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
-2024-10-12 14:40:13.700 INFO  ---- [xecutor-%d] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
-2024-10-12 14:45:13.702 INFO  ---- [xecutor-%d] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
-2024-10-12 14:50:13.710 INFO  ---- [xecutor-%d] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
-2024-10-12 14:55:13.724 INFO  ---- [xecutor-%d] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
-2024-10-12 15:00:13.731 INFO  ---- [xecutor-%d] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
-2024-10-12 15:05:13.737 INFO  ---- [xecutor-%d] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
-2024-10-12 15:10:13.751 INFO  ---- [xecutor-%d] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
-2024-10-12 15:16:54.699 INFO  ---- [xecutor-%d] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
-2024-10-12 15:21:54.703 INFO  ---- [xecutor-%d] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
-2024-10-12 15:26:54.707 INFO  ---- [xecutor-%d] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
-2024-10-12 15:31:54.714 INFO  ---- [xecutor-%d] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
-2024-10-12 15:36:54.726 INFO  ---- [xecutor-%d] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
-2024-10-12 15:41:54.736 INFO  ---- [xecutor-%d] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
-2024-10-12 15:46:54.739 INFO  ---- [xecutor-%d] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
-2024-10-12 15:51:54.740 INFO  ---- [xecutor-%d] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
-2024-10-12 15:56:54.744 INFO  ---- [xecutor-%d] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
-2024-10-12 16:01:54.758 INFO  ---- [xecutor-%d] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
-2024-10-12 16:06:54.774 INFO  ---- [xecutor-%d] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
-2024-10-12 16:11:54.789 INFO  ---- [xecutor-%d] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
-2024-10-12 16:16:54.792 INFO  ---- [xecutor-%d] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
-2024-10-12 16:21:54.798 INFO  ---- [xecutor-%d] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
-2024-10-12 16:26:54.820 INFO  ---- [xecutor-%d] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
-2024-10-12 16:31:54.823 INFO  ---- [xecutor-%d] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
-2024-10-12 16:36:54.829 INFO  ---- [xecutor-%d] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
-2024-10-12 16:41:54.834 INFO  ---- [xecutor-%d] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
-2024-10-12 16:46:54.842 INFO  ---- [xecutor-%d] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
-2024-10-12 16:51:54.856 INFO  ---- [xecutor-%d] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
-2024-10-12 16:56:54.872 INFO  ---- [xecutor-%d] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
-2024-10-12 17:01:54.887 INFO  ---- [xecutor-%d] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
-2024-10-12 17:10:51.129 INFO  ---- [xecutor-%d] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
-2024-10-12 17:15:51.136 INFO  ---- [xecutor-%d] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
-2024-10-12 17:20:51.139 INFO  ---- [xecutor-%d] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
-2024-10-12 17:25:51.156 INFO  ---- [xecutor-%d] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
-2024-10-12 17:30:51.164 INFO  ---- [xecutor-%d] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
-2024-10-12 17:35:51.190 INFO  ---- [xecutor-%d] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
+2024-10-15 15:07:53.065 INFO  ---- [main      ] [WearwizGatewayApplication:50] logStarting   Starting WearwizGatewayApplication using Java 17.0.12 with PID 31116 (C:\Users\tkdrb\IdeaProjects\waerwiz\wearwiz-gateway\build\classes\java\main started by tkdrb in C:\Users\tkdrb\IdeaProjects\waerwiz\wearwiz-gateway)
+2024-10-15 15:07:53.078 INFO  ---- [main      ] [WearwizGatewayApplication:654] logStartupProfileInfo   No active profile set, falling back to 1 default profile: "default"
+2024-10-15 15:07:54.201 INFO  ---- [main      ] [RepositoryConfigurationDelegate:295] multipleStoresDetected   Multiple Spring Data modules found, entering strict repository configuration mode
+2024-10-15 15:07:54.203 INFO  ---- [main      ] [RepositoryConfigurationDelegate:143] registerRepositoriesIn   Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-10-15 15:07:54.264 INFO  ---- [main      ] [RepositoryConfigurationDelegate:211] registerRepositoriesIn   Finished Spring Data repository scanning in 16 ms. Found 0 Redis repository interfaces.
+2024-10-15 15:07:54.811 INFO  ---- [main      ] [RepositoryConfigurationDelegate:295] multipleStoresDetected   Multiple Spring Data modules found, entering strict repository configuration mode
+2024-10-15 15:07:54.812 INFO  ---- [main      ] [RepositoryConfigurationDelegate:143] registerRepositoriesIn   Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-10-15 15:07:54.832 INFO  ---- [main      ] [RepositoryConfigurationDelegate:211] registerRepositoriesIn   Finished Spring Data repository scanning in 19 ms. Found 0 Redis repository interfaces.
+2024-10-15 15:07:55.283 INFO  ---- [main      ] [GenericScope:282] setSerializationId   BeanFactory id=41169cce-d464-39f4-a597-a8ad4a92454c
+2024-10-15 15:07:55.471 WARN  ---- [main      ] [PostProcessorRegistrationDelegate$BeanPostProcessorChecker:429] postProcessAfterInitialization   Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-10-15 15:07:55.477 WARN  ---- [main      ] [PostProcessorRegistrationDelegate$BeanPostProcessorChecker:437] postProcessAfterInitialization   Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-10-15 15:07:55.508 WARN  ---- [main      ] [PostProcessorRegistrationDelegate$BeanPostProcessorChecker:429] postProcessAfterInitialization   Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-10-15 15:07:55.511 WARN  ---- [main      ] [PostProcessorRegistrationDelegate$BeanPostProcessorChecker:437] postProcessAfterInitialization   Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-10-15 15:07:55.515 WARN  ---- [main      ] [PostProcessorRegistrationDelegate$BeanPostProcessorChecker:437] postProcessAfterInitialization   Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-10-15 15:07:59.041 INFO  ---- [main      ] [RouteDefinitionRouteLocator:89] lambda$initFactories$1   Loaded RoutePredicateFactory [After]
+2024-10-15 15:07:59.042 INFO  ---- [main      ] [RouteDefinitionRouteLocator:89] lambda$initFactories$1   Loaded RoutePredicateFactory [Before]
+2024-10-15 15:07:59.042 INFO  ---- [main      ] [RouteDefinitionRouteLocator:89] lambda$initFactories$1   Loaded RoutePredicateFactory [Between]
+2024-10-15 15:07:59.043 INFO  ---- [main      ] [RouteDefinitionRouteLocator:89] lambda$initFactories$1   Loaded RoutePredicateFactory [Cookie]
+2024-10-15 15:07:59.043 INFO  ---- [main      ] [RouteDefinitionRouteLocator:89] lambda$initFactories$1   Loaded RoutePredicateFactory [Header]
+2024-10-15 15:07:59.044 INFO  ---- [main      ] [RouteDefinitionRouteLocator:89] lambda$initFactories$1   Loaded RoutePredicateFactory [Host]
+2024-10-15 15:07:59.044 INFO  ---- [main      ] [RouteDefinitionRouteLocator:89] lambda$initFactories$1   Loaded RoutePredicateFactory [Method]
+2024-10-15 15:07:59.044 INFO  ---- [main      ] [RouteDefinitionRouteLocator:89] lambda$initFactories$1   Loaded RoutePredicateFactory [Path]
+2024-10-15 15:07:59.044 INFO  ---- [main      ] [RouteDefinitionRouteLocator:89] lambda$initFactories$1   Loaded RoutePredicateFactory [Query]
+2024-10-15 15:07:59.044 INFO  ---- [main      ] [RouteDefinitionRouteLocator:89] lambda$initFactories$1   Loaded RoutePredicateFactory [ReadBody]
+2024-10-15 15:07:59.044 INFO  ---- [main      ] [RouteDefinitionRouteLocator:89] lambda$initFactories$1   Loaded RoutePredicateFactory [RemoteAddr]
+2024-10-15 15:07:59.045 INFO  ---- [main      ] [RouteDefinitionRouteLocator:89] lambda$initFactories$1   Loaded RoutePredicateFactory [XForwardedRemoteAddr]
+2024-10-15 15:07:59.045 INFO  ---- [main      ] [RouteDefinitionRouteLocator:89] lambda$initFactories$1   Loaded RoutePredicateFactory [Weight]
+2024-10-15 15:07:59.046 INFO  ---- [main      ] [RouteDefinitionRouteLocator:89] lambda$initFactories$1   Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2024-10-15 15:08:00.151 INFO  ---- [main      ] [DiscoveryClientOptionalArgsConfiguration:80] restTemplateDiscoveryClientOptionalArgs   Eureka HTTP Client uses RestTemplate.
+2024-10-15 15:08:00.747 WARN  ---- [main      ] [LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger:94] afterPropertiesSet   Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2024-10-15 15:08:00.933 INFO  ---- [main      ] [InstanceInfoFactory:67] create   Setting initial instance status as: STARTING
+2024-10-15 15:08:01.026 INFO  ---- [main      ] [DiscoveryClient:329] <init>   Initializing Eureka in region us-east-1
+2024-10-15 15:08:01.038 INFO  ---- [main      ] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
+2024-10-15 15:08:01.058 INFO  ---- [main      ] [DiscoveryClient:954] fetchRegistry   Disable delta property : false
+2024-10-15 15:08:01.060 INFO  ---- [main      ] [DiscoveryClient:955] fetchRegistry   Single vip registry refresh property : null
+2024-10-15 15:08:01.060 INFO  ---- [main      ] [DiscoveryClient:956] fetchRegistry   Force full registry fetch : false
+2024-10-15 15:08:01.060 INFO  ---- [main      ] [DiscoveryClient:957] fetchRegistry   Application is null : false
+2024-10-15 15:08:01.061 INFO  ---- [main      ] [DiscoveryClient:958] fetchRegistry   Registered Applications size is zero : true
+2024-10-15 15:08:01.061 INFO  ---- [main      ] [DiscoveryClient:960] fetchRegistry   Application version is -1: true
+2024-10-15 15:08:01.062 INFO  ---- [main      ] [DiscoveryClient:1042] getAndStoreFullRegistry   Getting all instance registry info from the eureka server
+2024-10-15 15:08:02.649 INFO  ---- [main      ] [DiscoveryClient:1051] getAndStoreFullRegistry   The response status is 200
+2024-10-15 15:08:02.652 INFO  ---- [main      ] [DiscoveryClient:1266] initScheduledTasks   Starting heartbeat executor: renew interval is: 30
+2024-10-15 15:08:02.657 INFO  ---- [main      ] [InstanceInfoReplicator:64] <init>   InstanceInfoReplicator onDemand update allowed rate per min is 4
+2024-10-15 15:08:02.661 INFO  ---- [main      ] [DiscoveryClient:455] <init>   Discovery Client initialized at timestamp 1728972482660 with initial instances count: 0
+2024-10-15 15:08:02.666 INFO  ---- [main      ] [EurekaServiceRegistry:70] register   Registering application WEARWIZ-API-GATEWAY with eureka with status UP
+2024-10-15 15:08:02.668 INFO  ---- [main      ] [DiscoveryClient:1297] notify   Saw local status change event StatusChangeEvent [timestamp=1728972482668, current=UP, previous=STARTING]
+2024-10-15 15:08:02.672 INFO  ---- [licator-%d] [DiscoveryClient:825] register   DiscoveryClient_WEARWIZ-API-GATEWAY/172.20.10.2:8080: registering service...
+2024-10-15 15:08:02.967 INFO  ---- [licator-%d] [DiscoveryClient:834] register   DiscoveryClient_WEARWIZ-API-GATEWAY/172.20.10.2:8080 - registration status: 204
+2024-10-15 15:08:03.092 INFO  ---- [main      ] [NettyWebServer:141] start   Netty started on port 8080 (http)
+2024-10-15 15:08:03.095 INFO  ---- [main      ] [EurekaAutoServiceRegistration:150] onApplicationEvent   Updating port to 8080
+2024-10-15 15:08:04.228 INFO  ---- [main      ] [WearwizGatewayApplication:56] logStarted   Started WearwizGatewayApplication in 12.828 seconds (process running for 13.54)
+2024-10-15 15:08:32.666 INFO  ---- [xecutor-%d] [DiscoveryClient:954] fetchRegistry   Disable delta property : false
+2024-10-15 15:08:32.666 INFO  ---- [xecutor-%d] [DiscoveryClient:955] fetchRegistry   Single vip registry refresh property : null
+2024-10-15 15:08:32.666 INFO  ---- [xecutor-%d] [DiscoveryClient:956] fetchRegistry   Force full registry fetch : false
+2024-10-15 15:08:32.666 INFO  ---- [xecutor-%d] [DiscoveryClient:957] fetchRegistry   Application is null : false
+2024-10-15 15:08:32.666 INFO  ---- [xecutor-%d] [DiscoveryClient:958] fetchRegistry   Registered Applications size is zero : true
+2024-10-15 15:08:32.667 INFO  ---- [xecutor-%d] [DiscoveryClient:960] fetchRegistry   Application version is -1: false
+2024-10-15 15:08:32.667 INFO  ---- [xecutor-%d] [DiscoveryClient:1042] getAndStoreFullRegistry   Getting all instance registry info from the eureka server
+2024-10-15 15:08:32.692 INFO  ---- [xecutor-%d] [DiscoveryClient:1051] getAndStoreFullRegistry   The response status is 200
+2024-10-15 15:11:46.018 INFO  ---- [http-nio-3] [GlobalFilter:30] lambda$apply$1   [글로벌 필터] REQUEST 요청 >>>> IP :/0:0:0:0:0:0:0:1 ,URI : http://localhost:8080/member/v1/test
+2024-10-15 15:11:46.985 INFO  ---- [http-nio-3] [GlobalFilter:34] lambda$apply$0   [글로벌 필터] RESPONSE 응답 >>>> IP : /0:0:0:0:0:0:0:1, URI : http://localhost:8080/member/v1/test, 응답코드 : 200 OK ---> 처리 시간 0
+2024-10-15 15:11:49.640 INFO  ---- [http-nio-3] [GlobalFilter:30] lambda$apply$1   [글로벌 필터] REQUEST 요청 >>>> IP :/0:0:0:0:0:0:0:1 ,URI : http://localhost:8080/member/v1/test
+2024-10-15 15:11:49.655 INFO  ---- [http-nio-3] [GlobalFilter:34] lambda$apply$0   [글로벌 필터] RESPONSE 응답 >>>> IP : /0:0:0:0:0:0:0:1, URI : http://localhost:8080/member/v1/test, 응답코드 : 200 OK ---> 처리 시간 1
+2024-10-15 15:13:01.073 INFO  ---- [xecutor-%d] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
+2024-10-15 15:13:18.298 INFO  ---- [http-nio-3] [GlobalFilter:30] lambda$apply$1   [글로벌 필터] REQUEST 요청 >>>> IP :/0:0:0:0:0:0:0:1 ,URI : http://localhost:8080/member/v1/test
+2024-10-15 15:13:18.310 INFO  ---- [http-nio-3] [GlobalFilter:34] lambda$apply$0   [글로벌 필터] RESPONSE 응답 >>>> IP : /0:0:0:0:0:0:0:1, URI : http://localhost:8080/member/v1/test, 응답코드 : 200 OK ---> 처리 시간 0
+2024-10-15 15:13:22.247 INFO  ---- [http-nio-3] [GlobalFilter:30] lambda$apply$1   [글로벌 필터] REQUEST 요청 >>>> IP :/0:0:0:0:0:0:0:1 ,URI : http://localhost:8080/member/v1/test
+2024-10-15 15:13:22.254 INFO  ---- [http-nio-3] [GlobalFilter:34] lambda$apply$0   [글로벌 필터] RESPONSE 응답 >>>> IP : /0:0:0:0:0:0:0:1, URI : http://localhost:8080/member/v1/test, 응답코드 : 200 OK ---> 처리 시간 0
+2024-10-15 15:13:40.435 INFO  ---- [http-nio-3] [GlobalFilter:30] lambda$apply$1   [글로벌 필터] REQUEST 요청 >>>> IP :/0:0:0:0:0:0:0:1 ,URI : http://localhost:8080/member/v1/test
+2024-10-15 15:13:40.441 INFO  ---- [http-nio-3] [GlobalFilter:34] lambda$apply$0   [글로벌 필터] RESPONSE 응답 >>>> IP : /0:0:0:0:0:0:0:1, URI : http://localhost:8080/member/v1/test, 응답코드 : 200 OK ---> 처리 시간 0
+2024-10-15 15:13:47.406 INFO  ---- [http-nio-3] [GlobalFilter:30] lambda$apply$1   [글로벌 필터] REQUEST 요청 >>>> IP :/0:0:0:0:0:0:0:1 ,URI : http://localhost:8080/member/v1/test
+2024-10-15 15:13:47.416 INFO  ---- [http-nio-3] [GlobalFilter:34] lambda$apply$0   [글로벌 필터] RESPONSE 응답 >>>> IP : /0:0:0:0:0:0:0:1, URI : http://localhost:8080/member/v1/test, 응답코드 : 200 OK ---> 처리 시간 0
+2024-10-15 15:15:30.946 INFO  ---- [http-nio-3] [GlobalFilter:30] lambda$apply$1   [글로벌 필터] REQUEST 요청 >>>> IP :/0:0:0:0:0:0:0:1 ,URI : http://localhost:8080/member/v1/test
+2024-10-15 15:15:30.961 INFO  ---- [http-nio-3] [GlobalFilter:34] lambda$apply$0   [글로벌 필터] RESPONSE 응답 >>>> IP : /0:0:0:0:0:0:0:1, URI : http://localhost:8080/member/v1/test, 응답코드 : 200 OK ---> 처리 시간 0
+2024-10-15 15:16:22.057 INFO  ---- [http-nio-3] [GlobalFilter:30] lambda$apply$1   [글로벌 필터] REQUEST 요청 >>>> IP :/0:0:0:0:0:0:0:1 ,URI : http://localhost:8080/member/v1/test
+2024-10-15 15:16:22.063 INFO  ---- [http-nio-3] [GlobalFilter:34] lambda$apply$0   [글로벌 필터] RESPONSE 응답 >>>> IP : /0:0:0:0:0:0:0:1, URI : http://localhost:8080/member/v1/test, 응답코드 : 200 OK ---> 처리 시간 0
+2024-10-15 15:16:22.074 INFO  ---- [http-nio-3] [GlobalFilter:30] lambda$apply$1   [글로벌 필터] REQUEST 요청 >>>> IP :/0:0:0:0:0:0:0:1 ,URI : http://localhost:8080/member/v1/test
+2024-10-15 15:16:22.098 INFO  ---- [http-nio-3] [GlobalFilter:34] lambda$apply$0   [글로벌 필터] RESPONSE 응답 >>>> IP : /0:0:0:0:0:0:0:1, URI : http://localhost:8080/member/v1/test, 응답코드 : 405 METHOD_NOT_ALLOWED ---> 처리 시간 0
+2024-10-15 15:16:39.343 INFO  ---- [main      ] [WearwizGatewayApplication:50] logStarting   Starting WearwizGatewayApplication using Java 17.0.12 with PID 26052 (C:\Users\tkdrb\IdeaProjects\waerwiz\wearwiz-gateway\build\classes\java\main started by tkdrb in C:\Users\tkdrb\IdeaProjects\waerwiz\wearwiz-gateway)
+2024-10-15 15:16:39.347 INFO  ---- [main      ] [WearwizGatewayApplication:654] logStartupProfileInfo   No active profile set, falling back to 1 default profile: "default"
+2024-10-15 15:16:39.794 INFO  ---- [main      ] [RepositoryConfigurationDelegate:295] multipleStoresDetected   Multiple Spring Data modules found, entering strict repository configuration mode
+2024-10-15 15:16:39.795 INFO  ---- [main      ] [RepositoryConfigurationDelegate:143] registerRepositoriesIn   Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-10-15 15:16:39.816 INFO  ---- [main      ] [RepositoryConfigurationDelegate:211] registerRepositoriesIn   Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+2024-10-15 15:16:40.000 INFO  ---- [main      ] [RepositoryConfigurationDelegate:295] multipleStoresDetected   Multiple Spring Data modules found, entering strict repository configuration mode
+2024-10-15 15:16:40.000 INFO  ---- [main      ] [RepositoryConfigurationDelegate:143] registerRepositoriesIn   Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-10-15 15:16:40.012 INFO  ---- [main      ] [RepositoryConfigurationDelegate:211] registerRepositoriesIn   Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+2024-10-15 15:16:40.283 INFO  ---- [main      ] [GenericScope:282] setSerializationId   BeanFactory id=41169cce-d464-39f4-a597-a8ad4a92454c
+2024-10-15 15:16:40.358 WARN  ---- [main      ] [PostProcessorRegistrationDelegate$BeanPostProcessorChecker:429] postProcessAfterInitialization   Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-10-15 15:16:40.361 WARN  ---- [main      ] [PostProcessorRegistrationDelegate$BeanPostProcessorChecker:437] postProcessAfterInitialization   Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-10-15 15:16:40.363 WARN  ---- [main      ] [PostProcessorRegistrationDelegate$BeanPostProcessorChecker:429] postProcessAfterInitialization   Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-10-15 15:16:40.365 WARN  ---- [main      ] [PostProcessorRegistrationDelegate$BeanPostProcessorChecker:437] postProcessAfterInitialization   Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-10-15 15:16:40.367 WARN  ---- [main      ] [PostProcessorRegistrationDelegate$BeanPostProcessorChecker:437] postProcessAfterInitialization   Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-10-15 15:16:41.944 INFO  ---- [main      ] [RouteDefinitionRouteLocator:89] lambda$initFactories$1   Loaded RoutePredicateFactory [After]
+2024-10-15 15:16:41.944 INFO  ---- [main      ] [RouteDefinitionRouteLocator:89] lambda$initFactories$1   Loaded RoutePredicateFactory [Before]
+2024-10-15 15:16:41.944 INFO  ---- [main      ] [RouteDefinitionRouteLocator:89] lambda$initFactories$1   Loaded RoutePredicateFactory [Between]
+2024-10-15 15:16:41.944 INFO  ---- [main      ] [RouteDefinitionRouteLocator:89] lambda$initFactories$1   Loaded RoutePredicateFactory [Cookie]
+2024-10-15 15:16:41.946 INFO  ---- [main      ] [RouteDefinitionRouteLocator:89] lambda$initFactories$1   Loaded RoutePredicateFactory [Header]
+2024-10-15 15:16:41.946 INFO  ---- [main      ] [RouteDefinitionRouteLocator:89] lambda$initFactories$1   Loaded RoutePredicateFactory [Host]
+2024-10-15 15:16:41.946 INFO  ---- [main      ] [RouteDefinitionRouteLocator:89] lambda$initFactories$1   Loaded RoutePredicateFactory [Method]
+2024-10-15 15:16:41.946 INFO  ---- [main      ] [RouteDefinitionRouteLocator:89] lambda$initFactories$1   Loaded RoutePredicateFactory [Path]
+2024-10-15 15:16:41.946 INFO  ---- [main      ] [RouteDefinitionRouteLocator:89] lambda$initFactories$1   Loaded RoutePredicateFactory [Query]
+2024-10-15 15:16:41.946 INFO  ---- [main      ] [RouteDefinitionRouteLocator:89] lambda$initFactories$1   Loaded RoutePredicateFactory [ReadBody]
+2024-10-15 15:16:41.946 INFO  ---- [main      ] [RouteDefinitionRouteLocator:89] lambda$initFactories$1   Loaded RoutePredicateFactory [RemoteAddr]
+2024-10-15 15:16:41.946 INFO  ---- [main      ] [RouteDefinitionRouteLocator:89] lambda$initFactories$1   Loaded RoutePredicateFactory [XForwardedRemoteAddr]
+2024-10-15 15:16:41.946 INFO  ---- [main      ] [RouteDefinitionRouteLocator:89] lambda$initFactories$1   Loaded RoutePredicateFactory [Weight]
+2024-10-15 15:16:41.946 INFO  ---- [main      ] [RouteDefinitionRouteLocator:89] lambda$initFactories$1   Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2024-10-15 15:16:42.521 INFO  ---- [main      ] [DiscoveryClientOptionalArgsConfiguration:80] restTemplateDiscoveryClientOptionalArgs   Eureka HTTP Client uses RestTemplate.
+2024-10-15 15:16:42.855 WARN  ---- [main      ] [LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger:94] afterPropertiesSet   Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2024-10-15 15:16:42.885 INFO  ---- [main      ] [InstanceInfoFactory:67] create   Setting initial instance status as: STARTING
+2024-10-15 15:16:42.918 INFO  ---- [main      ] [DiscoveryClient:329] <init>   Initializing Eureka in region us-east-1
+2024-10-15 15:16:42.924 INFO  ---- [main      ] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
+2024-10-15 15:16:42.931 INFO  ---- [main      ] [DiscoveryClient:954] fetchRegistry   Disable delta property : false
+2024-10-15 15:16:42.932 INFO  ---- [main      ] [DiscoveryClient:955] fetchRegistry   Single vip registry refresh property : null
+2024-10-15 15:16:42.932 INFO  ---- [main      ] [DiscoveryClient:956] fetchRegistry   Force full registry fetch : false
+2024-10-15 15:16:42.932 INFO  ---- [main      ] [DiscoveryClient:957] fetchRegistry   Application is null : false
+2024-10-15 15:16:42.932 INFO  ---- [main      ] [DiscoveryClient:958] fetchRegistry   Registered Applications size is zero : true
+2024-10-15 15:16:42.932 INFO  ---- [main      ] [DiscoveryClient:960] fetchRegistry   Application version is -1: true
+2024-10-15 15:16:42.932 INFO  ---- [main      ] [DiscoveryClient:1042] getAndStoreFullRegistry   Getting all instance registry info from the eureka server
+2024-10-15 15:16:43.352 INFO  ---- [main      ] [DiscoveryClient:1051] getAndStoreFullRegistry   The response status is 200
+2024-10-15 15:16:43.354 INFO  ---- [main      ] [DiscoveryClient:1266] initScheduledTasks   Starting heartbeat executor: renew interval is: 30
+2024-10-15 15:16:43.356 INFO  ---- [main      ] [InstanceInfoReplicator:64] <init>   InstanceInfoReplicator onDemand update allowed rate per min is 4
+2024-10-15 15:16:43.358 INFO  ---- [main      ] [DiscoveryClient:455] <init>   Discovery Client initialized at timestamp 1728973003357 with initial instances count: 2
+2024-10-15 15:16:43.361 INFO  ---- [main      ] [EurekaServiceRegistry:70] register   Registering application WEARWIZ-API-GATEWAY with eureka with status UP
+2024-10-15 15:16:43.362 INFO  ---- [main      ] [DiscoveryClient:1297] notify   Saw local status change event StatusChangeEvent [timestamp=1728973003362, current=UP, previous=STARTING]
+2024-10-15 15:16:43.363 INFO  ---- [licator-%d] [DiscoveryClient:825] register   DiscoveryClient_WEARWIZ-API-GATEWAY/172.20.10.2:8080: registering service...
+2024-10-15 15:16:43.404 INFO  ---- [licator-%d] [DiscoveryClient:834] register   DiscoveryClient_WEARWIZ-API-GATEWAY/172.20.10.2:8080 - registration status: 204
+2024-10-15 15:16:43.541 INFO  ---- [main      ] [NettyWebServer:141] start   Netty started on port 8080 (http)
+2024-10-15 15:16:43.543 INFO  ---- [main      ] [EurekaAutoServiceRegistration:150] onApplicationEvent   Updating port to 8080
+2024-10-15 15:16:44.243 INFO  ---- [main      ] [WearwizGatewayApplication:56] logStarted   Started WearwizGatewayApplication in 5.679 seconds (process running for 6.081)
+2024-10-15 15:17:06.799 INFO  ---- [main      ] [WearwizGatewayApplication:50] logStarting   Starting WearwizGatewayApplication using Java 17.0.12 with PID 19972 (C:\Users\tkdrb\IdeaProjects\waerwiz\wearwiz-gateway\build\classes\java\main started by tkdrb in C:\Users\tkdrb\IdeaProjects\waerwiz\wearwiz-gateway)
+2024-10-15 15:17:06.802 INFO  ---- [main      ] [WearwizGatewayApplication:654] logStartupProfileInfo   No active profile set, falling back to 1 default profile: "default"
+2024-10-15 15:17:07.227 INFO  ---- [main      ] [RepositoryConfigurationDelegate:295] multipleStoresDetected   Multiple Spring Data modules found, entering strict repository configuration mode
+2024-10-15 15:17:07.228 INFO  ---- [main      ] [RepositoryConfigurationDelegate:143] registerRepositoriesIn   Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-10-15 15:17:07.249 INFO  ---- [main      ] [RepositoryConfigurationDelegate:211] registerRepositoriesIn   Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
+2024-10-15 15:17:07.415 INFO  ---- [main      ] [RepositoryConfigurationDelegate:295] multipleStoresDetected   Multiple Spring Data modules found, entering strict repository configuration mode
+2024-10-15 15:17:07.416 INFO  ---- [main      ] [RepositoryConfigurationDelegate:143] registerRepositoriesIn   Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-10-15 15:17:07.429 INFO  ---- [main      ] [RepositoryConfigurationDelegate:211] registerRepositoriesIn   Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+2024-10-15 15:17:07.635 INFO  ---- [main      ] [GenericScope:282] setSerializationId   BeanFactory id=41169cce-d464-39f4-a597-a8ad4a92454c
+2024-10-15 15:17:07.702 WARN  ---- [main      ] [PostProcessorRegistrationDelegate$BeanPostProcessorChecker:429] postProcessAfterInitialization   Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-10-15 15:17:07.705 WARN  ---- [main      ] [PostProcessorRegistrationDelegate$BeanPostProcessorChecker:437] postProcessAfterInitialization   Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-10-15 15:17:07.706 WARN  ---- [main      ] [PostProcessorRegistrationDelegate$BeanPostProcessorChecker:429] postProcessAfterInitialization   Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-10-15 15:17:07.708 WARN  ---- [main      ] [PostProcessorRegistrationDelegate$BeanPostProcessorChecker:437] postProcessAfterInitialization   Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-10-15 15:17:07.709 WARN  ---- [main      ] [PostProcessorRegistrationDelegate$BeanPostProcessorChecker:437] postProcessAfterInitialization   Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-10-15 15:17:09.189 INFO  ---- [main      ] [RouteDefinitionRouteLocator:89] lambda$initFactories$1   Loaded RoutePredicateFactory [After]
+2024-10-15 15:17:09.190 INFO  ---- [main      ] [RouteDefinitionRouteLocator:89] lambda$initFactories$1   Loaded RoutePredicateFactory [Before]
+2024-10-15 15:17:09.190 INFO  ---- [main      ] [RouteDefinitionRouteLocator:89] lambda$initFactories$1   Loaded RoutePredicateFactory [Between]
+2024-10-15 15:17:09.190 INFO  ---- [main      ] [RouteDefinitionRouteLocator:89] lambda$initFactories$1   Loaded RoutePredicateFactory [Cookie]
+2024-10-15 15:17:09.190 INFO  ---- [main      ] [RouteDefinitionRouteLocator:89] lambda$initFactories$1   Loaded RoutePredicateFactory [Header]
+2024-10-15 15:17:09.191 INFO  ---- [main      ] [RouteDefinitionRouteLocator:89] lambda$initFactories$1   Loaded RoutePredicateFactory [Host]
+2024-10-15 15:17:09.191 INFO  ---- [main      ] [RouteDefinitionRouteLocator:89] lambda$initFactories$1   Loaded RoutePredicateFactory [Method]
+2024-10-15 15:17:09.191 INFO  ---- [main      ] [RouteDefinitionRouteLocator:89] lambda$initFactories$1   Loaded RoutePredicateFactory [Path]
+2024-10-15 15:17:09.191 INFO  ---- [main      ] [RouteDefinitionRouteLocator:89] lambda$initFactories$1   Loaded RoutePredicateFactory [Query]
+2024-10-15 15:17:09.191 INFO  ---- [main      ] [RouteDefinitionRouteLocator:89] lambda$initFactories$1   Loaded RoutePredicateFactory [ReadBody]
+2024-10-15 15:17:09.191 INFO  ---- [main      ] [RouteDefinitionRouteLocator:89] lambda$initFactories$1   Loaded RoutePredicateFactory [RemoteAddr]
+2024-10-15 15:17:09.191 INFO  ---- [main      ] [RouteDefinitionRouteLocator:89] lambda$initFactories$1   Loaded RoutePredicateFactory [XForwardedRemoteAddr]
+2024-10-15 15:17:09.191 INFO  ---- [main      ] [RouteDefinitionRouteLocator:89] lambda$initFactories$1   Loaded RoutePredicateFactory [Weight]
+2024-10-15 15:17:09.192 INFO  ---- [main      ] [RouteDefinitionRouteLocator:89] lambda$initFactories$1   Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2024-10-15 15:17:09.704 INFO  ---- [main      ] [DiscoveryClientOptionalArgsConfiguration:80] restTemplateDiscoveryClientOptionalArgs   Eureka HTTP Client uses RestTemplate.
+2024-10-15 15:17:10.023 WARN  ---- [main      ] [LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger:94] afterPropertiesSet   Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2024-10-15 15:17:10.052 INFO  ---- [main      ] [InstanceInfoFactory:67] create   Setting initial instance status as: STARTING
+2024-10-15 15:17:10.085 INFO  ---- [main      ] [DiscoveryClient:329] <init>   Initializing Eureka in region us-east-1
+2024-10-15 15:17:10.091 INFO  ---- [main      ] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
+2024-10-15 15:17:10.098 INFO  ---- [main      ] [DiscoveryClient:954] fetchRegistry   Disable delta property : false
+2024-10-15 15:17:10.098 INFO  ---- [main      ] [DiscoveryClient:955] fetchRegistry   Single vip registry refresh property : null
+2024-10-15 15:17:10.099 INFO  ---- [main      ] [DiscoveryClient:956] fetchRegistry   Force full registry fetch : false
+2024-10-15 15:17:10.099 INFO  ---- [main      ] [DiscoveryClient:957] fetchRegistry   Application is null : false
+2024-10-15 15:17:10.099 INFO  ---- [main      ] [DiscoveryClient:958] fetchRegistry   Registered Applications size is zero : true
+2024-10-15 15:17:10.099 INFO  ---- [main      ] [DiscoveryClient:960] fetchRegistry   Application version is -1: true
+2024-10-15 15:17:10.099 INFO  ---- [main      ] [DiscoveryClient:1042] getAndStoreFullRegistry   Getting all instance registry info from the eureka server
+2024-10-15 15:17:10.486 INFO  ---- [main      ] [DiscoveryClient:1051] getAndStoreFullRegistry   The response status is 200
+2024-10-15 15:17:10.488 INFO  ---- [main      ] [DiscoveryClient:1266] initScheduledTasks   Starting heartbeat executor: renew interval is: 30
+2024-10-15 15:17:10.490 INFO  ---- [main      ] [InstanceInfoReplicator:64] <init>   InstanceInfoReplicator onDemand update allowed rate per min is 4
+2024-10-15 15:17:10.491 INFO  ---- [main      ] [DiscoveryClient:455] <init>   Discovery Client initialized at timestamp 1728973030491 with initial instances count: 2
+2024-10-15 15:17:10.494 INFO  ---- [main      ] [EurekaServiceRegistry:70] register   Registering application WEARWIZ-API-GATEWAY with eureka with status UP
+2024-10-15 15:17:10.494 INFO  ---- [main      ] [DiscoveryClient:1297] notify   Saw local status change event StatusChangeEvent [timestamp=1728973030494, current=UP, previous=STARTING]
+2024-10-15 15:17:10.497 INFO  ---- [licator-%d] [DiscoveryClient:825] register   DiscoveryClient_WEARWIZ-API-GATEWAY/172.20.10.2:8080: registering service...
+2024-10-15 15:17:10.533 INFO  ---- [licator-%d] [DiscoveryClient:834] register   DiscoveryClient_WEARWIZ-API-GATEWAY/172.20.10.2:8080 - registration status: 204
+2024-10-15 15:17:10.666 INFO  ---- [main      ] [NettyWebServer:141] start   Netty started on port 8080 (http)
+2024-10-15 15:17:10.667 INFO  ---- [main      ] [EurekaAutoServiceRegistration:150] onApplicationEvent   Updating port to 8080
+2024-10-15 15:17:11.305 INFO  ---- [main      ] [WearwizGatewayApplication:56] logStarted   Started WearwizGatewayApplication in 5.298 seconds (process running for 5.684)
+2024-10-15 15:17:17.261 INFO  ---- [http-nio-2] [GlobalFilter:30] lambda$apply$1   [글로벌 필터] REQUEST 요청 >>>> IP :/0:0:0:0:0:0:0:1 ,URI : http://localhost:8080/member/v1/test
+2024-10-15 15:17:17.453 INFO  ---- [http-nio-2] [GlobalFilter:34] lambda$apply$0   [글로벌 필터] RESPONSE 응답 >>>> IP : /0:0:0:0:0:0:0:1, URI : http://localhost:8080/member/v1/test, 응답코드 : 200 OK ---> 처리 시간 0
+2024-10-15 15:17:17.483 INFO  ---- [http-nio-2] [GlobalFilter:30] lambda$apply$1   [글로벌 필터] REQUEST 요청 >>>> IP :/0:0:0:0:0:0:0:1 ,URI : http://localhost:8080/member/v1/test
+2024-10-15 15:17:17.489 INFO  ---- [http-nio-2] [GlobalFilter:34] lambda$apply$0   [글로벌 필터] RESPONSE 응답 >>>> IP : /0:0:0:0:0:0:0:1, URI : http://localhost:8080/member/v1/test, 응답코드 : 405 METHOD_NOT_ALLOWED ---> 처리 시간 0
+2024-10-15 15:19:22.796 INFO  ---- [http-nio-2] [GlobalFilter:30] lambda$apply$1   [글로벌 필터] REQUEST 요청 >>>> IP :/0:0:0:0:0:0:0:1 ,URI : http://localhost:8080/member/v1/test
+2024-10-15 15:19:22.849 ERROR ---- [http-nio-2] [AbstractErrorWebExceptionHandler:102] error   [dcc6b629-4]  500 Server Error for HTTP GET "/member/v1/test"
+io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: localhost/127.0.0.1:8081
+	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
+Error has been observed at the following site(s):
+	*__checkpoint ⇢ org.springframework.cloud.gateway.filter.WeightCalculatorWebFilter [DefaultWebFilterChain]
+	*__checkpoint ⇢ HTTP GET "/member/v1/test" [ExceptionHandlingWebHandler]
+Original Stack Trace:
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:946)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:336)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:339)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:776)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2024-10-15 15:20:15.094 INFO  ---- [http-nio-2] [GlobalFilter:30] lambda$apply$1   [글로벌 필터] REQUEST 요청 >>>> IP :/0:0:0:0:0:0:0:1 ,URI : http://localhost:8080/member/v1/test
+2024-10-15 15:20:15.102 INFO  ---- [http-nio-2] [GlobalFilter:34] lambda$apply$0   [글로벌 필터] RESPONSE 응답 >>>> IP : /0:0:0:0:0:0:0:1, URI : http://localhost:8080/member/v1/test, 응답코드 : 200 OK ---> 처리 시간 0
+2024-10-15 15:20:15.115 INFO  ---- [http-nio-2] [GlobalFilter:30] lambda$apply$1   [글로벌 필터] REQUEST 요청 >>>> IP :/0:0:0:0:0:0:0:1 ,URI : http://localhost:8080/member/v1/testtt
+2024-10-15 15:20:15.119 INFO  ---- [http-nio-2] [GlobalFilter:34] lambda$apply$0   [글로벌 필터] RESPONSE 응답 >>>> IP : /0:0:0:0:0:0:0:1, URI : http://localhost:8080/member/v1/testtt, 응답코드 : 200 OK ---> 처리 시간 0
+2024-10-15 15:20:36.306 INFO  ---- [http-nio-2] [GlobalFilter:30] lambda$apply$1   [글로벌 필터] REQUEST 요청 >>>> IP :/0:0:0:0:0:0:0:1 ,URI : http://localhost:8080/member/v1/test
+2024-10-15 15:20:36.310 INFO  ---- [http-nio-2] [GlobalFilter:34] lambda$apply$0   [글로벌 필터] RESPONSE 응답 >>>> IP : /0:0:0:0:0:0:0:1, URI : http://localhost:8080/member/v1/test, 응답코드 : 200 OK ---> 처리 시간 0
+2024-10-15 15:20:36.322 INFO  ---- [http-nio-2] [GlobalFilter:30] lambda$apply$1   [글로벌 필터] REQUEST 요청 >>>> IP :/0:0:0:0:0:0:0:1 ,URI : http://localhost:8080/member/v1/testtt
+2024-10-15 15:20:36.326 INFO  ---- [http-nio-2] [GlobalFilter:34] lambda$apply$0   [글로벌 필터] RESPONSE 응답 >>>> IP : /0:0:0:0:0:0:0:1, URI : http://localhost:8080/member/v1/testtt, 응답코드 : 200 OK ---> 처리 시간 0
+2024-10-15 15:21:20.293 INFO  ---- [http-nio-2] [GlobalFilter:30] lambda$apply$1   [글로벌 필터] REQUEST 요청 >>>> IP :/0:0:0:0:0:0:0:1 ,URI : http://localhost:8080/member/v1/test
+2024-10-15 15:21:20.302 INFO  ---- [http-nio-2] [GlobalFilter:34] lambda$apply$0   [글로벌 필터] RESPONSE 응답 >>>> IP : /0:0:0:0:0:0:0:1, URI : http://localhost:8080/member/v1/test, 응답코드 : 200 OK ---> 처리 시간 0
+2024-10-15 15:21:20.321 INFO  ---- [http-nio-2] [GlobalFilter:30] lambda$apply$1   [글로벌 필터] REQUEST 요청 >>>> IP :/0:0:0:0:0:0:0:1 ,URI : http://localhost:8080/member/v1/testtt
+2024-10-15 15:21:20.328 INFO  ---- [http-nio-2] [GlobalFilter:34] lambda$apply$0   [글로벌 필터] RESPONSE 응답 >>>> IP : /0:0:0:0:0:0:0:1, URI : http://localhost:8080/member/v1/testtt, 응답코드 : 200 OK ---> 처리 시간 0
+2024-10-15 15:21:47.804 INFO  ---- [http-nio-2] [GlobalFilter:30] lambda$apply$1   [글로벌 필터] REQUEST 요청 >>>> IP :/0:0:0:0:0:0:0:1 ,URI : http://localhost:8080/member/v1/test
+2024-10-15 15:21:47.808 INFO  ---- [http-nio-2] [GlobalFilter:34] lambda$apply$0   [글로벌 필터] RESPONSE 응답 >>>> IP : /0:0:0:0:0:0:0:1, URI : http://localhost:8080/member/v1/test, 응답코드 : 200 OK ---> 처리 시간 0
+2024-10-15 15:21:47.818 INFO  ---- [http-nio-2] [GlobalFilter:30] lambda$apply$1   [글로벌 필터] REQUEST 요청 >>>> IP :/0:0:0:0:0:0:0:1 ,URI : http://localhost:8080/member/v1/testtt
+2024-10-15 15:21:47.824 INFO  ---- [http-nio-2] [GlobalFilter:34] lambda$apply$0   [글로벌 필터] RESPONSE 응답 >>>> IP : /0:0:0:0:0:0:0:1, URI : http://localhost:8080/member/v1/testtt, 응답코드 : 200 OK ---> 처리 시간 0
+2024-10-15 15:21:53.173 INFO  ---- [http-nio-2] [GlobalFilter:30] lambda$apply$1   [글로벌 필터] REQUEST 요청 >>>> IP :/0:0:0:0:0:0:0:1 ,URI : http://localhost:8080/member/v1/test
+2024-10-15 15:21:53.182 INFO  ---- [http-nio-2] [GlobalFilter:34] lambda$apply$0   [글로벌 필터] RESPONSE 응답 >>>> IP : /0:0:0:0:0:0:0:1, URI : http://localhost:8080/member/v1/test, 응답코드 : 200 OK ---> 처리 시간 0
+2024-10-15 15:21:53.225 INFO  ---- [http-nio-2] [GlobalFilter:30] lambda$apply$1   [글로벌 필터] REQUEST 요청 >>>> IP :/0:0:0:0:0:0:0:1 ,URI : http://localhost:8080/member/v1/testtt
+2024-10-15 15:21:53.231 INFO  ---- [http-nio-2] [GlobalFilter:34] lambda$apply$0   [글로벌 필터] RESPONSE 응답 >>>> IP : /0:0:0:0:0:0:0:1, URI : http://localhost:8080/member/v1/testtt, 응답코드 : 200 OK ---> 처리 시간 0
+2024-10-15 15:22:10.113 INFO  ---- [xecutor-%d] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
+2024-10-15 15:23:27.291 INFO  ---- [http-nio-2] [GlobalFilter:30] lambda$apply$1   [글로벌 필터] REQUEST 요청 >>>> IP :/0:0:0:0:0:0:0:1 ,URI : http://localhost:8080/member/v1/test
+2024-10-15 15:23:27.388 INFO  ---- [http-nio-2] [GlobalFilter:34] lambda$apply$0   [글로벌 필터] RESPONSE 응답 >>>> IP : /0:0:0:0:0:0:0:1, URI : http://localhost:8080/member/v1/test, 응답코드 : 200 OK ---> 처리 시간 0
+2024-10-15 15:23:27.396 INFO  ---- [http-nio-2] [GlobalFilter:30] lambda$apply$1   [글로벌 필터] REQUEST 요청 >>>> IP :/0:0:0:0:0:0:0:1 ,URI : http://localhost:8080/member/v1/testtt
+2024-10-15 15:23:27.409 INFO  ---- [http-nio-2] [GlobalFilter:34] lambda$apply$0   [글로벌 필터] RESPONSE 응답 >>>> IP : /0:0:0:0:0:0:0:1, URI : http://localhost:8080/member/v1/testtt, 응답코드 : 200 OK ---> 처리 시간 0
+2024-10-15 15:23:31.231 INFO  ---- [http-nio-2] [GlobalFilter:30] lambda$apply$1   [글로벌 필터] REQUEST 요청 >>>> IP :/0:0:0:0:0:0:0:1 ,URI : http://localhost:8080/member/v1/test
+2024-10-15 15:23:31.239 INFO  ---- [http-nio-2] [GlobalFilter:34] lambda$apply$0   [글로벌 필터] RESPONSE 응답 >>>> IP : /0:0:0:0:0:0:0:1, URI : http://localhost:8080/member/v1/test, 응답코드 : 200 OK ---> 처리 시간 0
+2024-10-15 15:23:31.251 INFO  ---- [http-nio-2] [GlobalFilter:30] lambda$apply$1   [글로벌 필터] REQUEST 요청 >>>> IP :/0:0:0:0:0:0:0:1 ,URI : http://localhost:8080/member/v1/testtt
+2024-10-15 15:23:31.259 INFO  ---- [http-nio-2] [GlobalFilter:34] lambda$apply$0   [글로벌 필터] RESPONSE 응답 >>>> IP : /0:0:0:0:0:0:0:1, URI : http://localhost:8080/member/v1/testtt, 응답코드 : 200 OK ---> 처리 시간 1
+2024-10-15 15:27:10.119 INFO  ---- [xecutor-%d] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
+2024-10-15 15:32:10.120 INFO  ---- [xecutor-%d] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
+2024-10-15 15:37:10.127 INFO  ---- [xecutor-%d] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
+2024-10-15 15:42:10.139 INFO  ---- [xecutor-%d] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
+2024-10-15 15:47:10.149 INFO  ---- [xecutor-%d] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
+2024-10-15 15:52:10.161 INFO  ---- [xecutor-%d] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
+2024-10-15 16:07:18.889 INFO  ---- [xecutor-%d] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
+2024-10-15 16:12:18.899 INFO  ---- [xecutor-%d] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
+2024-10-15 16:17:18.914 INFO  ---- [xecutor-%d] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
+2024-10-15 16:22:18.923 INFO  ---- [xecutor-%d] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
+2024-10-15 16:26:15.352 INFO  ---- [http-nio-3] [GlobalFilter:30] lambda$apply$1   [글로벌 필터] REQUEST 요청 >>>> IP :/0:0:0:0:0:0:0:1 ,URI : http://localhost:8080/member/v1/test
+2024-10-15 16:26:15.825 INFO  ---- [http-nio-3] [GlobalFilter:34] lambda$apply$0   [글로벌 필터] RESPONSE 응답 >>>> IP : /0:0:0:0:0:0:0:1, URI : http://localhost:8080/member/v1/test, 응답코드 : 200 OK ---> 처리 시간 1
+2024-10-15 16:26:22.932 INFO  ---- [http-nio-3] [GlobalFilter:30] lambda$apply$1   [글로벌 필터] REQUEST 요청 >>>> IP :/0:0:0:0:0:0:0:1 ,URI : http://localhost:8080/member/v1/test
+2024-10-15 16:26:22.941 INFO  ---- [http-nio-3] [GlobalFilter:34] lambda$apply$0   [글로벌 필터] RESPONSE 응답 >>>> IP : /0:0:0:0:0:0:0:1, URI : http://localhost:8080/member/v1/test, 응답코드 : 200 OK ---> 처리 시간 0
+2024-10-15 16:26:57.392 INFO  ---- [http-nio-3] [GlobalFilter:30] lambda$apply$1   [글로벌 필터] REQUEST 요청 >>>> IP :/0:0:0:0:0:0:0:1 ,URI : http://localhost:8080/member/v1/test
+2024-10-15 16:26:57.400 INFO  ---- [http-nio-3] [GlobalFilter:34] lambda$apply$0   [글로벌 필터] RESPONSE 응답 >>>> IP : /0:0:0:0:0:0:0:1, URI : http://localhost:8080/member/v1/test, 응답코드 : 200 OK ---> 처리 시간 0
+2024-10-15 16:27:18.932 INFO  ---- [xecutor-%d] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
+2024-10-15 16:32:18.938 INFO  ---- [xecutor-%d] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
+2024-10-15 16:37:18.949 INFO  ---- [xecutor-%d] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
+2024-10-15 16:39:49.074 INFO  ---- [http-nio-4] [GlobalFilter:30] lambda$apply$1   [글로벌 필터] REQUEST 요청 >>>> IP :/0:0:0:0:0:0:0:1 ,URI : http://localhost:8080/member/v1/test
+2024-10-15 16:39:49.089 INFO  ---- [http-nio-4] [GlobalFilter:34] lambda$apply$0   [글로벌 필터] RESPONSE 응답 >>>> IP : /0:0:0:0:0:0:0:1, URI : http://localhost:8080/member/v1/test, 응답코드 : 200 OK ---> 처리 시간 0
+2024-10-15 16:42:18.955 INFO  ---- [xecutor-%d] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
+2024-10-15 16:47:18.968 INFO  ---- [xecutor-%d] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
+2024-10-15 16:52:18.978 INFO  ---- [xecutor-%d] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
+2024-10-15 16:57:18.981 INFO  ---- [xecutor-%d] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
+2024-10-15 17:02:18.994 INFO  ---- [xecutor-%d] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
+2024-10-15 17:07:18.998 INFO  ---- [xecutor-%d] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
+2024-10-15 17:12:19.000 INFO  ---- [xecutor-%d] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
+2024-10-15 17:17:19.022 INFO  ---- [xecutor-%d] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
+2024-10-15 17:22:19.024 INFO  ---- [xecutor-%d] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
+2024-10-15 17:27:19.036 INFO  ---- [xecutor-%d] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
+2024-10-15 17:32:19.051 INFO  ---- [xecutor-%d] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
+2024-10-15 17:37:19.054 INFO  ---- [xecutor-%d] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
+2024-10-15 17:53:37.902 INFO  ---- [xecutor-%d] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
+2024-10-15 17:58:37.909 INFO  ---- [xecutor-%d] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
+2024-10-15 18:37:23.623 INFO  ---- [xecutor-%d] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
+2024-10-15 18:42:23.627 INFO  ---- [xecutor-%d] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
+2024-10-15 18:47:23.633 INFO  ---- [xecutor-%d] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
+2024-10-15 18:52:23.645 INFO  ---- [xecutor-%d] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
+2024-10-15 18:57:23.657 INFO  ---- [xecutor-%d] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
+2024-10-15 19:02:23.662 INFO  ---- [xecutor-%d] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
+2024-10-15 19:07:23.677 INFO  ---- [xecutor-%d] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
+2024-10-15 19:12:23.692 INFO  ---- [xecutor-%d] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
+2024-10-15 19:17:23.699 INFO  ---- [xecutor-%d] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
+2024-10-15 19:22:23.706 INFO  ---- [xecutor-%d] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
+2024-10-15 20:53:11.567 INFO  ---- [xecutor-%d] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration

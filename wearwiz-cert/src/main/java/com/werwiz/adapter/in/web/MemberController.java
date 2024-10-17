@@ -17,6 +17,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.server.ServerHttpRequest;
 import org.springframework.validation.Errors;
@@ -25,7 +26,9 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.validation.Valid;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @WebAdapter
@@ -72,10 +75,12 @@ public class MemberController {
         return ResponseEntity.ok().body(createMember);
     }
 
-    @PostMapping("/member/v2/portfolio-img/{memberId}")
+    @Operation(summary = "회원 포토폴리오 추가", description =
+            "  accessToken을 헤더로 던져야합니다")
+    @PostMapping(path = "/member/v2/portfolio-img", consumes = MediaType.MULTIPART_FORM_DATA_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<Image>> registerImgByMember(@RequestParam("files") List<MultipartFile> files,
-                                                     @PathVariable("memberId") Long memberId){
-        List<Image> uploadImage = registerImgUseCase.registerImgByMember(files,memberId);
+                                                           @RequestHeader("userId") Long userId){
+        List<Image> uploadImage = registerImgUseCase.registerImgByMember(files,userId);
 
         return ResponseEntity.ok().body(uploadImage);
     }

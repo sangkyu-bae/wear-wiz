@@ -4,3 +4,5 @@ include 'common'
 include 'wearwiz-cert'
 include 'wearwiz-gateway'
 include 'wearwiz-eureka'
+include 'wearzie-community'
+

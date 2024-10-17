@@ -6,5 +6,5 @@ import com.werwiz.adapter.out.persistence.entity.PortfolioEntity;
 import com.werwiz.domain.Image;
 
 public interface UploadImagePort {
-    ImageEntity uploadImage(Image image, PortfolioEntity portfolioEntity);
+    ImageEntity uploadImage(Image image, MemberEntity memberEntity);
 }
