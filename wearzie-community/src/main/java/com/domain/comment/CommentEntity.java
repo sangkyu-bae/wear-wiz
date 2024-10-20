@@ -4,6 +4,8 @@ import com.domain.post.PostEntity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.time.LocalDateTime;
+
 @Entity
 @Getter
 @Setter
@@ -21,6 +23,10 @@ public class CommentEntity {
     private String content;
 
     private long memberId;
+
+    private LocalDateTime createAt;
+
+    private LocalDateTime updateAt;
 
     @ManyToOne(fetch = FetchType.LAZY)
     private PostEntity post;

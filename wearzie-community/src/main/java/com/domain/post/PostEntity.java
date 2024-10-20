@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDateTime;
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -23,7 +24,9 @@ public class PostEntity {
 
     private String title;
 
-    private int type;
+    private int codyType;
+
+    private int itemType;
 
     @Lob
     private String content;
@@ -34,6 +37,18 @@ public class PostEntity {
 
     private LocalDateTime updateAt;
 
+    private int views;
+
     @OneToMany(mappedBy = "post",fetch = FetchType.LAZY)
     private Set<CommentEntity> commentList;
+
+    public void addComment(CommentEntity commentEntity){
+        commentEntity.setPost(this);
+
+        if(commentList == null){
+            commentList = new HashSet<>();
+        }
+
+        commentList.add(commentEntity);
+    }
 }
