@@ -9,4 +9,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 public interface PostRepository extends JpaRepository<PostEntity,Long>, PostRepositoryExtension {
 
     Page<PostEntity> findByItemType(Pageable pageable,int itemType);
+
+    Page<PostEntity> findByCommunityType(Pageable pageable,int communityType);
 }

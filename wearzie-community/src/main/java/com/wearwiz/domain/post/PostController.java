@@ -56,5 +56,14 @@ public class PostController {
         return ResponseEntity.ok().body(searchPost);
     }
 
+    @GetMapping("/comment/v1/community/{pageNum}/{type}/{size}")
+    public ResponseEntity<SearchPost> findPagingPostByCommunityType(@PathVariable("pageNum") int pageNum,
+                                                                    @PathVariable("type") int type,
+                                                                    @PathVariable("size") int size){
+        FindPagingPostRequest request = new FindPagingPostRequest(pageNum,type,size);
+        SearchPost searchPost = findPostService.findPagingPostByCommunityType(request);
+
+        return ResponseEntity.ok().body(searchPost);
+    }
 
 }

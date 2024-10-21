@@ -24,7 +24,7 @@ public class PostEntity {
 
     private String title;
 
-    private int codyType;
+    private int communityType;
 
     private int itemType;
 

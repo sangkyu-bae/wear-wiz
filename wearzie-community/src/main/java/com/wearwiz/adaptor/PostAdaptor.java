@@ -21,7 +21,7 @@ public class PostAdaptor {
         PostEntity postEntity = PostEntity.builder()
                 .title(createPost.getTitle())
                 .itemType(createPost.getItemType().getId())
-                .codyType(createPost.getCommunityType().getId())
+                .communityType(createPost.getCommunityType().getId())
                 .content(createPost.getContent())
                 .memberId(createPost.getMemberId())
                 .creatAt(createPost.getCreateAt())
@@ -39,5 +39,9 @@ public class PostAdaptor {
 
     public Page<PostEntity> findPagingByType(Pageable pageable,int itemType){
         return postRepository.findByItemType(pageable,itemType);
+    }
+
+    public Page<PostEntity> findPagingByTCommunityType(Pageable pageable,int itemType){
+        return postRepository.findByCommunityType(pageable,itemType);
     }
 }

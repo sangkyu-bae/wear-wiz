@@ -35,4 +35,11 @@ public class FindPostService {
 
         return postMapper.mapToDomain(postEntityPage);
     }
+
+    public SearchPost findPagingPostByCommunityType(FindPagingPostRequest request){
+        Pageable pageable = PageRequest.of(request.getPageNum() - 1, request.getPageSize(), Sort.Direction.ASC,"postId");
+        Page<PostEntity> postEntityPage = postAdaptor.findPagingByTCommunityType(pageable, request.getType());
+
+        return postMapper.mapToDomain(postEntityPage);
+    }
 }
