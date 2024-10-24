@@ -9,6 +9,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Component
@@ -20,9 +21,11 @@ public class PostMapper {
     public Post mapToDomain(PostEntity postEntity, boolean isLazy){
         List<Comment> commentList = new ArrayList<>();
         if(!isLazy){
-            commentList = postEntity.getCommentList()
-                    .stream().map(comment->commentMapper.mapToDomain(comment))
-                    .collect(Collectors.toList());
+            if(postEntity.getCommentList() != null){
+                commentList = postEntity.getCommentList()
+                        .stream().map(comment->commentMapper.mapToDomain(comment))
+                        .collect(Collectors.toList());
+            }
         }
 
 

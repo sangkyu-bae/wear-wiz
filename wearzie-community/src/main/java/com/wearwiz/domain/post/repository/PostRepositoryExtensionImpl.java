@@ -6,6 +6,8 @@ import com.wearwiz.domain.post.PostEntity;
 import com.wearwiz.domain.post.QPostEntity;
 import org.springframework.data.jpa.repository.support.QuerydslRepositorySupport;
 
+import java.util.Optional;
+
 public class PostRepositoryExtensionImpl extends QuerydslRepositorySupport implements PostRepositoryExtension{
 
     public PostRepositoryExtensionImpl() {
@@ -17,13 +19,13 @@ public class PostRepositoryExtensionImpl extends QuerydslRepositorySupport imple
     QCommentEntity qCommentEntity = QCommentEntity.commentEntity;
 
     @Override
-    public PostEntity findWithCommentById(long id) {
+    public Optional<PostEntity> findWithCommentById(long id) {
 
         JPQLQuery<PostEntity> query = from(qPostEntity)
-                .leftJoin(qCommentEntity.post, qPostEntity).fetchJoin()
+                .leftJoin(qPostEntity.commentList, qCommentEntity).fetchJoin()  // 조인 경로 수정
                 .where(qPostEntity.postId.eq(id))
                 .distinct();
 
-        return query.fetchOne();
+        return Optional.ofNullable(query.fetchOne());
     }
 }

@@ -20,8 +20,9 @@ public class CommentController {
     public ResponseEntity<Comment> registerComment(
             @RequestBody RegisterCommentRequest request,
             @PathVariable("postId") long postId,
-            @RequestHeader("userId") Long userId,
-            Errors errors, Validator validator
+            @RequestHeader("userId") Long userId
+
+//            Errors errors, Validator validator
     ){
 
         request.setMemberId(userId);
@@ -29,9 +30,9 @@ public class CommentController {
 //        BeanPropertyBindingResult bindingResult = new BeanPropertyBindingResult(request, "registerPostRequest");
 //        validator.validate(request, bindingResult);
 
-        if(errors.hasErrors()){
-            //에러 처리
-        }
+//        if(errors.hasErrors()){
+//            //에러 처리
+//        }
 
         Comment createComment = registerCommentService.registerComment(request,postId);
 

@@ -21,6 +21,8 @@ public class CommentAdaptor {
 
     public CommentEntity registerComment(Comment comment, long postId){
 
+        log.info("cooment : {}",postId);
+
         PostEntity postEntity = postRepository.findById(postId).orElseThrow(()->new IllegalArgumentException());
 
         CommentEntity commentEntity = CommentEntity.builder()
