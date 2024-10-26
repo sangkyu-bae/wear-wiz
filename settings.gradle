@@ -5,4 +5,6 @@ include 'wearwiz-cert'
 include 'wearwiz-gateway'
 include 'wearwiz-eureka'
 include 'wearzie-community'
+include 'wearwiz-view'
+include 'wearzie-views'
 
