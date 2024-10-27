@@ -54,8 +54,8 @@ eureka:
 
 kafka:
   bootstrap-server: localhost:9092
-  like:
-    community: community-like
+  view:
+    community: community-view
 
 
 

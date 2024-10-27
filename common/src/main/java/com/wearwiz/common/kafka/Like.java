@@ -2,16 +2,17 @@ package com.wearwiz.common.kafka;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class CommunityLike {
+public class Like {
 
-    private long postId;
+    private long toId;
 
     private long fromMemberId;
+
+    private LikeTypeEnum type;
 
 }
