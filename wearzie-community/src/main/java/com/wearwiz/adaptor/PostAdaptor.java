@@ -1,5 +1,8 @@
 package com.wearwiz.adaptor;
 
+import com.wearwiz.adaptor.out.kafka.ViewProducer;
+import com.wearwiz.common.kafka.IncreaseViewRequest;
+import com.wearwiz.common.kafka.ViewTypeEnum;
 import com.wearwiz.domain.post.Post;
 import com.wearwiz.domain.post.PostEntity;
 import com.wearwiz.domain.post.repository.PostRepository;
@@ -16,6 +19,8 @@ import org.springframework.data.domain.Pageable;
 public class PostAdaptor {
 
     private final PostRepository postRepository;
+
+    private final ViewProducer viewProducer;
 
     public PostEntity registerPost(Post createPost){
         PostEntity postEntity = PostEntity.builder()
@@ -37,6 +42,23 @@ public class PostAdaptor {
                 .orElseThrow(()->new IllegalArgumentException());
     }
 
+    /**
+     * ToDO: kafka 메세지 트랜잭션과
+     * 안묶이도록 aop 구현 예정
+     * */
+    public PostEntity findPostById(long postId,long memberId){
+        PostEntity postEntity = this.findPostById(postId);
+
+
+        IncreaseViewRequest request = IncreaseViewRequest.builder()
+                .postId(postId)
+                .fromMemberId(memberId)
+                .viewTypeEnum(ViewTypeEnum.COMMUNITY)
+                .build();
+
+        viewProducer.sendViewIncrease(request);
+        return postEntity;
+    }
     public Page<PostEntity> findPagingByType(Pageable pageable,int itemType){
         return postRepository.findByItemType(pageable,itemType);
     }

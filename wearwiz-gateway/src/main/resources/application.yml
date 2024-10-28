@@ -34,6 +34,26 @@ spring:
             - Path=/member/v2/**
           filters:
             - AuthFilter
+        - id: view-service
+          uri: lb://view-service
+          predicates:
+            - Path=/view/v1/**
+        - id: view-service
+          uri: lb://view-service
+          predicates:
+            - Path=/view/v2/**
+          filters:
+            - AuthFilter
+        - id: community-service
+          uri: lb://community-service
+          predicates:
+            - Path=/community/v1/**
+        - id: community-service
+          uri: lb://community-service
+          predicates:
+            - Path=/community/v2/**
+          filters:
+            - AuthFilter
 management:
   endpoints:
     web:

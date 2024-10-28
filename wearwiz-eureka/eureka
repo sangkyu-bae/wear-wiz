@@ -1,93 +1,104 @@
-2024-10-24 22:41:32.479 INFO  ---- [main      ] [WearwizEurekaApplication:50] logStarting   Starting WearwizEurekaApplication using Java 17.0.12 with PID 29188 (C:\Users\tkdrb\IdeaProjects\waerwiz\wearwiz-eureka\build\classes\java\main started by tkdrb in C:\Users\tkdrb\IdeaProjects\waerwiz\wearwiz-eureka)
-2024-10-24 22:41:32.490 INFO  ---- [main      ] [WearwizEurekaApplication:654] logStartupProfileInfo   No active profile set, falling back to 1 default profile: "default"
-2024-10-24 22:41:34.517 INFO  ---- [main      ] [GenericScope:282] setSerializationId   BeanFactory id=16c71ec9-c1b6-39ca-aca6-546b1679e34d
-2024-10-24 22:41:34.620 WARN  ---- [main      ] [PostProcessorRegistrationDelegate$BeanPostProcessorChecker:429] postProcessAfterInitialization   Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
-2024-10-24 22:41:34.635 WARN  ---- [main      ] [PostProcessorRegistrationDelegate$BeanPostProcessorChecker:437] postProcessAfterInitialization   Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
-2024-10-24 22:41:35.228 INFO  ---- [main      ] [TomcatWebServer:111] initialize   Tomcat initialized with port 8761 (http)
-2024-10-24 22:41:35.253 INFO  ---- [main      ] [StandardService:173] log   Starting service [Tomcat]
-2024-10-24 22:41:35.255 INFO  ---- [main      ] [StandardEngine:173] log   Starting Servlet engine: [Apache Tomcat/10.1.30]
-2024-10-24 22:41:35.387 INFO  ---- [main      ] [[/]:173] log   Initializing Spring embedded WebApplicationContext
-2024-10-24 22:41:35.388 INFO  ---- [main      ] [ServletWebServerApplicationContext:296] prepareWebApplicationContext   Root WebApplicationContext: initialization completed in 2827 ms
-2024-10-24 22:41:36.825 INFO  ---- [main      ] [DiscoveryJerseyProvider:70] <init>   Using JSON encoding codec LegacyJacksonJson
-2024-10-24 22:41:36.828 INFO  ---- [main      ] [DiscoveryJerseyProvider:71] <init>   Using JSON decoding codec LegacyJacksonJson
-2024-10-24 22:41:37.092 INFO  ---- [main      ] [DiscoveryJerseyProvider:80] <init>   Using XML encoding codec XStreamXml
-2024-10-24 22:41:37.093 INFO  ---- [main      ] [DiscoveryJerseyProvider:81] <init>   Using XML decoding codec XStreamXml
-2024-10-24 22:41:39.295 WARN  ---- [main      ] [LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger:94] afterPropertiesSet   Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2024-10-24 22:41:39.340 INFO  ---- [main      ] [InstanceInfoFactory:67] create   Setting initial instance status as: STARTING
-2024-10-24 22:41:39.391 INFO  ---- [main      ] [DiscoveryClient:329] <init>   Initializing Eureka in region us-east-1
-2024-10-24 22:41:39.391 INFO  ---- [main      ] [DiscoveryClient:332] <init>   Client configured to neither register nor query for data.
-2024-10-24 22:41:39.398 INFO  ---- [main      ] [DiscoveryClient:347] <init>   Discovery Client initialized at timestamp 1729777299394 with initial instances count: 0
-2024-10-24 22:41:39.547 INFO  ---- [main      ] [DefaultEurekaServerContext:64] initialize   Initializing ...
-2024-10-24 22:41:39.551 INFO  ---- [main      ] [PeerEurekaNodes:186] updatePeerEurekaNodes   Adding new peer nodes [http://localhost:8761/eureka/]
-2024-10-24 22:41:39.726 INFO  ---- [main      ] [DiscoveryJerseyProvider:70] <init>   Using JSON encoding codec LegacyJacksonJson
-2024-10-24 22:41:39.726 INFO  ---- [main      ] [DiscoveryJerseyProvider:71] <init>   Using JSON decoding codec LegacyJacksonJson
-2024-10-24 22:41:39.727 INFO  ---- [main      ] [DiscoveryJerseyProvider:80] <init>   Using XML encoding codec XStreamXml
-2024-10-24 22:41:39.727 INFO  ---- [main      ] [DiscoveryJerseyProvider:81] <init>   Using XML decoding codec XStreamXml
-2024-10-24 22:41:39.778 INFO  ---- [main      ] [PeerEurekaNodes:108] start   Replica node URL:  http://localhost:8761/eureka/
-2024-10-24 22:41:39.804 INFO  ---- [main      ] [AbstractInstanceRegistry:164] initRemoteRegionRegistry   Finished initializing remote region registries. All known remote regions: []
-2024-10-24 22:41:39.804 INFO  ---- [main      ] [DefaultEurekaServerContext:71] initialize   Initialized
-2024-10-24 22:41:39.822 INFO  ---- [main      ] [EndpointLinksResolver:60] <init>   Exposing 1 endpoint beneath base path '/actuator'
-2024-10-24 22:41:39.916 INFO  ---- [main      ] [EurekaServiceRegistry:70] register   Registering application WEARWIZ-EUREKA with eureka with status UP
-2024-10-24 22:41:39.949 INFO  ---- [Thread-9  ] [EurekaServerBootstrap:142] isAws   isAws returned false
-2024-10-24 22:41:39.951 INFO  ---- [Thread-9  ] [EurekaServerBootstrap:108] initEurekaServerContext   Initialized server context
-2024-10-24 22:41:39.952 INFO  ---- [Thread-9  ] [PeerAwareInstanceRegistryImpl:245] openForTraffic   Got 1 instances from neighboring DS node
-2024-10-24 22:41:39.953 INFO  ---- [Thread-9  ] [PeerAwareInstanceRegistryImpl:246] openForTraffic   Renew threshold is: 1
-2024-10-24 22:41:39.953 INFO  ---- [Thread-9  ] [PeerAwareInstanceRegistryImpl:257] openForTraffic   Changing status to UP
-2024-10-24 22:41:39.960 INFO  ---- [Thread-9  ] [EurekaServerInitializerConfiguration:68] lambda$start$0   Started Eureka Server
-2024-10-24 22:41:39.997 INFO  ---- [main      ] [TomcatWebServer:243] start   Tomcat started on port 8761 (http) with context path '/'
-2024-10-24 22:41:40.001 INFO  ---- [main      ] [EurekaAutoServiceRegistration:150] onApplicationEvent   Updating port to 8761
-2024-10-24 22:41:40.326 INFO  ---- [main      ] [WearwizEurekaApplication:56] logStarted   Started WearwizEurekaApplication in 8.996 seconds (process running for 9.666)
-2024-10-24 22:42:02.137 INFO  ---- [761-exec-1] [[/]:173] log   Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-10-24 22:42:02.138 INFO  ---- [761-exec-1] [DispatcherServlet:532] initServletBean   Initializing Servlet 'dispatcherServlet'
-2024-10-24 22:42:02.139 INFO  ---- [761-exec-1] [DispatcherServlet:554] initServletBean   Completed initialization in 1 ms
-2024-10-24 22:42:02.452 WARN  ---- [761-exec-2] [AbstractInstanceRegistry:371] renew   DS: Registry: lease doesn't exist, registering resource: COMMUNITY-SERVICE - 172.20.10.2:8082
-2024-10-24 22:42:02.452 WARN  ---- [761-exec-2] [InstanceResource:116] renewLease   Not Found (Renew): COMMUNITY-SERVICE - 172.20.10.2:8082
-2024-10-24 22:42:04.501 INFO  ---- [761-exec-4] [AbstractInstanceRegistry:277] register   Registered instance COMMUNITY-SERVICE/172.20.10.2:8082 with status UP (replication=false)
-2024-10-24 22:42:05.198 WARN  ---- [761-exec-6] [AbstractInstanceRegistry:371] renew   DS: Registry: lease doesn't exist, registering resource: WEARWIZ-API-GATEWAY - 172.20.10.2:8080
-2024-10-24 22:42:05.199 WARN  ---- [761-exec-6] [InstanceResource:116] renewLease   Not Found (Renew): WEARWIZ-API-GATEWAY - 172.20.10.2:8080
-2024-10-24 22:42:05.292 INFO  ---- [761-exec-8] [AbstractInstanceRegistry:277] register   Registered instance WEARWIZ-API-GATEWAY/172.20.10.2:8080 with status UP (replication=false)
-2024-10-24 22:42:05.667 INFO  ---- [761-exec-9] [AbstractInstanceRegistry:277] register   Registered instance COMMUNITY-SERVICE/172.20.10.2:8082 with status UP (replication=true)
-2024-10-24 22:42:05.815 INFO  ---- [761-exec-3] [AbstractInstanceRegistry:277] register   Registered instance WEARWIZ-API-GATEWAY/172.20.10.2:8080 with status UP (replication=true)
-2024-10-24 22:42:39.955 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
-2024-10-24 22:43:39.956 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
-2024-10-24 22:44:39.956 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
-2024-10-24 22:45:39.957 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 1ms
-2024-10-24 22:46:39.957 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
-2024-10-24 22:47:39.957 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
-2024-10-24 22:48:39.971 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 13ms
-2024-10-24 22:49:39.971 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
-2024-10-24 22:50:32.155 INFO  ---- [61-exec-10] [AbstractInstanceRegistry:277] register   Registered instance COMMUNITY-SERVICE/172.20.10.2:8082 with status UP (replication=false)
-2024-10-24 22:50:32.684 INFO  ---- [761-exec-7] [AbstractInstanceRegistry:277] register   Registered instance COMMUNITY-SERVICE/172.20.10.2:8082 with status UP (replication=true)
-2024-10-24 22:50:39.971 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
-2024-10-24 22:51:28.500 INFO  ---- [761-exec-4] [AbstractInstanceRegistry:277] register   Registered instance COMMUNITY-SERVICE/172.20.10.2:8082 with status UP (replication=false)
-2024-10-24 22:51:29.009 INFO  ---- [761-exec-5] [AbstractInstanceRegistry:277] register   Registered instance COMMUNITY-SERVICE/172.20.10.2:8082 with status UP (replication=true)
-2024-10-24 22:51:39.973 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 1ms
-2024-10-24 22:52:39.973 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
-2024-10-24 22:53:39.980 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 6ms
-2024-10-24 22:54:39.980 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
-2024-10-24 22:55:39.980 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
-2024-10-24 22:56:39.805 INFO  ---- [oldUpdater] [PeerAwareInstanceRegistryImpl:550] updateRenewalThreshold   Current renewal threshold is : 5
-2024-10-24 22:56:39.989 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 9ms
-2024-10-24 22:57:39.989 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
-2024-10-24 22:58:39.998 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 8ms
-2024-10-24 22:59:00.058 INFO  ---- [761-exec-5] [AbstractInstanceRegistry:277] register   Registered instance COMMUNITY-SERVICE/172.20.10.2:8082 with status UP (replication=false)
-2024-10-24 22:59:00.578 INFO  ---- [761-exec-8] [AbstractInstanceRegistry:277] register   Registered instance COMMUNITY-SERVICE/172.20.10.2:8082 with status UP (replication=true)
-2024-10-24 22:59:40.003 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 5ms
-2024-10-24 23:00:12.063 INFO  ---- [761-exec-2] [AbstractInstanceRegistry:277] register   Registered instance COMMUNITY-SERVICE/172.20.10.2:8082 with status UP (replication=false)
-2024-10-24 23:00:12.581 INFO  ---- [761-exec-4] [AbstractInstanceRegistry:277] register   Registered instance COMMUNITY-SERVICE/172.20.10.2:8082 with status UP (replication=true)
-2024-10-24 23:00:40.004 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
-2024-10-24 23:01:10.798 INFO  ---- [761-exec-8] [AbstractInstanceRegistry:277] register   Registered instance COMMUNITY-SERVICE/172.20.10.2:8082 with status UP (replication=false)
-2024-10-24 23:01:11.330 INFO  ---- [761-exec-3] [AbstractInstanceRegistry:277] register   Registered instance COMMUNITY-SERVICE/172.20.10.2:8082 with status UP (replication=true)
-2024-10-24 23:01:40.004 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
-2024-10-24 23:02:40.005 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
-2024-10-24 23:03:40.005 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
-2024-10-24 23:04:16.451 INFO  ---- [761-exec-6] [AbstractInstanceRegistry:277] register   Registered instance COMMUNITY-SERVICE/172.20.10.2:8082 with status UP (replication=false)
-2024-10-24 23:04:16.979 INFO  ---- [761-exec-5] [AbstractInstanceRegistry:277] register   Registered instance COMMUNITY-SERVICE/172.20.10.2:8082 with status UP (replication=true)
-2024-10-24 23:04:40.014 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 8ms
-2024-10-24 23:05:34.548 INFO  ---- [761-exec-2] [AbstractInstanceRegistry:277] register   Registered instance COMMUNITY-SERVICE/172.20.10.2:8082 with status UP (replication=false)
-2024-10-24 23:05:35.066 INFO  ---- [761-exec-4] [AbstractInstanceRegistry:277] register   Registered instance COMMUNITY-SERVICE/172.20.10.2:8082 with status UP (replication=true)
-2024-10-24 23:05:40.014 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
-2024-10-24 23:06:06.739 INFO  ---- [761-exec-1] [AbstractInstanceRegistry:277] register   Registered instance COMMUNITY-SERVICE/172.20.10.2:8082 with status UP (replication=false)
-2024-10-24 23:06:07.039 INFO  ---- [761-exec-4] [AbstractInstanceRegistry:277] register   Registered instance COMMUNITY-SERVICE/172.20.10.2:8082 with status UP (replication=true)
-2024-10-24 23:06:40.029 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 14ms
-2024-10-24 23:07:40.029 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
+2024-10-28 21:12:41.773 INFO  ---- [main      ] [WearwizEurekaApplication:50] logStarting   Starting WearwizEurekaApplication using Java 17.0.12 with PID 12508 (C:\Users\tkdrb\IdeaProjects\waerwiz\wearwiz-eureka\build\classes\java\main started by tkdrb in C:\Users\tkdrb\IdeaProjects\waerwiz\wearwiz-eureka)
+2024-10-28 21:12:41.803 INFO  ---- [main      ] [WearwizEurekaApplication:654] logStartupProfileInfo   No active profile set, falling back to 1 default profile: "default"
+2024-10-28 21:12:47.748 INFO  ---- [main      ] [GenericScope:282] setSerializationId   BeanFactory id=16c71ec9-c1b6-39ca-aca6-546b1679e34d
+2024-10-28 21:12:48.003 WARN  ---- [main      ] [PostProcessorRegistrationDelegate$BeanPostProcessorChecker:429] postProcessAfterInitialization   Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-10-28 21:12:48.017 WARN  ---- [main      ] [PostProcessorRegistrationDelegate$BeanPostProcessorChecker:437] postProcessAfterInitialization   Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-10-28 21:12:50.263 INFO  ---- [main      ] [TomcatWebServer:111] initialize   Tomcat initialized with port 8761 (http)
+2024-10-28 21:12:50.334 INFO  ---- [main      ] [StandardService:173] log   Starting service [Tomcat]
+2024-10-28 21:12:50.340 INFO  ---- [main      ] [StandardEngine:173] log   Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-28 21:12:50.814 INFO  ---- [main      ] [[/]:173] log   Initializing Spring embedded WebApplicationContext
+2024-10-28 21:12:50.816 INFO  ---- [main      ] [ServletWebServerApplicationContext:296] prepareWebApplicationContext   Root WebApplicationContext: initialization completed in 8896 ms
+2024-10-28 21:12:55.752 INFO  ---- [main      ] [DiscoveryJerseyProvider:70] <init>   Using JSON encoding codec LegacyJacksonJson
+2024-10-28 21:12:55.757 INFO  ---- [main      ] [DiscoveryJerseyProvider:71] <init>   Using JSON decoding codec LegacyJacksonJson
+2024-10-28 21:12:56.365 INFO  ---- [main      ] [DiscoveryJerseyProvider:80] <init>   Using XML encoding codec XStreamXml
+2024-10-28 21:12:56.365 INFO  ---- [main      ] [DiscoveryJerseyProvider:81] <init>   Using XML decoding codec XStreamXml
+2024-10-28 21:13:01.778 WARN  ---- [main      ] [LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger:94] afterPropertiesSet   Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2024-10-28 21:13:01.903 INFO  ---- [main      ] [InstanceInfoFactory:67] create   Setting initial instance status as: STARTING
+2024-10-28 21:13:02.007 INFO  ---- [main      ] [DiscoveryClient:329] <init>   Initializing Eureka in region us-east-1
+2024-10-28 21:13:02.009 INFO  ---- [main      ] [DiscoveryClient:332] <init>   Client configured to neither register nor query for data.
+2024-10-28 21:13:02.014 INFO  ---- [main      ] [DiscoveryClient:347] <init>   Discovery Client initialized at timestamp 1730117582012 with initial instances count: 0
+2024-10-28 21:13:02.277 INFO  ---- [main      ] [DefaultEurekaServerContext:64] initialize   Initializing ...
+2024-10-28 21:13:02.286 INFO  ---- [main      ] [PeerEurekaNodes:186] updatePeerEurekaNodes   Adding new peer nodes [http://localhost:8761/eureka/]
+2024-10-28 21:13:02.752 INFO  ---- [main      ] [DiscoveryJerseyProvider:70] <init>   Using JSON encoding codec LegacyJacksonJson
+2024-10-28 21:13:02.757 INFO  ---- [main      ] [DiscoveryJerseyProvider:71] <init>   Using JSON decoding codec LegacyJacksonJson
+2024-10-28 21:13:02.760 INFO  ---- [main      ] [DiscoveryJerseyProvider:80] <init>   Using XML encoding codec XStreamXml
+2024-10-28 21:13:02.761 INFO  ---- [main      ] [DiscoveryJerseyProvider:81] <init>   Using XML decoding codec XStreamXml
+2024-10-28 21:13:03.022 INFO  ---- [main      ] [PeerEurekaNodes:108] start   Replica node URL:  http://localhost:8761/eureka/
+2024-10-28 21:13:03.075 INFO  ---- [main      ] [AbstractInstanceRegistry:164] initRemoteRegionRegistry   Finished initializing remote region registries. All known remote regions: []
+2024-10-28 21:13:03.076 INFO  ---- [main      ] [DefaultEurekaServerContext:71] initialize   Initialized
+2024-10-28 21:13:03.112 INFO  ---- [main      ] [EndpointLinksResolver:60] <init>   Exposing 1 endpoint beneath base path '/actuator'
+2024-10-28 21:13:03.345 INFO  ---- [main      ] [EurekaServiceRegistry:70] register   Registering application WEARWIZ-EUREKA with eureka with status UP
+2024-10-28 21:13:03.404 INFO  ---- [Thread-9  ] [EurekaServerBootstrap:142] isAws   isAws returned false
+2024-10-28 21:13:03.406 INFO  ---- [Thread-9  ] [EurekaServerBootstrap:108] initEurekaServerContext   Initialized server context
+2024-10-28 21:13:03.407 INFO  ---- [Thread-9  ] [PeerAwareInstanceRegistryImpl:245] openForTraffic   Got 1 instances from neighboring DS node
+2024-10-28 21:13:03.408 INFO  ---- [Thread-9  ] [PeerAwareInstanceRegistryImpl:246] openForTraffic   Renew threshold is: 1
+2024-10-28 21:13:03.409 INFO  ---- [Thread-9  ] [PeerAwareInstanceRegistryImpl:257] openForTraffic   Changing status to UP
+2024-10-28 21:13:03.417 INFO  ---- [Thread-9  ] [EurekaServerInitializerConfiguration:68] lambda$start$0   Started Eureka Server
+2024-10-28 21:13:03.447 INFO  ---- [main      ] [TomcatWebServer:243] start   Tomcat started on port 8761 (http) with context path '/'
+2024-10-28 21:13:03.460 INFO  ---- [main      ] [EurekaAutoServiceRegistration:150] onApplicationEvent   Updating port to 8761
+2024-10-28 21:13:04.067 INFO  ---- [761-exec-1] [[/]:173] log   Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-28 21:13:04.068 INFO  ---- [761-exec-1] [DispatcherServlet:532] initServletBean   Initializing Servlet 'dispatcherServlet'
+2024-10-28 21:13:04.080 INFO  ---- [761-exec-1] [DispatcherServlet:554] initServletBean   Completed initialization in 11 ms
+2024-10-28 21:13:05.819 INFO  ---- [main      ] [WearwizEurekaApplication:56] logStarted   Started WearwizEurekaApplication in 28.1 seconds (process running for 30.792)
+2024-10-28 21:13:06.851 INFO  ---- [761-exec-4] [AbstractInstanceRegistry:277] register   Registered instance WEARWIZ-API-GATEWAY/192.168.0.104:8080 with status UP (replication=false)
+2024-10-28 21:13:08.233 INFO  ---- [761-exec-5] [AbstractInstanceRegistry:277] register   Registered instance WEARWIZ-API-GATEWAY/192.168.0.104:8080 with status UP (replication=true)
+2024-10-28 21:13:28.286 INFO  ---- [761-exec-3] [AbstractInstanceRegistry:277] register   Registered instance COMMUNITY-SERVICE/192.168.0.104:8082 with status UP (replication=false)
+2024-10-28 21:13:28.806 INFO  ---- [761-exec-6] [AbstractInstanceRegistry:277] register   Registered instance COMMUNITY-SERVICE/192.168.0.104:8082 with status UP (replication=true)
+2024-10-28 21:13:30.500 INFO  ---- [61-exec-10] [AbstractInstanceRegistry:277] register   Registered instance CERT-SERVICE/192.168.0.104:8081 with status UP (replication=false)
+2024-10-28 21:13:31.023 INFO  ---- [761-exec-8] [AbstractInstanceRegistry:277] register   Registered instance CERT-SERVICE/192.168.0.104:8081 with status UP (replication=true)
+2024-10-28 21:14:03.412 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
+2024-10-28 21:15:03.413 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 1ms
+2024-10-28 21:16:03.414 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 1ms
+2024-10-28 21:17:03.414 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
+2024-10-28 21:17:09.116 INFO  ---- [761-exec-7] [AbstractInstanceRegistry:277] register   Registered instance VIEW-SERVICE/192.168.0.104:8083 with status UP (replication=false)
+2024-10-28 21:17:09.635 INFO  ---- [61-exec-10] [AbstractInstanceRegistry:277] register   Registered instance VIEW-SERVICE/192.168.0.104:8083 with status UP (replication=true)
+2024-10-28 21:17:11.602 INFO  ---- [761-exec-8] [AbstractInstanceRegistry:277] register   Registered instance VIEW-SERVICE/192.168.0.104:8083 with status DOWN (replication=false)
+2024-10-28 21:17:12.111 INFO  ---- [761-exec-9] [AbstractInstanceRegistry:277] register   Registered instance VIEW-SERVICE/192.168.0.104:8083 with status DOWN (replication=true)
+2024-10-28 21:17:14.673 INFO  ---- [761-exec-1] [AbstractInstanceRegistry:339] internalCancel   Cancelled instance VIEW-SERVICE/192.168.0.104:8083 (replication=false)
+2024-10-28 21:17:15.190 WARN  ---- [761-exec-2] [AbstractInstanceRegistry:324] internalCancel   DS: Registry: cancel failed because Lease is not registered for: VIEW-SERVICE/192.168.0.104:8083
+2024-10-28 21:17:15.190 INFO  ---- [761-exec-2] [InstanceResource:288] cancelLease   Not Found (Cancel): VIEW-SERVICE - 192.168.0.104:8083
+2024-10-28 21:17:15.192 WARN  ---- [ocalhost-5] [ReplicationTask:35] handleFailure   The replication of task VIEW-SERVICE/192.168.0.104:8083:Cancel@localhost failed with response code 404
+2024-10-28 21:17:15.192 WARN  ---- [ocalhost-5] [PeerEurekaNode:171] handleFailure   VIEW-SERVICE/192.168.0.104:8083:Cancel@localhost: missing entry.
+2024-10-28 21:18:03.414 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
+2024-10-28 21:19:03.415 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
+2024-10-28 21:19:54.249 INFO  ---- [761-exec-1] [AbstractInstanceRegistry:277] register   Registered instance VIEW-SERVICE/192.168.0.104:8083 with status UP (replication=false)
+2024-10-28 21:19:54.772 INFO  ---- [761-exec-2] [AbstractInstanceRegistry:277] register   Registered instance VIEW-SERVICE/192.168.0.104:8083 with status UP (replication=true)
+2024-10-28 21:20:03.428 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 13ms
+2024-10-28 21:21:03.429 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
+2024-10-28 21:22:03.429 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
+2024-10-28 21:23:03.430 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
+2024-10-28 21:24:03.430 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
+2024-10-28 21:24:37.990 INFO  ---- [761-exec-9] [AbstractInstanceRegistry:277] register   Registered instance COMMUNITY-SERVICE/192.168.0.104:8082 with status UP (replication=false)
+2024-10-28 21:24:38.518 INFO  ---- [761-exec-1] [AbstractInstanceRegistry:277] register   Registered instance COMMUNITY-SERVICE/192.168.0.104:8082 with status UP (replication=true)
+2024-10-28 21:25:03.437 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 6ms
+2024-10-28 21:26:03.436 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
+2024-10-28 21:27:03.437 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
+2024-10-28 21:27:14.187 INFO  ---- [761-exec-8] [AbstractInstanceRegistry:277] register   Registered instance VIEW-SERVICE/192.168.0.104:8083 with status UP (replication=false)
+2024-10-28 21:27:14.698 INFO  ---- [761-exec-9] [AbstractInstanceRegistry:277] register   Registered instance VIEW-SERVICE/192.168.0.104:8083 with status UP (replication=true)
+2024-10-28 21:28:03.082 INFO  ---- [oldUpdater] [PeerAwareInstanceRegistryImpl:550] updateRenewalThreshold   Current renewal threshold is : 8
+2024-10-28 21:28:03.437 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
+2024-10-28 21:29:03.437 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
+2024-10-28 21:30:03.437 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
+2024-10-28 21:31:03.438 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
+2024-10-28 21:31:28.963 INFO  ---- [761-exec-2] [AbstractInstanceRegistry:277] register   Registered instance VIEW-SERVICE/192.168.0.104:8083 with status UP (replication=false)
+2024-10-28 21:31:29.477 INFO  ---- [761-exec-4] [AbstractInstanceRegistry:277] register   Registered instance VIEW-SERVICE/192.168.0.104:8083 with status UP (replication=true)
+2024-10-28 21:32:03.438 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
+2024-10-28 21:33:03.438 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
+2024-10-28 21:33:03.449 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:629] evict   Evicting 1 items (expired=1, evictionLimit=1)
+2024-10-28 21:33:03.453 WARN  ---- [ctionTimer] [AbstractInstanceRegistry:641] evict   DS: Registry: expired lease for VIEW-SERVICE/192.168.0.104:8083
+2024-10-28 21:33:03.454 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:339] internalCancel   Cancelled instance VIEW-SERVICE/192.168.0.104:8083 (replication=false)
+2024-10-28 21:34:03.439 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 1ms
+2024-10-28 21:35:03.440 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
+2024-10-28 21:36:03.440 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
+2024-10-28 21:37:03.440 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
+2024-10-28 21:38:03.441 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
+2024-10-28 21:39:03.441 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
+2024-10-28 21:40:03.441 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
+2024-10-28 21:40:27.087 INFO  ---- [761-exec-9] [AbstractInstanceRegistry:277] register   Registered instance VIEW-SERVICE/192.168.0.104:8083 with status UP (replication=false)
+2024-10-28 21:40:27.607 INFO  ---- [761-exec-1] [AbstractInstanceRegistry:277] register   Registered instance VIEW-SERVICE/192.168.0.104:8083 with status UP (replication=true)
+2024-10-28 21:41:03.442 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
+2024-10-28 21:41:50.490 INFO  ---- [761-exec-7] [AbstractInstanceRegistry:277] register   Registered instance VIEW-SERVICE/192.168.0.104:8083 with status UP (replication=false)
+2024-10-28 21:41:51.013 INFO  ---- [61-exec-10] [AbstractInstanceRegistry:277] register   Registered instance VIEW-SERVICE/192.168.0.104:8083 with status UP (replication=true)
+2024-10-28 21:42:03.442 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms
+2024-10-28 21:43:03.076 INFO  ---- [oldUpdater] [PeerAwareInstanceRegistryImpl:550] updateRenewalThreshold   Current renewal threshold is : 8
+2024-10-28 21:43:03.443 INFO  ---- [ctionTimer] [AbstractInstanceRegistry:1254] run   Running the evict task with compensationTime 0ms

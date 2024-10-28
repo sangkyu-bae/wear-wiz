@@ -13,10 +13,12 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @Slf4j
 @AllArgsConstructor
+@Transactional
 public class FindPostService {
 
 
@@ -25,6 +27,12 @@ public class FindPostService {
     private final PostMapper postMapper;
     public Post findPostById(long postId){
         PostEntity findEntity = postAdaptor.findPostById(postId);
+
+        return postMapper.mapToDomain(findEntity,false);
+    }
+
+    public Post findPostById(long postId,long userId){
+        PostEntity findEntity = postAdaptor.findPostById(postId,userId);
 
         return postMapper.mapToDomain(findEntity,false);
     }

@@ -45,6 +45,13 @@ public class PostController {
         return ResponseEntity.ok().body(post);
     }
 
+    @GetMapping("/comment/v2/{postId}")
+    public ResponseEntity<Post> findPostById(@PathVariable("postId")long postId,
+                                             @RequestHeader("userId") Long userId){
+        Post post = findPostService.findPostById(postId,userId);
+
+        return ResponseEntity.ok().body(post);
+    }
     @GetMapping("/comment/v1/item/{pageNum}/{type}/{size}")
     public ResponseEntity<SearchPost> findPagingPostByItemType(@PathVariable("pageNum") int pageNum,
                                                                @PathVariable("type") int type,

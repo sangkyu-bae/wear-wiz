@@ -67,4 +67,8 @@ eureka:
       defaultZone: http://0.0.0.0:8761/eureka
 
 
+kafka:
+  bootstrap-server: localhost:9092
+  view:
+    community: community-view
 

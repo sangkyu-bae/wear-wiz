@@ -24,7 +24,7 @@ public class CommunityViewEntity {
 
     private int viewCount;
 
-    @OneToMany(fetch = FetchType.LAZY,mappedBy = "fromMember")
+    @OneToMany(fetch = FetchType.LAZY,mappedBy = "communityView")
     private Set<FromMemberViewEntity> fromMembers;
 
     public void addFromMemberView(FromMemberViewEntity fromMemberViewEntity){

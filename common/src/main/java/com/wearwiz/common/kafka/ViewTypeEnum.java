@@ -3,7 +3,7 @@ package com.wearwiz.common.kafka;
 import com.wearwiz.common.EnumMapperType;
 
 public enum ViewTypeEnum implements EnumMapperType {
-    COMMUNITY(1,"IncreaseCommunityViewService");
+    COMMUNITY(1,"increaseCommunityViewService");
 
 
     private final int value;

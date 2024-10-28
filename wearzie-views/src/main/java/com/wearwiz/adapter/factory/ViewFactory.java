@@ -19,6 +19,7 @@ public class ViewFactory {
 
     public IncreaseViewService createIncreaseViewService(ViewTypeEnum type) throws IllegalAccessException {
         IncreaseViewService increaseViewService = viewServiceMap.get(type.getName());
+        log.info(type.getName());
         if(increaseViewService == null){
             throw new IllegalAccessException("Unknown createIncreaseViewService type:" + type.getName());
         }

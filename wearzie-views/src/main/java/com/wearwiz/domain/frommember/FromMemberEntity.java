@@ -27,7 +27,7 @@ public class FromMemberEntity {
     @ManyToOne(fetch = FetchType.LAZY)
     private CommunityLikeEntity communityLike;
 
-    @OneToMany(fetch = FetchType.LAZY,mappedBy = "communityView")
+    @OneToMany(fetch = FetchType.LAZY,mappedBy = "fromMember")
     private List<FromMemberViewEntity> views;
 
     public void addFromMemberView(FromMemberViewEntity fromMemberViewEntity){

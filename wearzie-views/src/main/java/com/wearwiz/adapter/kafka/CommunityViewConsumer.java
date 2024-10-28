@@ -22,7 +22,7 @@ public class CommunityViewConsumer {
     /**
      * ToDo: 현재 단일 파티션으로 구동 추후 kafka 파티션 증가
      */
-    @KafkaListener(topics = "${kafka.view.community}")
+    @KafkaListener(topics = "${kafka.view.community.topic}",groupId ="${kafka.view.community.group}" )
     public void CommunityViewListener(String viewObj){
         IncreaseViewRequest request = null;
 
