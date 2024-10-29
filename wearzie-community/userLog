@@ -1,0 +1,543 @@
+2024-10-29 20:14:02.240 INFO  ---- [main      ] [CommunityMain:50] logStarting   Starting CommunityMain using Java 17.0.12 with PID 30276 (C:\Users\tkdrb\IdeaProjects\waerwiz\wearzie-community\build\classes\java\main started by tkdrb in C:\Users\tkdrb\IdeaProjects\waerwiz\wearzie-community)
+2024-10-29 20:14:02.252 INFO  ---- [main      ] [CommunityMain:654] logStartupProfileInfo   No active profile set, falling back to 1 default profile: "default"
+2024-10-29 20:14:02.877 INFO  ---- [tartedMain] [CommunityMain:50] logStarting   Starting CommunityMain using Java 17.0.12 with PID 25992 (C:\Users\tkdrb\IdeaProjects\waerwiz\wearzie-community\build\classes\java\main started by tkdrb in C:\Users\tkdrb\IdeaProjects\waerwiz\wearzie-community)
+2024-10-29 20:14:02.886 INFO  ---- [tartedMain] [CommunityMain:654] logStartupProfileInfo   No active profile set, falling back to 1 default profile: "default"
+2024-10-29 20:14:02.996 INFO  ---- [tartedMain] [DevToolsPropertyDefaultsPostProcessor:252] logTo   Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-10-29 20:14:02.997 INFO  ---- [tartedMain] [DevToolsPropertyDefaultsPostProcessor:252] logTo   For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-10-29 20:14:04.310 INFO  ---- [main      ] [RepositoryConfigurationDelegate:295] multipleStoresDetected   Multiple Spring Data modules found, entering strict repository configuration mode
+2024-10-29 20:14:04.314 INFO  ---- [main      ] [RepositoryConfigurationDelegate:143] registerRepositoriesIn   Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-29 20:14:04.762 INFO  ---- [main      ] [RepositoryConfigurationDelegate:211] registerRepositoriesIn   Finished Spring Data repository scanning in 433 ms. Found 2 JPA repository interfaces.
+2024-10-29 20:14:04.811 INFO  ---- [main      ] [RepositoryConfigurationDelegate:295] multipleStoresDetected   Multiple Spring Data modules found, entering strict repository configuration mode
+2024-10-29 20:14:04.814 INFO  ---- [main      ] [RepositoryConfigurationDelegate:143] registerRepositoriesIn   Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-10-29 20:14:04.866 INFO  ---- [main      ] [RepositoryConfigurationExtensionSupport:320] isStrictRepositoryCandidate   Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.wearwiz.domain.comment.repository.CommentRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-10-29 20:14:04.867 INFO  ---- [main      ] [RepositoryConfigurationExtensionSupport:320] isStrictRepositoryCandidate   Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.wearwiz.domain.post.repository.PostRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-10-29 20:14:04.868 INFO  ---- [main      ] [RepositoryConfigurationDelegate:211] registerRepositoriesIn   Finished Spring Data repository scanning in 35 ms. Found 0 Redis repository interfaces.
+2024-10-29 20:14:05.256 INFO  ---- [tartedMain] [RepositoryConfigurationDelegate:295] multipleStoresDetected   Multiple Spring Data modules found, entering strict repository configuration mode
+2024-10-29 20:14:05.262 INFO  ---- [tartedMain] [RepositoryConfigurationDelegate:143] registerRepositoriesIn   Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-29 20:14:05.705 INFO  ---- [main      ] [GenericScope:282] setSerializationId   BeanFactory id=deb9f2b9-6299-3afe-8cc7-a0d0fcba17bc
+2024-10-29 20:14:05.797 INFO  ---- [tartedMain] [RepositoryConfigurationDelegate:211] registerRepositoriesIn   Finished Spring Data repository scanning in 506 ms. Found 2 JPA repository interfaces.
+2024-10-29 20:14:05.835 INFO  ---- [tartedMain] [RepositoryConfigurationDelegate:295] multipleStoresDetected   Multiple Spring Data modules found, entering strict repository configuration mode
+2024-10-29 20:14:05.838 INFO  ---- [tartedMain] [RepositoryConfigurationDelegate:143] registerRepositoriesIn   Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-10-29 20:14:05.880 INFO  ---- [tartedMain] [RepositoryConfigurationExtensionSupport:320] isStrictRepositoryCandidate   Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.wearwiz.domain.comment.repository.CommentRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-10-29 20:14:05.880 INFO  ---- [tartedMain] [RepositoryConfigurationExtensionSupport:320] isStrictRepositoryCandidate   Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.wearwiz.domain.post.repository.PostRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-10-29 20:14:05.881 INFO  ---- [tartedMain] [RepositoryConfigurationDelegate:211] registerRepositoriesIn   Finished Spring Data repository scanning in 26 ms. Found 0 Redis repository interfaces.
+2024-10-29 20:14:06.626 INFO  ---- [tartedMain] [GenericScope:282] setSerializationId   BeanFactory id=4a92d43c-d18b-3aec-b830-53a257b3a839
+2024-10-29 20:14:06.991 INFO  ---- [main      ] [TomcatWebServer:111] initialize   Tomcat initialized with port 8082 (http)
+2024-10-29 20:14:07.027 INFO  ---- [main      ] [StandardService:173] log   Starting service [Tomcat]
+2024-10-29 20:14:07.027 INFO  ---- [main      ] [StandardEngine:173] log   Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-29 20:14:07.135 INFO  ---- [main      ] [[/]:173] log   Initializing Spring embedded WebApplicationContext
+2024-10-29 20:14:07.135 INFO  ---- [main      ] [ServletWebServerApplicationContext:296] prepareWebApplicationContext   Root WebApplicationContext: initialization completed in 4791 ms
+2024-10-29 20:14:07.518 INFO  ---- [main      ] [LogHelper:31] logPersistenceUnitInformation   HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-29 20:14:07.703 INFO  ---- [main      ] [Version:44] logVersion   HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-29 20:14:07.819 INFO  ---- [main      ] [RegionFactoryInitiator:50] initiateService   HHH000026: Second-level cache disabled
+2024-10-29 20:14:08.168 INFO  ---- [tartedMain] [TomcatWebServer:111] initialize   Tomcat initialized with port 8082 (http)
+2024-10-29 20:14:08.199 INFO  ---- [tartedMain] [StandardService:173] log   Starting service [Tomcat]
+2024-10-29 20:14:08.199 INFO  ---- [tartedMain] [StandardEngine:173] log   Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-29 20:14:08.409 INFO  ---- [tartedMain] [[/]:173] log   Initializing Spring embedded WebApplicationContext
+2024-10-29 20:14:08.410 INFO  ---- [tartedMain] [ServletWebServerApplicationContext:296] prepareWebApplicationContext   Root WebApplicationContext: initialization completed in 5411 ms
+2024-10-29 20:14:08.670 INFO  ---- [main      ] [SpringPersistenceUnitInfo:87] addTransformer   No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-29 20:14:08.764 INFO  ---- [tartedMain] [LogHelper:31] logPersistenceUnitInformation   HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-29 20:14:08.769 INFO  ---- [main      ] [HikariDataSource:109] getConnection   HikariPool-1 - Starting...
+2024-10-29 20:14:08.956 INFO  ---- [tartedMain] [Version:44] logVersion   HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-29 20:14:09.055 INFO  ---- [tartedMain] [RegionFactoryInitiator:50] initiateService   HHH000026: Second-level cache disabled
+2024-10-29 20:14:09.373 INFO  ---- [main      ] [HikariPool:554] checkFailFast   HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@47f0e078
+2024-10-29 20:14:09.377 INFO  ---- [main      ] [HikariDataSource:122] getConnection   HikariPool-1 - Start completed.
+2024-10-29 20:14:09.557 DEBUG ---- [main      ] [DdlTypeRegistry:64] addDescriptor   addDescriptor(12, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@6949cead) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@fe13916)
+2024-10-29 20:14:09.558 DEBUG ---- [main      ] [DdlTypeRegistry:64] addDescriptor   addDescriptor(-9, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@5ea0a7a9) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@278c998)
+2024-10-29 20:14:09.558 DEBUG ---- [main      ] [DdlTypeRegistry:64] addDescriptor   addDescriptor(-3, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@25e353dc) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@234ce7ff)
+2024-10-29 20:14:09.559 DEBUG ---- [main      ] [DdlTypeRegistry:64] addDescriptor   addDescriptor(4003, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@780a91d0) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@3cfab340)
+2024-10-29 20:14:09.559 DEBUG ---- [main      ] [DdlTypeRegistry:64] addDescriptor   addDescriptor(4001, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@3387ab0) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@470f0637)
+2024-10-29 20:14:09.560 DEBUG ---- [main      ] [DdlTypeRegistry:64] addDescriptor   addDescriptor(4002, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@6b278b17) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@2ae5580)
+2024-10-29 20:14:09.561 DEBUG ---- [main      ] [DdlTypeRegistry:64] addDescriptor   addDescriptor(2004, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@4203529f) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@7d82ca56)
+2024-10-29 20:14:09.562 DEBUG ---- [main      ] [DdlTypeRegistry:64] addDescriptor   addDescriptor(2005, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@2aaa89c2) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@5a58db42)
+2024-10-29 20:14:09.562 DEBUG ---- [main      ] [DdlTypeRegistry:64] addDescriptor   addDescriptor(2011, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@217fd3c) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@69ac5752)
+2024-10-29 20:14:09.826 INFO  ---- [tartedMain] [SpringPersistenceUnitInfo:87] addTransformer   No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-29 20:14:09.902 INFO  ---- [tartedMain] [HikariDataSource:109] getConnection   HikariPool-1 - Starting...
+2024-10-29 20:14:10.430 INFO  ---- [tartedMain] [HikariPool:554] checkFailFast   HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@23d02811
+2024-10-29 20:14:10.435 INFO  ---- [tartedMain] [HikariDataSource:122] getConnection   HikariPool-1 - Start completed.
+2024-10-29 20:14:10.586 DEBUG ---- [tartedMain] [DdlTypeRegistry:64] addDescriptor   addDescriptor(12, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@3fbbbb87) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@40375b5c)
+2024-10-29 20:14:10.586 DEBUG ---- [tartedMain] [DdlTypeRegistry:64] addDescriptor   addDescriptor(-9, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@50174e8d) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@ee0671)
+2024-10-29 20:14:10.587 DEBUG ---- [tartedMain] [DdlTypeRegistry:64] addDescriptor   addDescriptor(-3, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@626bf268) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@187ca8c2)
+2024-10-29 20:14:10.587 DEBUG ---- [tartedMain] [DdlTypeRegistry:64] addDescriptor   addDescriptor(4003, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@7275fe66) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@258b3d7)
+2024-10-29 20:14:10.588 DEBUG ---- [tartedMain] [DdlTypeRegistry:64] addDescriptor   addDescriptor(4001, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@3f9df946) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@42da7ccf)
+2024-10-29 20:14:10.588 DEBUG ---- [tartedMain] [DdlTypeRegistry:64] addDescriptor   addDescriptor(4002, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@1f013c3c) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@5800f200)
+2024-10-29 20:14:10.588 DEBUG ---- [tartedMain] [DdlTypeRegistry:64] addDescriptor   addDescriptor(2004, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@887778f) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@192a4e54)
+2024-10-29 20:14:10.589 DEBUG ---- [tartedMain] [DdlTypeRegistry:64] addDescriptor   addDescriptor(2005, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@fdc6191) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@50931298)
+2024-10-29 20:14:10.589 DEBUG ---- [tartedMain] [DdlTypeRegistry:64] addDescriptor   addDescriptor(2011, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@639b2c0a) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@280896c3)
+2024-10-29 20:14:15.881 INFO  ---- [tartedMain] [JtaPlatformInitiator:59] initiateService   HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-29 20:14:16.150 INFO  ---- [tartedMain] [LocalContainerEntityManagerFactoryBean:437] buildNativeEntityManagerFactory   Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-29 20:14:17.493 WARN  ---- [tartedMain] [JpaBaseConfiguration$JpaWebConfiguration:236] openEntityManagerInViewInterceptor   spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-29 20:14:19.216 WARN  ---- [tartedMain] [OptionalLiveReloadServer:62] startServer   Unable to start LiveReload server
+2024-10-29 20:14:20.021 INFO  ---- [tartedMain] [DiscoveryClientOptionalArgsConfiguration:74] restTemplateDiscoveryClientOptionalArgs   Eureka HTTP Client uses RestTemplate.
+2024-10-29 20:14:20.781 INFO  ---- [tartedMain] [InstanceInfoFactory:67] create   Setting initial instance status as: STARTING
+2024-10-29 20:14:20.947 INFO  ---- [tartedMain] [DiscoveryClient:327] <init>   Initializing Eureka in region us-east-1
+2024-10-29 20:14:20.963 INFO  ---- [tartedMain] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
+2024-10-29 20:14:21.026 INFO  ---- [tartedMain] [DiscoveryClient:951] fetchRegistry   Disable delta property : false
+2024-10-29 20:14:21.027 INFO  ---- [tartedMain] [DiscoveryClient:952] fetchRegistry   Single vip registry refresh property : null
+2024-10-29 20:14:21.028 INFO  ---- [tartedMain] [DiscoveryClient:953] fetchRegistry   Force full registry fetch : false
+2024-10-29 20:14:21.029 INFO  ---- [tartedMain] [DiscoveryClient:954] fetchRegistry   Application is null : false
+2024-10-29 20:14:21.030 INFO  ---- [tartedMain] [DiscoveryClient:955] fetchRegistry   Registered Applications size is zero : true
+2024-10-29 20:14:21.030 INFO  ---- [tartedMain] [DiscoveryClient:957] fetchRegistry   Application version is -1: true
+2024-10-29 20:14:21.030 INFO  ---- [tartedMain] [DiscoveryClient:1041] getAndStoreFullRegistry   Getting all instance registry info from the eureka server
+2024-10-29 20:14:21.650 INFO  ---- [tartedMain] [DiscoveryClient:1050] getAndStoreFullRegistry   The response status is 200
+2024-10-29 20:14:21.653 INFO  ---- [tartedMain] [DiscoveryClient:1265] initScheduledTasks   Starting heartbeat executor: renew interval is: 30
+2024-10-29 20:14:21.658 INFO  ---- [tartedMain] [InstanceInfoReplicator:60] <init>   InstanceInfoReplicator onDemand update allowed rate per min is 4
+2024-10-29 20:14:21.670 INFO  ---- [tartedMain] [DiscoveryClient:447] <init>   Discovery Client initialized at timestamp 1730200461668 with initial instances count: 2
+2024-10-29 20:14:21.674 INFO  ---- [tartedMain] [EurekaServiceRegistry:41] register   Registering application COMMUNITY-SERVICE with eureka with status UP
+2024-10-29 20:14:21.676 INFO  ---- [tartedMain] [DiscoveryClient:1296] notify   Saw local status change event StatusChangeEvent [timestamp=1730200461676, current=UP, previous=STARTING]
+2024-10-29 20:14:21.679 INFO  ---- [plicator-0] [DiscoveryClient:817] register   DiscoveryClient_COMMUNITY-SERVICE/192.168.0.100:8082: registering service...
+2024-10-29 20:14:21.723 INFO  ---- [tartedMain] [TomcatWebServer:243] start   Tomcat started on port 8082 (http) with context path '/'
+2024-10-29 20:14:21.725 INFO  ---- [tartedMain] [EurekaAutoServiceRegistration:144] onApplicationEvent   Updating port to 8082
+2024-10-29 20:14:21.750 INFO  ---- [plicator-0] [DiscoveryClient:826] register   DiscoveryClient_COMMUNITY-SERVICE/192.168.0.100:8082 - registration status: 204
+2024-10-29 20:14:22.350 INFO  ---- [tartedMain] [CommunityMain:56] logStarted   Started CommunityMain in 21.697 seconds (process running for 23.552)
+2024-10-29 20:19:21.036 INFO  ---- [executor-0] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
+2024-10-29 20:20:00.380 INFO  ---- [082-exec-1] [[/]:173] log   Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-29 20:20:00.381 INFO  ---- [082-exec-1] [DispatcherServlet:532] initServletBean   Initializing Servlet 'dispatcherServlet'
+2024-10-29 20:20:00.386 INFO  ---- [082-exec-1] [DispatcherServlet:554] initServletBean   Completed initialization in 5 ms
+2024-10-29 20:20:02.262 INFO  ---- [082-exec-8] [AbstractOpenApiResource:387] getOpenApi   Init duration for springdoc-openapi is: 1197 ms
+2024-10-29 20:20:14.266 DEBUG ---- [082-exec-9] [SQL:135] logStatement   select distinct pe1_0.post_id,cl1_0.post_post_id,cl1_0.comment_id,cl1_0.content,cl1_0.createAt,cl1_0.memberId,cl1_0.updateAt,pe1_0.communityType,pe1_0.content,pe1_0.creatAt,pe1_0.itemType,pe1_0.memberId,pe1_0.title,pe1_0.updateAt,pe1_0.views from tb_post pe1_0 left join tb_comment cl1_0 on pe1_0.post_id=cl1_0.post_post_id where pe1_0.post_id=?
+2024-10-29 20:20:14.335 ERROR ---- [082-exec-9] [[dispatcherServlet]:175] log   Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.IllegalArgumentException] with root cause
+java.lang.IllegalArgumentException: null
+	at com.wearwiz.adaptor.PostAdaptor.lambda$findPostById$0(PostAdaptor.java:42)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at com.wearwiz.adaptor.PostAdaptor.findPostById(PostAdaptor.java:42)
+	at com.wearwiz.adaptor.PostAdaptor.findPostById(PostAdaptor.java:50)
+	at com.wearwiz.domain.post.service.FindPostService.findPostById(FindPostService.java:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:355)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:379)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:720)
+	at com.wearwiz.domain.post.service.FindPostService$$SpringCGLIB$$0.findPostById(<generated>)
+	at com.wearwiz.domain.post.PostController.findPostById(PostController.java:51)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2024-10-29 20:20:51.665 DEBUG ---- [082-exec-5] [SQL:135] logStatement   select distinct pe1_0.post_id,cl1_0.post_post_id,cl1_0.comment_id,cl1_0.content,cl1_0.createAt,cl1_0.memberId,cl1_0.updateAt,pe1_0.communityType,pe1_0.content,pe1_0.creatAt,pe1_0.itemType,pe1_0.memberId,pe1_0.title,pe1_0.updateAt,pe1_0.views from tb_post pe1_0 left join tb_comment cl1_0 on pe1_0.post_id=cl1_0.post_post_id where pe1_0.post_id=?
+2024-10-29 20:20:51.686 ERROR ---- [082-exec-5] [[dispatcherServlet]:175] log   Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.IllegalArgumentException] with root cause
+java.lang.IllegalArgumentException: null
+	at com.wearwiz.adaptor.PostAdaptor.lambda$findPostById$0(PostAdaptor.java:42)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at com.wearwiz.adaptor.PostAdaptor.findPostById(PostAdaptor.java:42)
+	at com.wearwiz.adaptor.PostAdaptor.findPostById(PostAdaptor.java:50)
+	at com.wearwiz.domain.post.service.FindPostService.findPostById(FindPostService.java:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:355)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:379)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:720)
+	at com.wearwiz.domain.post.service.FindPostService$$SpringCGLIB$$0.findPostById(<generated>)
+	at com.wearwiz.domain.post.PostController.findPostById(PostController.java:51)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2024-10-29 20:20:52.889 DEBUG ---- [082-exec-6] [SQL:135] logStatement   select distinct pe1_0.post_id,cl1_0.post_post_id,cl1_0.comment_id,cl1_0.content,cl1_0.createAt,cl1_0.memberId,cl1_0.updateAt,pe1_0.communityType,pe1_0.content,pe1_0.creatAt,pe1_0.itemType,pe1_0.memberId,pe1_0.title,pe1_0.updateAt,pe1_0.views from tb_post pe1_0 left join tb_comment cl1_0 on pe1_0.post_id=cl1_0.post_post_id where pe1_0.post_id=?
+2024-10-29 20:20:52.908 ERROR ---- [082-exec-6] [[dispatcherServlet]:175] log   Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.IllegalArgumentException] with root cause
+java.lang.IllegalArgumentException: null
+	at com.wearwiz.adaptor.PostAdaptor.lambda$findPostById$0(PostAdaptor.java:42)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at com.wearwiz.adaptor.PostAdaptor.findPostById(PostAdaptor.java:42)
+	at com.wearwiz.adaptor.PostAdaptor.findPostById(PostAdaptor.java:50)
+	at com.wearwiz.domain.post.service.FindPostService.findPostById(FindPostService.java:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:355)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:379)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:720)
+	at com.wearwiz.domain.post.service.FindPostService$$SpringCGLIB$$0.findPostById(<generated>)
+	at com.wearwiz.domain.post.PostController.findPostById(PostController.java:51)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2024-10-29 20:21:12.122 DEBUG ---- [082-exec-4] [SQL:135] logStatement   select distinct pe1_0.post_id,cl1_0.post_post_id,cl1_0.comment_id,cl1_0.content,cl1_0.createAt,cl1_0.memberId,cl1_0.updateAt,pe1_0.communityType,pe1_0.content,pe1_0.creatAt,pe1_0.itemType,pe1_0.memberId,pe1_0.title,pe1_0.updateAt,pe1_0.views from tb_post pe1_0 left join tb_comment cl1_0 on pe1_0.post_id=cl1_0.post_post_id where pe1_0.post_id=?
+2024-10-29 20:21:12.136 ERROR ---- [082-exec-4] [[dispatcherServlet]:175] log   Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.IllegalArgumentException] with root cause
+java.lang.IllegalArgumentException: null
+	at com.wearwiz.adaptor.PostAdaptor.lambda$findPostById$0(PostAdaptor.java:42)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at com.wearwiz.adaptor.PostAdaptor.findPostById(PostAdaptor.java:42)
+	at com.wearwiz.adaptor.PostAdaptor.findPostById(PostAdaptor.java:50)
+	at com.wearwiz.domain.post.service.FindPostService.findPostById(FindPostService.java:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:355)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:379)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:720)
+	at com.wearwiz.domain.post.service.FindPostService$$SpringCGLIB$$0.findPostById(<generated>)
+	at com.wearwiz.domain.post.PostController.findPostById(PostController.java:51)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2024-10-29 20:21:28.597 DEBUG ---- [082-exec-7] [SQL:135] logStatement   select distinct pe1_0.post_id,cl1_0.post_post_id,cl1_0.comment_id,cl1_0.content,cl1_0.createAt,cl1_0.memberId,cl1_0.updateAt,pe1_0.communityType,pe1_0.content,pe1_0.creatAt,pe1_0.itemType,pe1_0.memberId,pe1_0.title,pe1_0.updateAt,pe1_0.views from tb_post pe1_0 left join tb_comment cl1_0 on pe1_0.post_id=cl1_0.post_post_id where pe1_0.post_id=?
+2024-10-29 20:21:28.770 INFO  ---- [082-exec-7] [ProducerConfig:372] logAll   ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = community-service-producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	enable.metrics.push = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2024-10-29 20:21:28.834 INFO  ---- [082-exec-7] [KafkaMetricsCollector:297] init   initializing Kafka metrics collector
+2024-10-29 20:21:28.880 INFO  ---- [082-exec-7] [KafkaProducer:597] configureTransactionState   [Producer clientId=community-service-producer-1] Instantiated an idempotent producer.
+2024-10-29 20:21:29.029 INFO  ---- [082-exec-7] [AppInfoParser:124] <init>   Kafka version: 3.7.1
+2024-10-29 20:21:29.030 INFO  ---- [082-exec-7] [AppInfoParser:125] <init>   Kafka commitId: e2494e6ffb89f828
+2024-10-29 20:21:29.030 INFO  ---- [082-exec-7] [AppInfoParser:126] <init>   Kafka startTimeMs: 1730200889021
+2024-10-29 20:21:29.861 INFO  ---- [producer-1] [Metadata:356] update   [Producer clientId=community-service-producer-1] Cluster ID: Y4gVRtFOTGa7EI15pG5Dhw
+2024-10-29 20:21:29.912 INFO  ---- [producer-1] [TransactionManager:502] setProducerIdAndEpoch   [Producer clientId=community-service-producer-1] ProducerId set to 67000 with epoch 0
+2024-10-29 20:21:31.961 DEBUG ---- [082-exec-9] [SQL:135] logStatement   select distinct pe1_0.post_id,cl1_0.post_post_id,cl1_0.comment_id,cl1_0.content,cl1_0.createAt,cl1_0.memberId,cl1_0.updateAt,pe1_0.communityType,pe1_0.content,pe1_0.creatAt,pe1_0.itemType,pe1_0.memberId,pe1_0.title,pe1_0.updateAt,pe1_0.views from tb_post pe1_0 left join tb_comment cl1_0 on pe1_0.post_id=cl1_0.post_post_id where pe1_0.post_id=?
+2024-10-29 20:21:38.908 DEBUG ---- [082-exec-3] [SQL:135] logStatement   select distinct pe1_0.post_id,cl1_0.post_post_id,cl1_0.comment_id,cl1_0.content,cl1_0.createAt,cl1_0.memberId,cl1_0.updateAt,pe1_0.communityType,pe1_0.content,pe1_0.creatAt,pe1_0.itemType,pe1_0.memberId,pe1_0.title,pe1_0.updateAt,pe1_0.views from tb_post pe1_0 left join tb_comment cl1_0 on pe1_0.post_id=cl1_0.post_post_id where pe1_0.post_id=?
+2024-10-29 20:23:08.830 DEBUG ---- [82-exec-10] [SQL:135] logStatement   select distinct pe1_0.post_id,cl1_0.post_post_id,cl1_0.comment_id,cl1_0.content,cl1_0.createAt,cl1_0.memberId,cl1_0.updateAt,pe1_0.communityType,pe1_0.content,pe1_0.creatAt,pe1_0.itemType,pe1_0.memberId,pe1_0.title,pe1_0.updateAt,pe1_0.views from tb_post pe1_0 left join tb_comment cl1_0 on pe1_0.post_id=cl1_0.post_post_id where pe1_0.post_id=?
+2024-10-29 20:24:21.042 INFO  ---- [executor-0] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
+2024-10-29 20:25:57.275 DEBUG ---- [082-exec-6] [SQL:135] logStatement   select distinct pe1_0.post_id,cl1_0.post_post_id,cl1_0.comment_id,cl1_0.content,cl1_0.createAt,cl1_0.memberId,cl1_0.updateAt,pe1_0.communityType,pe1_0.content,pe1_0.creatAt,pe1_0.itemType,pe1_0.memberId,pe1_0.title,pe1_0.updateAt,pe1_0.views from tb_post pe1_0 left join tb_comment cl1_0 on pe1_0.post_id=cl1_0.post_post_id where pe1_0.post_id=?
+2024-10-29 20:29:21.045 INFO  ---- [executor-0] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
+2024-10-29 20:30:29.934 INFO  ---- [producer-1] [NetworkClient:997] handleDisconnections   [Producer clientId=community-service-producer-1] Node -1 disconnected.
+2024-10-29 20:31:06.579 DEBUG ---- [082-exec-7] [SQL:135] logStatement   select distinct pe1_0.post_id,cl1_0.post_post_id,cl1_0.comment_id,cl1_0.content,cl1_0.createAt,cl1_0.memberId,cl1_0.updateAt,pe1_0.communityType,pe1_0.content,pe1_0.creatAt,pe1_0.itemType,pe1_0.memberId,pe1_0.title,pe1_0.updateAt,pe1_0.views from tb_post pe1_0 left join tb_comment cl1_0 on pe1_0.post_id=cl1_0.post_post_id where pe1_0.post_id=?
+2024-10-29 20:32:22.824 DEBUG ---- [082-exec-9] [SQL:135] logStatement   select distinct pe1_0.post_id,cl1_0.post_post_id,cl1_0.comment_id,cl1_0.content,cl1_0.createAt,cl1_0.memberId,cl1_0.updateAt,pe1_0.communityType,pe1_0.content,pe1_0.creatAt,pe1_0.itemType,pe1_0.memberId,pe1_0.title,pe1_0.updateAt,pe1_0.views from tb_post pe1_0 left join tb_comment cl1_0 on pe1_0.post_id=cl1_0.post_post_id where pe1_0.post_id=?
+2024-10-29 20:34:20.197 DEBUG ---- [082-exec-3] [SQL:135] logStatement   select distinct pe1_0.post_id,cl1_0.post_post_id,cl1_0.comment_id,cl1_0.content,cl1_0.createAt,cl1_0.memberId,cl1_0.updateAt,pe1_0.communityType,pe1_0.content,pe1_0.creatAt,pe1_0.itemType,pe1_0.memberId,pe1_0.title,pe1_0.updateAt,pe1_0.views from tb_post pe1_0 left join tb_comment cl1_0 on pe1_0.post_id=cl1_0.post_post_id where pe1_0.post_id=?
+2024-10-29 20:34:21.067 INFO  ---- [executor-0] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
+2024-10-29 20:35:41.005 DEBUG ---- [82-exec-10] [SQL:135] logStatement   select distinct pe1_0.post_id,cl1_0.post_post_id,cl1_0.comment_id,cl1_0.content,cl1_0.createAt,cl1_0.memberId,cl1_0.updateAt,pe1_0.communityType,pe1_0.content,pe1_0.creatAt,pe1_0.itemType,pe1_0.memberId,pe1_0.title,pe1_0.updateAt,pe1_0.views from tb_post pe1_0 left join tb_comment cl1_0 on pe1_0.post_id=cl1_0.post_post_id where pe1_0.post_id=?
+2024-10-29 20:37:04.677 DEBUG ---- [082-exec-6] [SQL:135] logStatement   select distinct pe1_0.post_id,cl1_0.post_post_id,cl1_0.comment_id,cl1_0.content,cl1_0.createAt,cl1_0.memberId,cl1_0.updateAt,pe1_0.communityType,pe1_0.content,pe1_0.creatAt,pe1_0.itemType,pe1_0.memberId,pe1_0.title,pe1_0.updateAt,pe1_0.views from tb_post pe1_0 left join tb_comment cl1_0 on pe1_0.post_id=cl1_0.post_post_id where pe1_0.post_id=?
+2024-10-29 20:39:21.074 INFO  ---- [executor-0] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
+2024-10-29 20:40:29.975 INFO  ---- [producer-1] [NetworkClient:997] handleDisconnections   [Producer clientId=community-service-producer-1] Node -1 disconnected.
+2024-10-29 20:44:21.089 INFO  ---- [executor-0] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
+2024-10-29 20:49:20.899 DEBUG ---- [082-exec-7] [SQL:135] logStatement   select distinct pe1_0.post_id,cl1_0.post_post_id,cl1_0.comment_id,cl1_0.content,cl1_0.createAt,cl1_0.memberId,cl1_0.updateAt,pe1_0.communityType,pe1_0.content,pe1_0.creatAt,pe1_0.itemType,pe1_0.memberId,pe1_0.title,pe1_0.updateAt,pe1_0.views from tb_post pe1_0 left join tb_comment cl1_0 on pe1_0.post_id=cl1_0.post_post_id where pe1_0.post_id=?
+2024-10-29 20:49:21.100 INFO  ---- [executor-0] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
+2024-10-29 20:54:20.218 DEBUG ---- [082-exec-9] [SQL:135] logStatement   select distinct pe1_0.post_id,cl1_0.post_post_id,cl1_0.comment_id,cl1_0.content,cl1_0.createAt,cl1_0.memberId,cl1_0.updateAt,pe1_0.communityType,pe1_0.content,pe1_0.creatAt,pe1_0.itemType,pe1_0.memberId,pe1_0.title,pe1_0.updateAt,pe1_0.views from tb_post pe1_0 left join tb_comment cl1_0 on pe1_0.post_id=cl1_0.post_post_id where pe1_0.post_id=?
+2024-10-29 20:54:21.109 INFO  ---- [executor-0] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
+2024-10-29 20:54:40.880 DEBUG ---- [082-exec-3] [SQL:135] logStatement   select distinct pe1_0.post_id,cl1_0.post_post_id,cl1_0.comment_id,cl1_0.content,cl1_0.createAt,cl1_0.memberId,cl1_0.updateAt,pe1_0.communityType,pe1_0.content,pe1_0.creatAt,pe1_0.itemType,pe1_0.memberId,pe1_0.title,pe1_0.updateAt,pe1_0.views from tb_post pe1_0 left join tb_comment cl1_0 on pe1_0.post_id=cl1_0.post_post_id where pe1_0.post_id=?
+2024-10-29 20:59:21.117 INFO  ---- [executor-0] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
+2024-10-29 20:59:21.129 DEBUG ---- [82-exec-10] [SQL:135] logStatement   select distinct pe1_0.post_id,cl1_0.post_post_id,cl1_0.comment_id,cl1_0.content,cl1_0.createAt,cl1_0.memberId,cl1_0.updateAt,pe1_0.communityType,pe1_0.content,pe1_0.creatAt,pe1_0.itemType,pe1_0.memberId,pe1_0.title,pe1_0.updateAt,pe1_0.views from tb_post pe1_0 left join tb_comment cl1_0 on pe1_0.post_id=cl1_0.post_post_id where pe1_0.post_id=?
+2024-10-29 20:59:45.111 DEBUG ---- [082-exec-5] [SQL:135] logStatement   select distinct pe1_0.post_id,cl1_0.post_post_id,cl1_0.comment_id,cl1_0.content,cl1_0.createAt,cl1_0.memberId,cl1_0.updateAt,pe1_0.communityType,pe1_0.content,pe1_0.creatAt,pe1_0.itemType,pe1_0.memberId,pe1_0.title,pe1_0.updateAt,pe1_0.views from tb_post pe1_0 left join tb_comment cl1_0 on pe1_0.post_id=cl1_0.post_post_id where pe1_0.post_id=?
+2024-10-29 21:02:45.488 DEBUG ---- [082-exec-4] [SQL:135] logStatement   select distinct pe1_0.post_id,cl1_0.post_post_id,cl1_0.comment_id,cl1_0.content,cl1_0.createAt,cl1_0.memberId,cl1_0.updateAt,pe1_0.communityType,pe1_0.content,pe1_0.creatAt,pe1_0.itemType,pe1_0.memberId,pe1_0.title,pe1_0.updateAt,pe1_0.views from tb_post pe1_0 left join tb_comment cl1_0 on pe1_0.post_id=cl1_0.post_post_id where pe1_0.post_id=?
+2024-10-29 21:03:02.834 DEBUG ---- [082-exec-8] [SQL:135] logStatement   select distinct pe1_0.post_id,cl1_0.post_post_id,cl1_0.comment_id,cl1_0.content,cl1_0.createAt,cl1_0.memberId,cl1_0.updateAt,pe1_0.communityType,pe1_0.content,pe1_0.creatAt,pe1_0.itemType,pe1_0.memberId,pe1_0.title,pe1_0.updateAt,pe1_0.views from tb_post pe1_0 left join tb_comment cl1_0 on pe1_0.post_id=cl1_0.post_post_id where pe1_0.post_id=?
+2024-10-29 21:04:21.130 INFO  ---- [executor-0] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
+2024-10-29 21:09:21.137 INFO  ---- [executor-0] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
+2024-10-29 21:11:50.815 WARN  ---- [ousekeeper] [HikariPool:797] run   HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m9s314ms141µs600ns).
+2024-10-29 21:15:00.440 INFO  ---- [executor-0] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
+2024-10-29 21:20:00.447 INFO  ---- [executor-0] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
+2024-10-29 21:25:00.468 INFO  ---- [executor-0] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
+2024-10-29 21:30:00.483 INFO  ---- [executor-0] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
+2024-10-29 21:35:00.493 INFO  ---- [executor-0] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
+2024-10-29 21:40:00.498 INFO  ---- [executor-0] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
+2024-10-29 21:45:00.520 INFO  ---- [executor-0] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
+2024-10-29 21:50:00.525 INFO  ---- [executor-0] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
+2024-10-29 21:55:00.530 INFO  ---- [executor-0] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
+2024-10-29 22:00:00.535 INFO  ---- [executor-0] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
+2024-10-29 22:05:00.546 INFO  ---- [executor-0] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
+2024-10-29 22:10:00.548 INFO  ---- [executor-0] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
+2024-10-29 22:15:00.554 INFO  ---- [executor-0] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
+2024-10-29 22:20:00.570 INFO  ---- [executor-0] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
+2024-10-29 22:25:01.783 INFO  ---- [executor-0] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
+2024-10-29 22:30:01.784 INFO  ---- [executor-0] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
+2024-10-29 22:35:01.800 INFO  ---- [executor-0] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
+2024-10-29 22:40:01.805 INFO  ---- [executor-0] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
+2024-10-29 22:49:36.234 INFO  ---- [producer-1] [NetworkClient:997] handleDisconnections   [Producer clientId=community-service-producer-1] Node 3 disconnected.
+2024-10-29 22:49:49.996 WARN  ---- [ousekeeper] [HikariPool:797] run   HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m26s534ms682µs).
+2024-10-29 22:49:58.331 INFO  ---- [executor-0] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
+2024-10-29 22:54:58.346 INFO  ---- [executor-0] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
+2024-10-29 22:58:36.460 INFO  ---- [producer-1] [NetworkClient:997] handleDisconnections   [Producer clientId=community-service-producer-1] Node 1 disconnected.
+2024-10-29 22:59:58.349 INFO  ---- [executor-0] [ConfigClusterResolver:43] getClusterEndpoints   Resolving eureka endpoints via configuration
+2024-10-29 23:00:49.171 DEBUG ---- [082-exec-2] [SQL:135] logStatement   select distinct pe1_0.post_id,cl1_0.post_post_id,cl1_0.comment_id,cl1_0.content,cl1_0.createAt,cl1_0.memberId,cl1_0.updateAt,pe1_0.communityType,pe1_0.content,pe1_0.creatAt,pe1_0.itemType,pe1_0.memberId,pe1_0.title,pe1_0.updateAt,pe1_0.views from tb_post pe1_0 left join tb_comment cl1_0 on pe1_0.post_id=cl1_0.post_post_id where pe1_0.post_id=?

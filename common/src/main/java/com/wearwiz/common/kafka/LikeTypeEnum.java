@@ -4,7 +4,7 @@ import com.wearwiz.common.EnumMapperType;
 
 public enum LikeTypeEnum implements EnumMapperType {
      VIEW(1,"조회수"),
-    COMMUNITY_LIKE(1,"RegisterCommunityLikeService"),
+    COMMUNITY_LIKE(1,"registerCommunityLikeService"),
     COMMENT_LIKE(2,"댓글 좋아요"),
     OOTD_LIKE(3,"OOTD 좋아요"),
     PORTFOLIO_LIKE(4,"포트폴리오 좋아요")

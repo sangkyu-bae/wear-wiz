@@ -1,9 +1,7 @@
 package com.wearwiz.domain.frommember;
 
 
-import com.wearwiz.adapter.entity.FromMemberViewEntity;
-import com.wearwiz.domain.community.like.CommunityLikeEntity;
-import com.wearwiz.domain.community.view.CommunityViewEntity;
+import com.wearwiz.adapter.entity.FromMemberCommunityEntity;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -21,21 +19,32 @@ public class FromMemberEntity {
 
     @Id
     @Column( name ="from_id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long fromId;
+    private Long id;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    private CommunityLikeEntity communityLike;
+    @OneToMany(fetch = FetchType.LAZY,mappedBy = "viewFromMember")
+    private List<FromMemberCommunityEntity> views;
 
-    @OneToMany(fetch = FetchType.LAZY,mappedBy = "fromMember")
-    private List<FromMemberViewEntity> views;
+    @OneToMany(fetch = FetchType.LAZY,mappedBy = "likeFromMember")
+    private List<FromMemberCommunityEntity> likes;
 
-    public void addFromMemberView(FromMemberViewEntity fromMemberViewEntity){
-        fromMemberViewEntity.setFromMember(this);
+    public void addFromMemberView(FromMemberCommunityEntity fromMemberEntity){
+        fromMemberEntity.setViewFromMember(this);
+
         if(views == null){
             views = new ArrayList<>();
         }
 
-        views.add(fromMemberViewEntity);
+        views.add(fromMemberEntity);
     }
+
+    public void addFromMemberLike(FromMemberCommunityEntity fromMemberCommunityEntity){
+        fromMemberCommunityEntity.setLikeFromMember(this);
+
+        if(likes == null){
+            likes = new ArrayList<>();
+        }
+
+        likes.add(fromMemberCommunityEntity);
+    }
+
 }
