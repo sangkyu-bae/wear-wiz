@@ -24,13 +24,13 @@ public class CommunityEntity {
 
     private int likeCount;
 
-    @OneToMany(fetch = FetchType.LAZY,mappedBy = "communityView")
+    @OneToMany(fetch = FetchType.LAZY,mappedBy = "community")
     private Set<FromMemberCommunityEntity> fromMembers;
 
 
 
     public void addFromMemberView(FromMemberCommunityEntity fromMemberEntity){
-        fromMemberEntity.setCommunityView(this);
+        fromMemberEntity.setCommunity(this);
 
         if(fromMembers == null){
             fromMembers = new HashSet<>();

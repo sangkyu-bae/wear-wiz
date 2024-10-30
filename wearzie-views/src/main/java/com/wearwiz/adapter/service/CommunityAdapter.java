@@ -1,7 +1,7 @@
 package com.wearwiz.adapter.service;
 
 import com.wearwiz.adapter.entity.FromMemberCommunityEntity;
-import com.wearwiz.adapter.entity.FromMemberViewRepository;
+import com.wearwiz.adapter.entity.FromMemberCommunityRepository;
 import com.wearwiz.common.PersistenceAdapter;
 import com.wearwiz.domain.community.Community;
 import com.wearwiz.domain.community.CommunityEntity;
@@ -13,6 +13,8 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Optional;
+
 @PersistenceAdapter
 @Slf4j
 @RequiredArgsConstructor
@@ -22,36 +24,78 @@ public class CommunityAdapter {
 
     private final FromMemberRepository fromMemberRepository;
 
-    private final FromMemberViewRepository fromMemberViewRepository;
+    private final FromMemberCommunityRepository fromMemberCommunityRepository;
     @Transactional
     public CommunityEntity increaseCommunityView(Community communityView) {
         FromMember fromMember = communityView.getFromViewMembers().get(0);
 
-        com.wearwiz.domain.frommember.FromMemberEntity findFromMember = fromMemberRepository.findById(fromMember.getFromMemberId())
+        FromMemberEntity findFromMember = fromMemberRepository.findById(fromMember.getFromMemberId())
                 .orElseGet(() -> newFromMember(fromMember));
 
         CommunityEntity communityViewEntity = communityViewRepository.findById(communityView.getPostId())
                 .orElseGet(()->newCommunityView(communityView));
 
-        FromMemberCommunityEntity fromMemberEntity = FromMemberCommunityEntity.builder()
-                .viewFromMember(findFromMember)
-                .communityView(communityViewEntity)
-                .build();
+        if (!findFromMember.ifPresentByFromMemberCommunity()) {
+            FromMemberCommunityEntity fromMemberEntity = FromMemberCommunityEntity.builder()
+                    .viewFromMember(findFromMember)
+                    .community(communityViewEntity)
+                    .build();
 
-        try{
-            FromMemberCommunityEntity saveFromMemberView = fromMemberViewRepository.save(fromMemberEntity);
-        }catch (Exception e){
-            // sql 익셉션 -> 멀티키시 다시 커스텀 오류 필요
-            return null;
+            fromMemberCommunityRepository.save(fromMemberEntity);
+
+            communityViewEntity.increaseViewCount();
         }
+
+        if (Optional.ofNullable(findFromMember.getDetchView()).isPresent()) {
+            return communityViewEntity;
+        }
+
+        Optional.ofNullable(findFromMember.getDetchLike()).ifPresent(detachedLikeCommunityEntity -> {
+            detachedLikeCommunityEntity.setViewFromMember(findFromMember);
+        });
 
         communityViewEntity.increaseViewCount();
 
         return communityViewEntity;
     }
 
-    private com.wearwiz.domain.frommember.FromMemberEntity newFromMember(FromMember fromMember){
-        com.wearwiz.domain.frommember.FromMemberEntity fromMemberEntity = com.wearwiz.domain.frommember.FromMemberEntity.builder()
+    @Transactional
+    public CommunityEntity increaseCommunityLike(Community community){
+        FromMember fromLikeMember = community.getFromLikeMembers().get(0);
+
+        FromMemberEntity fromLikeMemberEntity = fromMemberRepository.findById(fromLikeMember.getFromMemberId())
+                .orElseGet(() -> newFromMember(fromLikeMember));
+
+        CommunityEntity communityViewEntity = communityViewRepository.findById(community.getPostId())
+                .orElseGet(()->newCommunityView(community));
+
+
+        if (!fromLikeMemberEntity.ifPresentByFromMemberCommunity()) {
+            FromMemberCommunityEntity fromMemberEntity = FromMemberCommunityEntity.builder()
+                    .likeFromMember(fromLikeMemberEntity)
+                    .community(communityViewEntity)
+                    .build();
+
+            FromMemberCommunityEntity saveFromMemberView = fromMemberCommunityRepository.save(fromMemberEntity);
+            fromLikeMemberEntity.addFromMemberLike(saveFromMemberView);
+
+            communityViewEntity.increaseLikeCount();
+
+            return communityViewEntity;
+        }
+
+        if (Optional.ofNullable(fromLikeMemberEntity.getDetchLike()).isPresent()) {
+            return communityViewEntity;
+        }
+
+
+        fromLikeMemberEntity.getDetchView().setLikeFromMember(fromLikeMemberEntity);
+        communityViewEntity.increaseLikeCount();
+
+        return communityViewEntity;
+    }
+    private FromMemberEntity newFromMember(FromMember fromMember){
+        FromMemberEntity fromMemberEntity =FromMemberEntity.builder()
                 .id(fromMember.getFromMemberId())
                 .build();
 
@@ -68,35 +112,5 @@ public class CommunityAdapter {
         return communityViewRepository.save(communityViewEntity);
     }
 
-    @Transactional
-    public CommunityEntity increaseCommunityLike(Community community){
-        FromMember fromLikeMember = community.getFromLikeMembers().get(0);
 
-       FromMemberEntity fromLikeMemberEntity = fromMemberRepository.findById(fromLikeMember.getFromMemberId())
-                .orElseGet(() -> newFromMember(fromLikeMember));
-
-        CommunityEntity communityViewEntity = communityViewRepository.findById(community.getPostId())
-                .orElseGet(()->newCommunityView(community));
-
-
-
-        FromMemberCommunityEntity fromMemberEntity = FromMemberCommunityEntity.builder()
-                .likeFromMember(fromLikeMemberEntity)
-                .communityView(communityViewEntity)
-                .build();
-
-        try{
-            FromMemberCommunityEntity saveFromMemberView = fromMemberViewRepository.save(fromMemberEntity);
-            fromLikeMemberEntity.addFromMemberLike(saveFromMemberView);
-
-        }catch (Exception e){
-            // sql 익셉션 -> 멀티키시 다시 커스텀 오류 필요
-            return null;
-        }
-
-
-        communityViewEntity.increaseLikeCount();
-
-        return communityViewEntity;
-    }
 }

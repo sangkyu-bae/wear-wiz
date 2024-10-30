@@ -40,6 +40,6 @@ public class FromMemberCommunityEntity {
 
     @JoinColumn(name = "community_view_id")
     @ManyToOne(fetch = FetchType.LAZY)
-    private CommunityEntity communityView;
+    private CommunityEntity community;
 
 }
