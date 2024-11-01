@@ -17,4 +17,6 @@ public class Like {
 
     private LikeTypeEnum type;
 
+    private String title;
+
 }

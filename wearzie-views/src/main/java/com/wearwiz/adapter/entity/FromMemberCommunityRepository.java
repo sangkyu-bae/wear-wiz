@@ -8,5 +8,4 @@ import java.util.Optional;
 
 public interface FromMemberCommunityRepository extends JpaRepository<FromMemberCommunityEntity,Long> {
 
-    Optional<FromMemberCommunityEntity> findByCommunityAndViewFromMember(CommunityEntity communityEntity, FromMemberEntity fromMemberEntity);
 }

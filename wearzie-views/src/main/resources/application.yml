@@ -5,6 +5,9 @@ server:
 redis:
   port: 6379
   host: localhost
+  community:
+    view : community-view
+    like : community-like
 spring:
   application:
     name: view-service
