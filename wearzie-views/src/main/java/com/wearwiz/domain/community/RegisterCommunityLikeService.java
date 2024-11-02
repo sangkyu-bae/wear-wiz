@@ -1,9 +1,9 @@
 package com.wearwiz.domain.community;
 
-import com.wearwiz.adapter.service.CommunityAdapter;
+import com.wearwiz.adapter.CommunityAdapter;
 import com.wearwiz.adapter.service.RegisterLikeService;
 import com.wearwiz.common.kafka.Like;
-import com.wearwiz.domain.community.service.UpdateCommunityRedisService;
+import com.wearwiz.domain.community.service.UpdateCommunityRedisAdapter;
 import com.wearwiz.domain.frommember.FromMember;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -11,7 +11,6 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.lang.reflect.Member;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,7 +21,7 @@ public class RegisterCommunityLikeService implements RegisterLikeService {
 
     private final CommunityAdapter communityAdapter;
 
-    private final UpdateCommunityRedisService updateCommunityRedisService;
+    private final UpdateCommunityRedisAdapter updateCommunityRedisService;
 
     @Value("${redis.community.like}")
     private String COMMUNITY_LIKE_KEY;
@@ -50,7 +49,7 @@ public class RegisterCommunityLikeService implements RegisterLikeService {
 
         try{
             RedisCommunity redisCommunity = RedisCommunity.generateCreate(likeRequest.getToId(), likeRequest.getTitle(), 0,0);
-            updateCommunityRedisService.updateCommunity(redisCommunity,COMMUNITY_LIKE_KEY);
+            updateCommunityRedisService.execute(redisCommunity,COMMUNITY_LIKE_KEY);
         }catch (Exception e){
 //            log.error(e.getStackTrace());
             e.printStackTrace();

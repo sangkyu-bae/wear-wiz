@@ -1,6 +1,6 @@
 package com.wearwiz.domain.community.service;
 
-import com.wearwiz.adapter.service.CommunityAdapter;
+import com.wearwiz.adapter.CommunityAdapter;
 import com.wearwiz.adapter.service.IncreaseViewService;
 import com.wearwiz.common.kafka.IncreaseViewRequest;
 import com.wearwiz.domain.community.Community;

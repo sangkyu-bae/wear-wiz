@@ -1,4 +1,4 @@
-package com.wearwiz.adapter.service;
+package com.wearwiz.adapter;
 
 import com.wearwiz.adapter.entity.FromMemberCommunityEntity;
 import com.wearwiz.adapter.entity.FromMemberCommunityRepository;
